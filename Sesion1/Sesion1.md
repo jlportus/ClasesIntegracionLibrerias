@@ -21,7 +21,7 @@
 
 **Las bibliotecas de código:**
 
-Son conjuntos de funciones y procedimientos preescritos que pueden ser utilizados para realizar tareas específicas en un programa.
+> Son conjuntos de funciones y procedimientos preescritos que pueden ser utilizados para realizar tareas específicas en un programa.
 
 [Biblioteca de código Wikipedia](<https://es.wikipedia.org/wiki/Biblioteca_(inform%C3%A1tica)>)
 
@@ -29,7 +29,7 @@ Son conjuntos de funciones y procedimientos preescritos que pueden ser utilizado
 
 ### Librería vs Biblioteca
 
-**Library** : En realidad la traducción literal del ingles de _library_ es **BIBLIOTECA** y lo que en castellano es una librería en ingles es una _bookstore_
+> **Library** : En realidad la traducción literal del ingles de _library_ es **BIBLIOTECA** y lo que en castellano es una librería en ingles es una _bookstore_
 
 ---
 
