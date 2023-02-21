@@ -1,4 +1,4 @@
-# Integracion de Librerias
+# Integracion de Librerías
 
 ---
 
@@ -36,8 +36,8 @@ MÓDULO 7 - Desarrollo de Aplicaciones
 
 Resultados de aprendizaje:
 
-- Crear librerias propias para reutilizar código
-- Elegir y utilizar librerias de terceros
+- Crear librerías propias para reutilizar código
+- Elegir y utilizar librerías de terceros
 - Utilizar código proveniente de proyectos enlazados y gestión de paquetes
 - Refactorización de código
 
@@ -48,16 +48,16 @@ Resultados de aprendizaje:
 | Sesion                                        | Contenido                                    | Objetivo                                                                                                                                           |
 | --------------------------------------------- | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0                                             | Presentacion e introduccion de la asignatura |                                                                                                                                                    |
-| <a href="./sesion1.html">Sesion 1</a>         | Conceptos generales de Librerias             | Justificacion del uso de Librerias. <br/> Describir que es una libreria<br/>repositorios<br/> gestores de dependencias<br/> Libreria VS Framework  |
-| <a href="./sesion2.html">Sesion 2</a>         | JAVA - HolaLibreria                          | implementar una libreria con java, generarla y emplearla                                                                                           |
-| <a href="./sesion2.html">Sesion 3</a>         | Gradle/Maven - repositorios                  | Gestion de dependencias con Gradle y Maven. <br/>Tipos de inclusion<br/> repositorios de librerias<br/> Busqueda de librerias<br/> licenciamientos |
-| <a href="./sesion4.html">Sesion 4</a>         | Generacion de una libreria con gestor        | Implementacion y generacion de una libreira usando mvn o gradle                                                                                    |
-| <a href="./sesion5.html">Sesion 5</a>         | Trabajando con librerias en local            | Usar una libreria con dos proyectos en local (Libreria-negocio <> API)<br/> arquitectura de capas                                                  |
+| <a href="./sesion1.html">Sesion 1</a>         | Conceptos generales de Librerías             | Justificacion del uso de Librerías. <br/> Describir que es una librería<br/>repositorios<br/> gestores de dependencias<br/> Librería VS Framework  |
+| <a href="./sesion2.html">Sesion 2</a>         | JAVA - HolaLibrería                          | implementar una librería con java, generarla y emplearla                                                                                           |
+| <a href="./sesion2.html">Sesion 3</a>         | Gradle/Maven - repositorios                  | Gestion de dependencias con Gradle y Maven. <br/>Tipos de inclusion<br/> repositorios de librerías<br/> Busqueda de librerías<br/> licenciamientos |
+| <a href="./sesion4.html">Sesion 4</a>         | Generacion de una librería con gestor        | Implementacion y generacion de una libreira usando mvn o gradle                                                                                    |
+| <a href="./sesion5.html">Sesion 5</a>         | Trabajando con librerías en local            | Usar una librería con dos proyectos en local (Librería-negocio <> API)<br/> arquitectura de capas                                                  |
 | <a href="./sesion6.html">Sesion 6</a>         | Generacion war - Servidor Web (Tomcat)       |                                                                                                                                                    |
-| <a href="./sesion7-8-9.html">Sesion 7-8-9</a> | Librerias Utiles de Backend                  | Jackson<br/> JDBC<br/> Apache HTTP                                                                                                                 |
-| <a href="./sesion10-11.html">Sesion 10-11</a> | JavaScript - HolaLibreria                    | implementar una libreria con javaScript, generarla y emplearla                                                                                     |
-| <a href="./sesion12.html">Sesion 12</a>       | node-npm - repositorios                      | Gestion de dependencias con node-npm<br/> Tipos de inclusion<br/> repositorios de librerias>                                                       |
-| <a href="./sesion13.html">Sesion 13</a>       | Librerias Utiles de Frontend                 | Electron <br/>ChartJs<br/>ReactTables                                                                                                              |
+| <a href="./sesion7-8-9.html">Sesion 7-8-9</a> | Librerías Utiles de Backend                  | Jackson<br/> JDBC<br/> Apache HTTP                                                                                                                 |
+| <a href="./sesion10-11.html">Sesion 10-11</a> | JavaScript - HolaLibrería                    | implementar una librería con javaScript, generarla y emplearla                                                                                     |
+| <a href="./sesion12.html">Sesion 12</a>       | node-npm - repositorios                      | Gestion de dependencias con node-npm<br/> Tipos de inclusion<br/> repositorios de librerías>                                                       |
+| <a href="./sesion13.html">Sesion 13</a>       | Librerías Utiles de Frontend                 | Electron <br/>ChartJs<br/>ReactTables                                                                                                              |
 | <a href="./sesion14.html">Sesion 14</a>       | Generacion web (Tomcat)                      |                                                                                                                                                    |
 | <a href="./sesion15.html">Sesion 15</a>       | Generacion documentacion                     | Generar @javaDocs                                                                                                                                  |
 | <a href="./sesion16-17.html">Sesion 16-17</a> | Ejemplo de uso proyecto fin de curso         |                                                                                                                                                    |

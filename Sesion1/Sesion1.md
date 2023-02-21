@@ -1,40 +1,53 @@
-# Conceptos Generales de Librerias
-
-- [Conceptos Generales de Librerias](#conceptos-generales-de-librerias)
-  - [Libreria](#libreria)
-  - [Caracteristicas de Librerias](#caracteristicas-de-librerias)
-  - [Caracteristicas de Librerias II](#caracteristicas-de-librerias-ii)
-  - [Soluciones especializadas: Las bibliotecas de código pueden ofrecer soluciones especializadas a problemas específicos, lo que permite a los desarrolladores enfocarse en la lógica de negocio de su aplicación y no en solucionar problemas comunes y ya resueltos](#soluciones-especializadas-las-bibliotecas-de-código-pueden-ofrecer-soluciones-especializadas-a-problemas-específicos-lo-que-permite-a-los-desarrolladores-enfocarse-en-la-lógica-de-negocio-de-su-aplicación-y-no-en-solucionar-problemas-comunes-y-ya-resueltos)
-  - [Libreria vs Biblioteca](#libreria-vs-biblioteca)
-  - [Uso de Libreria vs Copy\&Paste](#uso-de-libreria-vs-copypaste)
+# Conceptos Generales de LibrerÍas
 
 ---
 
-## Libreria
+### INDICE
+
+- [Conceptos Generales de LibrerÍas](#conceptos-generales-de-librerías)
+    - [INDICE](#indice)
+    - [Librería](#librería)
+    - [Librería vs Biblioteca](#librería-vs-biblioteca)
+    - [Características de Librerías](#características-de-librerías)
+    - [Características de Librerías II](#características-de-librerías-ii)
+    - [Uso de Librería vs Copy\&Paste](#uso-de-librería-vs-copypaste)
+    - [Librería vs FRAMEWORK](#librería-vs-framework)
+    - [Repositorio](#repositorio)
+    - [Gestores de dependencias](#gestores-de-dependencias)
+
+---
+
+### Librería
 
 **Las bibliotecas de código:**
 
 Son conjuntos de funciones y procedimientos preescritos que pueden ser utilizados para realizar tareas específicas en un programa.
 
-[Biblioteca de codigo Wikipedia](<https://es.wikipedia.org/wiki/Biblioteca_(inform%C3%A1tica)>)
+[Biblioteca de código Wikipedia](<https://es.wikipedia.org/wiki/Biblioteca_(inform%C3%A1tica)>)
 
 ---
 
-## Caracteristicas de Librerias
+### Librería vs Biblioteca
 
-- No estan desarrolladas para ejecutarse por si solas, si no en otros programas
+**Library** : En realidad la traducción literal del ingles de _library_ es **BIBLIOTECA** y lo que en castellano es una librería en ingles es una _bookstore_
+
+---
+
+### Características de Librerías
+
+- No están desarrolladas para ejecutarse por si solas, si no en otros programas
 - Se pueden utilizar en diferentes proyectos sin tener que escribir el código desde cero.
-  - Permiten reutilizacion
+  - Permiten reutilización
 - Permiten ahorrar tiempo y esfuerzo al no tener que escribir funciones comunes desde cero.
 - Simplifican mantenimiento
-- Estan optimizadas (mas eficientes)
+- Están optimizadas (mas eficientes)
 - Desarrolladas por otros programadores (_"expertos_")
-- **DOCUMENTACION**
+- **DOCUMENTACIÓN**
 - Aumenta la confiabilidad del código ya que las bibliotecas suelen ser ampliamente probadas y utilizadas.
 
----
+Notas:
 
-## Caracteristicas de Librerias II
+### Características de Librerías II
 
 - **Ahorro de tiempo**: Las bibliotecas de código pueden ahorrar mucho tiempo en el desarrollo de software, ya que los desarrolladores no tienen que escribir todo el código desde cero. En lugar de eso, pueden utilizar una biblioteca existente y reutilizar el código que ya ha sido probado y optimizado.
 
@@ -46,14 +59,46 @@ Son conjuntos de funciones y procedimientos preescritos que pueden ser utilizado
 
 - **Actualizaciones y mantenimiento**: Las bibliotecas de código suelen ser mantenidas y actualizadas por la comunidad de desarrolladores, lo que significa que los desarrolladores pueden confiar en que las bibliotecas se mantendrán al día y estarán disponibles en el futuro.
 
-## Soluciones especializadas: Las bibliotecas de código pueden ofrecer soluciones especializadas a problemas específicos, lo que permite a los desarrolladores enfocarse en la lógica de negocio de su aplicación y no en solucionar problemas comunes y ya resueltos
-
-## Libreria vs Biblioteca
-
-**Library** : En realidad la traduccion literal del inglees de library es **BIBLIOTECA** y lo que en castellano es una libreria en ingles es una _bookstore_
+- **Soluciones especializadas:** Las bibliotecas de código pueden ofrecer soluciones especializadas a problemas específicos, lo que permite a los desarrolladores enfocarse en la lógica de negocio de su aplicación y no en solucionar problemas comunes y ya resueltos
 
 ---
 
-## Uso de Libreria vs Copy&Paste
+### Uso de Librería vs Copy&Paste
 
 ---
+
+### Librería vs FRAMEWORK
+
+**Coincidencias**
+
+1. Ambas son código reusable escrito por terceros generalmente.
+
+**Diferencias**
+
+2. Una librería ofrece generalmente una funcionalidad única y concreta
+3. Un framework ofrece un conjunto global de soluciones para hacer una aplicación completa
+
+[**Inversion de Control**](https://en.wikipedia.org/wiki/Inversion_of_control)
+
+---
+
+### Repositorio
+
+> Lugar en el que se almacena, organiza y distribuye código de aplicaciones o programas
+
+|                                                                                           |                                                                       |
+| ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| **Repositorios de proyectos**<br/>- GitHub<br/>- GitLab<br/>- SourceForge<br/>- Bitbucket | **Repositorios de Librerías** <br/>- mavenCentral<br/>- npmRepository |
+
+Notas:
+¿cual es la diferencia entre ambos tipos?
+
+---
+
+### Gestores de dependencias
+
+> Herramienta que se encarga de descargar y organizar las dependencias de terceros (librerías) empleadas en un proyecto de manera automática.
+
+|                                                                                                                |                                                          |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| **Gestores de Backend**<br/>- Maven --> Java<br/>- Gradle --> Java<br/>- Composer --> PHP<br/>- NuGet --> .NET | **Gestores de Frontend**<br/>- Node + npm --> JavaScript |

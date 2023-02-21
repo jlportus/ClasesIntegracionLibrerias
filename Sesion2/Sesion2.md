@@ -1,31 +1,31 @@
-# Conceptos Generales de Librerias
+# JAVA - HolaLibrería
 
-- [Conceptos Generales de Librerias](#conceptos-generales-de-librerias)
-  - [Libreria](#libreria)
-  - [Libreria vs Biblioteca](#libreria-vs-biblioteca)
-  - [Caracteristicas de Librerias](#caracteristicas-de-librerias)
-  - [Caracteristicas de Librerias II](#caracteristicas-de-librerias-ii)
-  - [Uso de Libreria vs Copy\&Paste](#uso-de-libreria-vs-copypaste)
-
----
-
-## Libreria
-
-**Las bibliotecas de código:**
-
-Son conjuntos de funciones y procedimientos preescritos que pueden ser utilizados para realizar tareas específicas en un programa.
-
-[Biblioteca de codigo Wikipedia](<https://es.wikipedia.org/wiki/Biblioteca_(inform%C3%A1tica)>)
+- [JAVA - HolaLibrería](#java---holalibrería)
+  - [JAVA - HolaLibrería](#java---holalibrería-1)
+  - [Conceptos](#conceptos)
+  - [Caracteristicas de Librerías](#caracteristicas-de-librerías)
+  - [Caracteristicas de Librerías II](#caracteristicas-de-librerías-ii)
+  - [Uso de Librería vs Copy\&Paste](#uso-de-librería-vs-copypaste)
 
 ---
 
-## Libreria vs Biblioteca
+## JAVA - HolaLibrería
 
-**Library** : En realidad la traduccion literal del inglees de library es **BIBLIOTECA** y lo que en castellano es una libreria en ingles es una _bookstore_
+**Proposito:**
+Generar una libreria de un codigo ya existente y reutilizarlo en otro proyecto
 
 ---
 
-## Caracteristicas de Librerias
+## Conceptos
+
+**JAR** _"tarro"_,  
+
+Notas:
+**Library** : En realidad la traduccion literal del inglees de library es **BIBLIOTECA** y lo que en castellano es una librería en ingles es una _bookstore_
+
+---
+
+## Caracteristicas de Librerías
 
 - No estan desarrolladas para ejecutarse por si solas, si no en otros programas
 - Se pueden utilizar en diferentes proyectos sin tener que escribir el código desde cero.
@@ -39,7 +39,7 @@ Son conjuntos de funciones y procedimientos preescritos que pueden ser utilizado
 
 ---
 
-## Caracteristicas de Librerias II
+## Caracteristicas de Librerías II
 
 - **Ahorro de tiempo**: Las bibliotecas de código pueden ahorrar mucho tiempo en el desarrollo de software, ya que los desarrolladores no tienen que escribir todo el código desde cero. En lugar de eso, pueden utilizar una biblioteca existente y reutilizar el código que ya ha sido probado y optimizado.
 
@@ -57,6 +57,6 @@ Son conjuntos de funciones y procedimientos preescritos que pueden ser utilizado
 
 ---
 
-## Uso de Libreria vs Copy&Paste
+## Uso de Librería vs Copy&Paste
 
 ---
