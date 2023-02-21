@@ -92,6 +92,7 @@ Notas:
 
 Notas:
 ¿cual es la diferencia entre ambos tipos?
+abrir  un compilado
 
 ---
 
