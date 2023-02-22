@@ -25,6 +25,9 @@
 
 [Biblioteca de código Wikipedia](<https://es.wikipedia.org/wiki/Biblioteca_(inform%C3%A1tica)>)
 
+Notas:
+[Guion de la asignatura DIM XLIII](https://web.institutomilitar.com/librerias.html)
+
 ---
 
 ### Librería vs Biblioteca
