@@ -23,6 +23,7 @@
     - [Instalacion Gradle](#instalacion-gradle)
     - [Comandos Gradle](#comandos-gradle)
   - [Crear un proyecto gradle](#crear-un-proyecto-gradle)
+  - [Crear proyecto gradle por consola](#crear-proyecto-gradle-por-consola)
   - [Declaracion de dependencias en gradle](#declaracion-de-dependencias-en-gradle)
   - [Declarar una libreria de un repositorio proyecto de gitHub](#declarar-una-libreria-de-un-repositorio-proyecto-de-github)
     - [Tipos de inclusion de librerias con gradle](#tipos-de-inclusion-de-librerias-con-gradle)
@@ -260,31 +261,36 @@ comandos más comunes de Maven:
 - Con un IDE (Eclipse)
 
 Notas:
-**Crear proyecto gradle por consola**
+
+---
+
+## Crear proyecto gradle por consola
 
 1. Ejecutar
-   ```
-    # Comporbar version de gradle
-   gradle -version
 
-    # ejecutar
-   gradle init
-    ## Seguir las instrucciones de la interfaz de consola
-   ```
+```
+# Comporbar version de gradle
+gradle -version
+
+# ejecutar
+gradle init
+## Seguir las instrucciones de la interfaz de consola
+```
 
 Notas:
 
 Si no aparece la opción "Application" en el Project Template del wizard de creación de proyecto Gradle en Eclipse, puede deberse a que la extensión "Buildship Gradle Integration" no esté instalada en su Eclipse.
 
 Para solucionarlo, siga estos pasos:
+```
+Abra Eclipse y seleccione "Help" > "Eclipse Marketplace".
 
-    Abra Eclipse y seleccione "Help" > "Eclipse Marketplace".
+En la pestaña "Marketplace", busque "Buildship Gradle Integration" y haga clic en "Go".
 
-    En la pestaña "Marketplace", busque "Buildship Gradle Integration" y haga clic en "Go".
+Seleccione "Buildship Gradle Integration" y haga clic en "Install".
 
-    Seleccione "Buildship Gradle Integration" y haga clic en "Install".
-
-    Siga las instrucciones para instalar la extensión y reinicie Eclipse.
+Siga las instrucciones para instalar la extensión y reinicie Eclipse.
+```
 
 ---
 
