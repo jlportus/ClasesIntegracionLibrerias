@@ -55,6 +55,13 @@ Resultados de aprendizaje:
 | <a href="./sesion5.html">Sesion 5</a>         | Trabajando con librerías en local            | Usar una librería con dos proyectos en local (Librería-negocio <> API)<br/> arquitectura de capas                                                  |
 | <a href="./sesion6.html">Sesion 6</a>         | Generacion war - Servidor Web (Tomcat)       |                                                                                                                                                    |
 | <a href="./sesion7-8-9.html">Sesion 7-8-9</a> | Librerías Utiles de Backend                  | Jackson<br/> JDBC<br/> Apache HTTP                                                                                                                 |
+
+---
+
+### Temario y planificacion II
+
+| Sesion                                        | Contenido                                    | Objetivo                                                                                                                                           |
+| --------------------------------------------- | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <a href="./sesion10-11.html">Sesion 10-11</a> | JavaScript - HolaLibrería                    | implementar una librería con javaScript, generarla y emplearla                                                                                     |
 | <a href="./sesion12.html">Sesion 12</a>       | node-npm - repositorios                      | Gestion de dependencias con node-npm<br/> Tipos de inclusion<br/> repositorios de librerías>                                                       |
 | <a href="./sesion13.html">Sesion 13</a>       | Librerías Utiles de Frontend                 | Electron <br/>ChartJs<br/>ReactTables                                                                                                              |
