@@ -1,4 +1,5 @@
 # Repositorios
+
 # Gradle/Maven
 
 ---
@@ -22,7 +23,9 @@
     - [Instalacion Gradle](#instalacion-gradle)
     - [Comandos Gradle](#comandos-gradle)
   - [Crear un proyecto gradle](#crear-un-proyecto-gradle)
-  - [Tipos de inclusion de librerias con gradle](#tipos-de-inclusion-de-librerias-con-gradle)
+  - [Declaracion de dependencias en gradle](#declaracion-de-dependencias-en-gradle)
+  - [Declarar una libreria de un repositorio proyecto de gitHub](#declarar-una-libreria-de-un-repositorio-proyecto-de-github)
+    - [Tipos de inclusion de librerias con gradle](#tipos-de-inclusion-de-librerias-con-gradle)
 
 ---
 
@@ -33,13 +36,14 @@ Conocer herramientas de gestión de librerías de Backend, los repositorios, lic
 
 ---
 
-## Conceptos - Repositorios 
+## Conceptos - Repositorios
 
 [https://mvnrepository.com/](https://mvnrepository.com/)
 
 Notas:
 
 Consejos para la busqueda de librerias
+
 - Numero de descargas/numero de commits
 - numero de contribuyentes del repo
 - numero de stars
@@ -83,29 +87,32 @@ repositorios de bibliotecas de código Java más extendidos incluyen:
 
 Notas:
 Restricciones/implicaciones de licencias
-   - Linking - linking of the licensed code with code licensed under a different license (e.g. when the code is provided as a library)
-   - Distribution - distribution of the code to third parties
-   - Modification - modification of the code by a licensee
-   - Patent grant - protection of licensees from patent claims made by code contributors regarding their contribution, and protection of contributors from patent claims made by licensees
-   - Private use - whether modification to the code must be shared with the community or may be used privately (e.g. internal use by a corporation)
-   - Sublicensing - whether modified code may be licensed under a different license (for example a copyright) or must retain the same license under which it was provided
-   - TM grant - use of trademarks associated with the licensed code or its contributors by a licensee
+
+- Linking - linking of the licensed code with code licensed under a different license (e.g. when the code is provided as a library)
+- Distribution - distribution of the code to third parties
+- Modification - modification of the code by a licensee
+- Patent grant - protection of licensees from patent claims made by code contributors regarding their contribution, and protection of contributors from patent claims made by licensees
+- Private use - whether modification to the code must be shared with the community or may be used privately (e.g. internal use by a corporation)
+- Sublicensing - whether modified code may be licensed under a different license (for example a copyright) or must retain the same license under which it was provided
+- TM grant - use of trademarks associated with the licensed code or its contributors by a licensee
 
 ---
 
-## MAVEN 
+## MAVEN
 
 **Maven** es una herramienta de gestión de proyectos software que se utiliza para construir, gestionar y documentar proyectos de software en Java.
 
-Utiliza archivos de configuración llamados 
+Utiliza archivos de configuración llamados
+
 ```
 pom.xml (Project Object Model)
 ```
- para definir la estructura del proyecto, las dependencias, los plugins y otros aspectos del ciclo de vida del proyecto.
+
+para definir la estructura del proyecto, las dependencias, los plugins y otros aspectos del ciclo de vida del proyecto.
 
 Notas:
 
-[Instalacion de mvn](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html#installation) 
+[Instalacion de mvn](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html#installation)
 
 ---
 
@@ -129,25 +136,25 @@ Notas:
 Notas:
 comandos más comunes de Maven:
 
-   **mvn install**: instala el paquete generado en el repositorio local de Maven, lo que permite que otros proyectos de Maven lo utilicen como una dependencia.
+**mvn install**: instala el paquete generado en el repositorio local de Maven, lo que permite que otros proyectos de Maven lo utilicen como una dependencia.
 
-   **mvn clean**: elimina los archivos generados en la última compilación, como los archivos de clase y los archivos JAR.
+**mvn clean**: elimina los archivos generados en la última compilación, como los archivos de clase y los archivos JAR.
 
-   **mvn compile**: compila los archivos fuente del proyecto.
+**mvn compile**: compila los archivos fuente del proyecto.
 
-   **mvn test**: ejecuta las pruebas unitarias del proyecto.
+**mvn test**: ejecuta las pruebas unitarias del proyecto.
 
-   **mvn package**: empaqueta el proyecto en un archivo JAR, WAR u otro formato de archivo.
+**mvn package**: empaqueta el proyecto en un archivo JAR, WAR u otro formato de archivo.
 
-   **mvn deploy**: copia el paquete generado en un repositorio remoto, lo que permite que otros desarrolladores o proyectos lo utilicen como una dependencia.
+**mvn deploy**: copia el paquete generado en un repositorio remoto, lo que permite que otros desarrolladores o proyectos lo utilicen como una dependencia.
 
-   **mvn dependency:tree**: muestra el árbol de dependencias del proyecto, incluyendo las dependencias transitivas.
+**mvn dependency:tree**: muestra el árbol de dependencias del proyecto, incluyendo las dependencias transitivas.
 
-   **mvn clean install**: este es un comando común que combina los comandos clean e install en uno solo.
+**mvn clean install**: este es un comando común que combina los comandos clean e install en uno solo.
 
-   **mvn archetype:generate**: crea un nuevo proyecto Maven a partir de una plantilla predefinida.
+**mvn archetype:generate**: crea un nuevo proyecto Maven a partir de una plantilla predefinida.
 
-   **mvn help**: muestra una lista de todos los comandos de Maven disponibles y su descripción.
+**mvn help**: muestra una lista de todos los comandos de Maven disponibles y su descripción.
 
 ---
 
@@ -158,9 +165,9 @@ default lifecycle phases executed.
     validate: _validate the project is correct and all necessary information is available_
     compile: _compile the source code of the project_
     test: _test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed_
-        
+
         [...]
-    
+
     package: _take the compiled code and package it in its distributable format, such as a JAR._
     integration-test: _process and deploy the package if necessary into an environment where integration tests can be run_
     verify: _run any checks to verify the package is valid and meets quality criteria_
@@ -186,11 +193,13 @@ Utiliza un lenguaje de scripting basado en **Groovy** o **Kotlin** --> scripts p
 plugins --> Scripts "predefinidos"
 ```
 
-Utiliza archivos de configuración llamados 
+Utiliza archivos de configuración llamados
+
 ```
 build.gradle ~ pom.xml
 ```
- para definir la estructura del proyecto, las dependencias, los plugins y otros aspectos del ciclo de vida del proyecto.
+
+para definir la estructura del proyecto, las dependencias, los plugins y otros aspectos del ciclo de vida del proyecto.
 
 Notas:
 [Gradle Docs](https://docs.gradle.org/current/userguide/what_is_gradle.html)
@@ -223,38 +232,205 @@ gradle build
 Notas:
 comandos más comunes de Maven:
 
-   **gradle build**: construye el proyecto y genera los archivos de salida, como los archivos JAR, WAR y ZIP.
+**gradle build**: construye el proyecto y genera los archivos de salida, como los archivos JAR, WAR y ZIP.
 
-   **gradle test**: ejecuta las pruebas unitarias del proyecto.
+**gradle test**: ejecuta las pruebas unitarias del proyecto.
 
-   **gradle run**: ejecuta la aplicación directamente desde Gradle.
+**gradle run**: ejecuta la aplicación directamente desde Gradle.
 
-   **gradle clean**: elimina los archivos generados en la última compilación, como los archivos de clase y los archivos JAR.
+**gradle clean**: elimina los archivos generados en la última compilación, como los archivos de clase y los archivos JAR.
 
-   **gradle tasks**: muestra una lista de todas las tareas disponibles en el proyecto.
+**gradle tasks**: muestra una lista de todas las tareas disponibles en el proyecto.
 
-   **gradle dependencies**: muestra una lista de todas las dependencias del proyecto.
+**gradle dependencies**: muestra una lista de todas las dependencias del proyecto.
 
-   **gradle help**: muestra una lista de todos los comandos de Gradle disponibles y su descripción.
+**gradle help**: muestra una lista de todos los comandos de Gradle disponibles y su descripción.
 
-   **gradle build --info**: muestra información detallada de la compilación, incluyendo las dependencias resueltas, los plugins aplicados y los archivos generados.
+**gradle build --info**: muestra información detallada de la compilación, incluyendo las dependencias resueltas, los plugins aplicados y los archivos generados.
 
-   **gradle build --scan**: genera un informe de análisis de la compilación en línea que incluye información detallada sobre el proyecto, las dependencias y las tareas.
+**gradle build --scan**: genera un informe de análisis de la compilación en línea que incluye información detallada sobre el proyecto, las dependencias y las tareas.
 
-   **gradle init**: crea un nuevo proyecto Gradle a partir de una plantilla predefinida.
+**gradle init**: crea un nuevo proyecto Gradle a partir de una plantilla predefinida.
 
 ---
 
 ## Crear un proyecto gradle
 
 - Por consola
+- Con un IDE (Eclipse)
 
 Notas:
 **Crear proyecto gradle por consola**
-1. 
+
+1. Ejecutar
+   ```
+    # Comporbar version de gradle
+   gradle -version
+
+    # ejecutar
+   gradle init
+    ## Seguir las instrucciones de la interfaz de consola
+   ```
+
+Notas:
+
+Si no aparece la opción "Application" en el Project Template del wizard de creación de proyecto Gradle en Eclipse, puede deberse a que la extensión "Buildship Gradle Integration" no esté instalada en su Eclipse.
+
+Para solucionarlo, siga estos pasos:
+
+    Abra Eclipse y seleccione "Help" > "Eclipse Marketplace".
+
+    En la pestaña "Marketplace", busque "Buildship Gradle Integration" y haga clic en "Go".
+
+    Seleccione "Buildship Gradle Integration" y haga clic en "Install".
+
+    Siga las instrucciones para instalar la extensión y reinicie Eclipse.
 
 ---
 
-## Tipos de inclusion de librerias con gradle
+## Declaracion de dependencias en gradle
 
+En el archivo `build.gradle`
 
+```
+dependencies {
+    implementation 'grupo:nombre:version'
+}
+
+dependencies {
+    implementation 'com.google.guava:guava:30.1.1-jre'
+}
+```
+
+Notas:
+
+**Limitar versiones**
+En Gradle, se puede declarar un rango de versiones para una dependencia utilizando la sintaxis de intervalo de versiones. La sintaxis básica es la siguiente:
+
+```
+dependencies {
+    implementation 'grupo:nombre:[versionInicial, versionFinal)'
+}
+```
+
+Donde versionInicial y versionFinal corresponden a las versiones entre las cuales se desea incluir la dependencia. El intervalo es inclusivo en la versión inicial y exclusivo en la versión final, lo que significa que se incluirán todas las versiones desde la versión inicial hasta la versión anterior a la versión final.
+
+Por ejemplo, para incluir todas las versiones de la biblioteca Guava de Google desde la versión 30.0.0 hasta la versión 31.0.0, se puede declarar la dependencia de la siguiente manera:
+
+```
+dependencies {
+    implementation 'com.google.guava:guava:[30.0.0, 31.0.0)'
+}
+```
+
+También es posible utilizar otros operadores en lugar del intervalo [ ], como ( y ], para cambiar la inclusión de las versiones en el rango. Por ejemplo, para incluir todas las versiones hasta la versión 30.0.0, se puede declarar la dependencia de la siguiente manera:
+
+```
+dependencies {
+    implementation 'com.google.guava:guava:(, 30.0.0]'
+}
+```
+
+En este caso, el paréntesis indica que la versión inicial es cualquier versión anterior a la versión especificada, mientras que el corchete indica que la versión final es la versión especificada y todas las versiones posteriores.
+
+---
+
+## Declarar una libreria de un repositorio proyecto de gitHub
+
+Utilizando el complemento maven:
+
+```
+repositories {
+    maven {
+        url 'https://jitpack.io'
+    }
+}
+dependencies {
+    implementation 'com.github.usuario:repositorio:version'
+}
+```
+
+Notas: 
+
+Utilizando el complemento maven-publish:
+
+```
+plugins {
+    id 'maven-publish'
+}
+
+repositories {
+    maven {
+        url 'https://jitpack.io'
+    }
+}
+
+dependencies {
+    implementation 'com.github.usuario:repositorio:version'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId 'com.github.usuario'
+            artifactId 'repositorio'
+            version 'version'
+        }
+    }
+    repositories {
+        maven {
+            url 'https://jitpack.io'
+        }
+    }
+}
+```
+
+---
+
+### Tipos de inclusion de librerias con gradle
+
+```
+compileOnly
+implementation
+testImplementation
+runtimeOnly
+api
+```
+
+Notas:
+
+se pueden declarar diferentes tipos de dependencias en el archivo build.gradle. Algunos de los tipos más comunes son:
+
+    compileOnly: Esta dependencia solo se utiliza durante la compilación del proyecto, pero no se incluye en el archivo JAR o WAR resultante. Se utiliza para especificar dependencias que solo se necesitan durante la compilación, pero no se utilizan en tiempo de ejecución.
+
+    implementation: Esta dependencia se utiliza durante la compilación y en tiempo de ejecución del proyecto. Se incluye en el archivo JAR o WAR resultante. Se utiliza para especificar dependencias que se necesitan tanto en tiempo de compilación como en tiempo de ejecución.
+
+    testImplementation: Esta dependencia se utiliza durante la compilación y en tiempo de ejecución de las pruebas unitarias del proyecto. Se incluye en el classpath de las pruebas, pero no se incluye en el archivo JAR o WAR resultante.
+
+    runtimeOnly: Esta dependencia se utiliza solo en tiempo de ejecución del proyecto, pero no durante la compilación. Se incluye en el archivo JAR o WAR resultante, pero no se utiliza durante la compilación del proyecto.
+
+    api: Esta dependencia se utiliza durante la compilación y en tiempo de ejecución del proyecto, y se incluye en el archivo JAR o WAR resultante. Además, todas las dependencias transitivas de esta dependencia también se incluyen en el archivo JAR o WAR. Se utiliza para especificar una dependencia que es parte de la API pública del proyecto y que debe estar disponible para los consumidores de la misma.
+
+Existen otros tipos de dependencias en Gradle, como annotationProcessor, compileClasspath, runtimeClasspath, entre otros, que se utilizan en situaciones específicas.
+
+**Inclusión de una libreria a través de repositorios**
+En este modo, se especifica la dependencia en el archivo build.gradle y Gradle se encarga de buscar la librería en los repositorios especificados. Por ejemplo, si se desea agregar la librería Log4j en un proyecto, se puede incluir la siguiente línea en el archivo build.gradle:
+
+groovy
+
+dependencies {
+implementation 'org.apache.logging.log4j:log4j-core:2.17.1'
+}
+
+Al hacer esto, Gradle buscará la librería Log4j en los repositorios remotos especificados en el archivo settings.gradle. Si la librería se encuentra, Gradle la descargará y la agregará al classpath del proyecto.
+
+**Inclusión e una libreria local**
+En este modo, se especifica la ruta de la librería en el sistema de archivos local. Por ejemplo, si se tiene la librería Log4j en la carpeta /lib del proyecto, se puede incluir la siguiente línea en el archivo build.gradle:
+
+groovy
+
+dependencies {
+implementation files('lib/log4j-core-2.17.1.jar')
+}
+
+Al hacer esto, Gradle agregará la librería al classpath del proyecto y podrá ser utilizada en el mismo.
