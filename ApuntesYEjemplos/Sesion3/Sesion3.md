@@ -27,6 +27,10 @@
   - [Declaracion de dependencias en gradle](#declaracion-de-dependencias-en-gradle)
   - [Declarar una libreria de un repositorio proyecto de gitHub](#declarar-una-libreria-de-un-repositorio-proyecto-de-github)
     - [Tipos de inclusion de librerias con gradle](#tipos-de-inclusion-de-librerias-con-gradle)
+    - [Api vs Dependencia](#api-vs-dependencia)
+    - [Precedencia y exportacion de dependencias](#precedencia-y-exportacion-de-dependencias)
+    - [Inclusión de una libreria a través de repositorios](#inclusión-de-una-libreria-a-través-de-repositorios)
+    - [Inclusión e una libreria local](#inclusión-e-una-libreria-local)
 
 ---
 
@@ -223,7 +227,6 @@ Notas:
 
 ```
 gradle init
-gradle install
 gradle bootRun # Necesita la dependencia _spring-boot-starter-web_
 gradle build
 ```
@@ -419,24 +422,46 @@ se pueden declarar diferentes tipos de dependencias en el archivo build.gradle. 
 
 Existen otros tipos de dependencias en Gradle, como annotationProcessor, compileClasspath, runtimeClasspath, entre otros, que se utilizan en situaciones específicas.
 
-**Inclusión de una libreria a través de repositorios**
+---
+
+### Api vs Dependencia
+
+- Una api alguien puede utilizar los métodos de la api desde mi librería
+- Una dependencia No se puede → solo los puede usar mi librería en local
+
+
+---
+
+### Precedencia y exportacion de dependencias
+
+Existe precedencia cuando hay conflicto entre clases iguales
+
+- 1° la mas arriba del build path → order export
+- **export** ⇒ cualquiera que use mi liberia tendrá acceso a las librerias externas que esa integre.
+
+---
+
+### Inclusión de una libreria a través de repositorios
+
 En este modo, se especifica la dependencia en el archivo build.gradle y Gradle se encarga de buscar la librería en los repositorios especificados. Por ejemplo, si se desea agregar la librería Log4j en un proyecto, se puede incluir la siguiente línea en el archivo build.gradle:
-
-groovy
-
+```
 dependencies {
-implementation 'org.apache.logging.log4j:log4j-core:2.17.1'
+    implementation 'org.apache.logging.log4j:log4j-core:2.17.1'
 }
-
+```
 Al hacer esto, Gradle buscará la librería Log4j en los repositorios remotos especificados en el archivo settings.gradle. Si la librería se encuentra, Gradle la descargará y la agregará al classpath del proyecto.
 
-**Inclusión e una libreria local**
+---
+
+### Inclusión e una libreria local
+
 En este modo, se especifica la ruta de la librería en el sistema de archivos local. Por ejemplo, si se tiene la librería Log4j en la carpeta /lib del proyecto, se puede incluir la siguiente línea en el archivo build.gradle:
 
-groovy
 
+```
 dependencies {
-implementation files('lib/log4j-core-2.17.1.jar')
+    implementation files('lib/log4j-core-2.17.1.jar')
 }
+```
 
 Al hacer esto, Gradle agregará la librería al classpath del proyecto y podrá ser utilizada en el mismo.
