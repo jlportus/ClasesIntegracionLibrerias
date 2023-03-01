@@ -1,12 +1,9 @@
-# Repositorios
-
 # Trabajando con librerías en local
 
 ---
 
 ### INDICE
 
-- [Repositorios](#repositorios)
 - [Trabajando con librerías en local](#trabajando-con-librerías-en-local)
     - [INDICE](#indice)
   - [Proyecto API-Libreria](#proyecto-api-libreria)
@@ -20,9 +17,9 @@
 ## Proyecto API-Libreria
 
 **Propósito:**
-Generar un proyecto-API con SpringBoot
+Generar un proyecto-API con SpringBoot Con la capa de servicios
 
-Generar Un proyecto-LIB con Springboot
+Generar Un proyecto-LIB con Springboot Con la capa de negocio
 
 Utilizar ambos
 
