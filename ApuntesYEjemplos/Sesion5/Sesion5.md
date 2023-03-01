@@ -12,7 +12,8 @@
   - [Proyecto API-Libreria](#proyecto-api-libreria)
   - [Integrando Librerias](#integrando-librerias)
     - [Integrar Proyecto Local](#integrar-proyecto-local)
-- [Fin de la presentacion](#fin-de-la-presentacion)
+    - [Incluir libreria de repo publico (GitHub)](#incluir-libreria-de-repo-publico-github)
+    - [Incluir libreria de repo publico (GitHub) II](#incluir-libreria-de-repo-publico-github-ii)
 
 ---
 
@@ -73,6 +74,9 @@ Prerrequisitos:
      - `id 'java'`
      - `id 'java-library'`
      - `id 'eclipse'`
+
+---
+
 5. En el **`settings.gradle`** del proyecto **API**
    - Debe coincidir el nombre del directorio con el del preyecto
      `rootProject.name = 'nombreProyectoAPI'` (si esta hecho con Spring lo genera automáticamente)
@@ -89,6 +93,9 @@ Prerrequisitos:
      ```
 7. Ejecutar **Refresh gradle project**
    - en propiedades de mi proyecto en java build path → saldrá la librería como una dependencia
+
+---
+
 8. Ejecutar en eclipse gradle
    **gradle task ide ⇒ generate all eclipse files**
 
@@ -98,9 +105,47 @@ Prerrequisitos:
 
 ---
 
-# Fin de la presentacion 
-<a href="./index.html#/6">Ir al indice de presentaciones</a>
+### Incluir libreria de repo publico (GitHub)
 
-<a href="./sesion6.html">Ir a la Sesion 6</a>
+Pretendo usar una libreria de un repositorio publico de GitHub (Sin compilar) para lo que se necesita compilar con jit-pack.
+
+Necesita el **plugin id 'application'**
+
+1. Añado el repositorio y JitPack
+  
+```
+repositories {
+      mavenCentral()
+      maven { url 'https://jitpack.io' }
+}
+```
 
 ---
+
+### Incluir libreria de repo publico (GitHub) II
+
+1. La libreria necesita el plugin
+
+```
+id 'java-library'
+```
+
+2. En la API: Ir a dependencias y añadir linea 
+
+```
+implementation 'Grupo:artefacto:Versión'
+```
+3. Ejecutar `gradle → refresh project` --> Saldrán en project and external dependencies las que haya añadido, pudiendo emplearlas en mi codigo
+
+Notas:
+Documentacion: [JitPack](https://docs.jitpack.io/building/)
+
+- grupo: es la ruta al usuario de GitHub 
+- artefacto: es el proyecto del usuario 
+- versión: es el tag-release 
+
+> En la version se puede poner 
+> - 1 version concreta (debe existir un tag)
+> - sanapshot (ultima versión) 
+> - 1 commit concreto > puedo poner varias versiones que se crearan en sus carpetas correspondientes
+
