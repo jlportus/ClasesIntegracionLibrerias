@@ -12,6 +12,7 @@
   - [Proyecto API-Libreria](#proyecto-api-libreria)
   - [Integrando Librerias](#integrando-librerias)
     - [Integrar Proyecto Local](#integrar-proyecto-local)
+- [Fin de la presentacion](#fin-de-la-presentacion)
 
 ---
 
@@ -94,3 +95,12 @@ Prerrequisitos:
 > En propiedades de mi proyecto en java build path (o en la carpeta Project and External Dependencies) → saldrá la librería como una dependencia
 
 > Comprobar llamando desde la API a una clase de la libreria
+
+---
+
+# Fin de la presentacion 
+<a href="./index.html#/6">Ir al indice de presentaciones</a>
+
+<a href="./sesion6.html">Ir a la Sesion 6</a>
+
+---

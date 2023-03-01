@@ -14,6 +14,7 @@
     - [Librería vs FRAMEWORK](#librería-vs-framework)
     - [Repositorio](#repositorio)
     - [Gestores de dependencias](#gestores-de-dependencias)
+- [Fin de la presentacion](#fin-de-la-presentacion)
 
 ---
 
@@ -106,3 +107,12 @@ abrir  un compilado
 |                                                                                                                |                                                          |
 | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
 | **Gestores de Backend**<br/>- Maven --> Java<br/>- Gradle --> Java<br/>- Composer --> PHP<br/>- NuGet --> .NET | **Gestores de Frontend**<br/>- Node + npm --> JavaScript |
+
+---
+
+# Fin de la presentacion 
+<a href="./index.html#/6">Ir al indice de Presentaciones</a>
+
+<a href="./sesion2.html">Ir a la Sesion 2</a>
+
+---

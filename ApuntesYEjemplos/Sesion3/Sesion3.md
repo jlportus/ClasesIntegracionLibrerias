@@ -31,6 +31,7 @@
     - [Precedencia y exportacion de dependencias](#precedencia-y-exportacion-de-dependencias)
     - [Inclusión de una libreria a través de repositorios](#inclusión-de-una-libreria-a-través-de-repositorios)
     - [Inclusión e una libreria local](#inclusión-e-una-libreria-local)
+- [Fin de la presentacion](#fin-de-la-presentacion)
 
 ---
 
@@ -443,13 +444,15 @@ Existe precedencia cuando hay conflicto entre clases iguales
 
 ### Inclusión de una libreria a través de repositorios
 
-En este modo, se especifica la dependencia en el archivo build.gradle y Gradle se encarga de buscar la librería en los repositorios especificados. Por ejemplo, si se desea agregar la librería Log4j en un proyecto, se puede incluir la siguiente línea en el archivo build.gradle:
+En este modo, se especifica la dependencia en el archivo build.gradle y Gradle se encarga de buscar la librería en los repositorios especificados. 
+
+Ejemplo: se desea agregar la librería Log4j --> incluir la siguiente línea en el archivo build.gradle:
 ```
 dependencies {
     implementation 'org.apache.logging.log4j:log4j-core:2.17.1'
 }
 ```
-Al hacer esto, Gradle buscará la librería Log4j en los repositorios remotos especificados en el archivo settings.gradle. Si la librería se encuentra, Gradle la descargará y la agregará al classpath del proyecto.
+Gradle buscará la librería Log4j en los repositorios remotos especificados en el archivo settings.gradle, la descargará y la agregará al classpath del proyecto.
 
 ---
 
@@ -465,3 +468,12 @@ dependencies {
 ```
 
 Al hacer esto, Gradle agregará la librería al classpath del proyecto y podrá ser utilizada en el mismo.
+
+---
+
+# Fin de la presentacion 
+<a href="./index.html#/6">Ir al indice de Presentaciones</a>
+
+<a href="./sesion4.html">Ir a la Sesion 4</a>
+
+---
