@@ -18,7 +18,31 @@ Notas: https://web.institutomilitar.com/librerias.html
 ## Jackson
 
 [Jackson Baeldung Tutorial](https://www.baeldung.com/jackson)
+- https://www.baeldung.com/jackson-object-mapper-tutorial
+- [escribir](https://www.baeldung.com/jackson-object-mapper-tutorial#1-java-object-to-json) y [leer](https://www.baeldung.com/jackson-object-mapper-tutorial#2-json-to-java-object) json
+- https://www.baeldung.com/jackson-json-node-tree-model
+- https://www.baeldung.com/jackson-jsonformat
+- https://www.baeldung.com/jackson-serialize-dates
 
+[Jenkov Tutorial](https://jenkov.com/tutorials/java-json/index.html)
+- intro + instalacion
+- Object mapper
+- json node
+- jsonGenerator
+- annotations
+
+--
+
+Ejercicio:
+
+- Escribir json a partir de un objeto Java
+- leer json y convertir en objeto java
+
+- Modificar parseo con anotaciones
+
+- crear un nodo a partir de un objeto e incluir campos (clave valor y array)
+
+- Trabajar con fechas
 ---
 
 ## JDBC
