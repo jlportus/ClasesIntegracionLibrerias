@@ -1,6 +1,6 @@
 # Integracion de Librerías
 
-[Presentaciones en GitHub-Pages](https://jlportus.github.io/ClasesIntegracionLibrerias/)
+[Indice Presentaciones en GitHub-Pages](https://jlportus.github.io/ClasesIntegracionLibrerias/#/6)
 
 ---
 
@@ -45,11 +45,11 @@ Resultados de aprendizaje:
 
 ---
 
-### Temario y planificacion
+### Temario y planificacion (1 de 2)
 
 | Sesion                                        | Contenido                                    | Objetivo                                                                                                                                           |
 | --------------------------------------------- | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0                                             | Presentacion e introduccion de la asignatura |                                                                                                                                                    |
+| <a href="./index.html">Sesion 0</a>         | Presentacion e introduccion de la asignatura |                                                                                                                                                    |
 | <a href="./sesion1.html">Sesion 1</a>         | Conceptos generales de Librerías             | Justificacion del uso de Librerías. <br/> Describir que es una librería<br/>repositorios<br/> gestores de dependencias<br/> Librería VS Framework  |
 | <a href="./sesion2.html">Sesion 2</a>         | JAVA - HolaLibrería                          | implementar una librería con java, generarla y emplearla                                                                                           |
 | <a href="./sesion3.html">Sesion 3</a>         | Gradle/Maven - repositorios                  | Gestion de dependencias con Gradle y Maven. <br/>Tipos de inclusion<br/> repositorios de librerías<br/> Busqueda de librerías<br/> licenciamientos |
@@ -60,18 +60,18 @@ Resultados de aprendizaje:
 
 ---
 
-### Temario y planificacion II
+### Temario y planificacion (2 de 2)
 
-| Sesion                                        | Contenido                                    | Objetivo                                                                                                                                           |
-| --------------------------------------------- | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <a href="./sesion10-11.html">Sesion 10-11</a> | JavaScript - HolaLibrería                    | implementar una librería con javaScript, generarla y emplearla                                                                                     |
-| <a href="./sesion12.html">Sesion 12</a>       | node-npm - repositorios                      | Gestion de dependencias con node-npm<br/> Tipos de inclusion<br/> repositorios de librerías>                                                       |
-| <a href="./sesion13.html">Sesion 13</a>       | Librerías Utiles de Frontend                 | Electron <br/>ChartJs<br/>ReactTables                                                                                                              |
-| <a href="./sesion14.html">Sesion 14</a>       | Generacion web (Tomcat)                      |                                                                                                                                                    |
-| <a href="./sesion15.html">Sesion 15</a>       | Generacion documentacion                     | Generar @javaDocs                                                                                                                                  |
-| <a href="./sesion16-17.html">Sesion 16-17</a> | Ejemplo de uso proyecto fin de curso         |                                                                                                                                                    |
-| <a href="./sesion18.html">Sesion 18</a>       | Resolucion de dudas                          |                                                                                                                                                    |
-| <a href="./sesion19-20.html">Sesion 19-20</a> | Ejercicio Practico                           | Ejercicio tutorizado para la puesta en practica de los conocimientos                                                                               |
+| Sesion                                        | Contenido                            | Objetivo                                                                                     |
+| --------------------------------------------- | ------------------------------------ | -------------------------------------------------------------------------------------------- |
+| <a href="./sesion10-11.html">Sesion 10-11</a> | JavaScript - HolaLibrería            | implementar una librería con javaScript, generarla y emplearla                               |
+| <a href="./sesion12.html">Sesion 12</a>       | node-npm - repositorios              | Gestion de dependencias con node-npm<br/> Tipos de inclusion<br/> repositorios de librerías> |
+| <a href="./sesion13.html">Sesion 13</a>       | Librerías Utiles de Frontend         | Electron <br/>ChartJs<br/>ReactTables                                                        |
+| <a href="./sesion14.html">Sesion 14</a>       | Generacion web (Tomcat)              |                                                                                              |
+| <a href="./sesion15.html">Sesion 15</a>       | Generacion documentacion             | Generar @javaDocs                                                                            |
+| <a href="./sesion16-17.html">Sesion 16-17</a> | Ejemplo de uso proyecto fin de curso |                                                                                              |
+| <a href="./sesion18.html">Sesion 18</a>       | Resolucion de dudas                  |                                                                                              |
+| <a href="./sesion19-20.html">Sesion 19-20</a> | Ejercicio Practico                   | Ejercicio tutorizado para la puesta en practica de los conocimientos                         |
 
 ---
 

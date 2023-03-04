@@ -10,6 +10,7 @@
   - [Integrando Librerias](#integrando-librerias)
     - [Integrar Proyecto Local](#integrar-proyecto-local)
     - [Incluir libreria de repo publico (GitHub)](#incluir-libreria-de-repo-publico-github)
+    - [Incluir libreria de repo publico (GitHub)](#incluir-libreria-de-repo-publico-github-1)
     - [Incluir libreria de repo publico (GitHub) II](#incluir-libreria-de-repo-publico-github-ii)
 
 ---
@@ -36,8 +37,9 @@ Ambos proyectos deberían ser Proyectos Gradle:
 
 ---
 
+<img title="Arquitectura 3 capas" src="./ApuntesYEjemplos/Sesion5/Recursos/Capas.drawio.png">
 
-<img title="Capas" src="https://www.techopedia.com/images/uploads/3b108f50042e4c398169ec3fa43d9b94.png">
+![Arquitectura 3 capas](./Recursos/Capas.drawio.png)
 
 Notas:
 https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador
@@ -56,49 +58,54 @@ Prerrequisitos:
 
 ---
 
-1. El `proyecto-LIBreria` esta en la misma carpeta donde está mi `proyecto-API` (en carpetas hermanas).
+1. El `proyecto-LIBreria` esta en la misma carpeta donde está mi `proyecto-API` _(en carpetas hermanas)_
 2. Al proyecto **LIB**reria le quito todas las anotaciones e importaciones de Spring
-   - En el main
+   - Del main
      - @SpringApplication
      - SpringContext = `SpringApplication.run`
-   - dependencias y plugins Spring del build.gradle
-   - La carpeta de Tests
+   - Del build.gradle
+     - dependencias y plugins Spring  _`...Springframework...`_
+   - La carpeta de Tests _(Los test se ejecutaran desde la API)_
 3. Importar ambos proyectos Gradle en eclipse.
    - Usar valores por defecto
 4. En el `build.gradle` del proyecto **LIB**
-   - **NO** puede haber plugins de `Springframework`
-   - Eclipse Necesita el plugin
-     - `id 'java'`
-     - `id 'java-library'`
-     - `id 'eclipse'`
+   - Eclipse Necesita ademas los plugin
+```
+     `id 'java'`
+     `id 'java-library'`
+     `id 'eclipse'`
+```
 
 ---
 
 5. En el **`settings.gradle`** del proyecto **API**
-   - Debe coincidir el nombre del directorio con el del preyecto
-     `rootProject.name = 'nombreProyectoAPI'` (si esta hecho con Spring lo genera automáticamente)
+   - Debe coincidir el nombre del directorio con el del proyecto
+```
+`rootProject.name = 'nombreProyectoAPI'` 
+//(si esta hecho con Spring lo genera automáticamente)
+```
    - Introduzco una linea nueva con:
-     `includeFlat 'proyecto-LIBreria'`
-     > Debe ser el mismo nombre que tiene el proyectoLIB en su settings.gradle
-6. En el **`build.gradle`** del proyecto **API**
-   - Introduzco en el apartado **`dependencias`**
-     ```
-     dependencies {
-       //
-       implementation project(':proyecto-LIBreria')
-     }
-     ```
-7. Ejecutar **Refresh gradle project**
-   - en propiedades de mi proyecto en java build path → saldrá la librería como una dependencia
+```
+includeFlat 'proyecto-LIBreria'
+```
+> Debe ser el mismo nombre que tiene el proyectoLIB en su settings.gradle
 
 ---
 
-8. Ejecutar en eclipse gradle
-   **gradle task ide ⇒ generate all eclipse files**
+6. En el **`build.gradle`** del proyecto **API**
+   - Introduzco en el apartado **`dependencias`**
+```
+dependencies {
+  //
+  implementation project(':proyecto-LIBreria')
+}
+```
+7. Ejecutar **Refresh gradle project**
+> En propiedades de mi proyecto en java build path (o en la carpeta Project and External Dependencies) 
+> 
+> **→ saldrá la librería como una dependencia**
 
-> En propiedades de mi proyecto en java build path (o en la carpeta Project and External Dependencies) → saldrá la librería como una dependencia
-
-> Comprobar llamando desde la API a una clase de la libreria
+8. _Comprobar llamando desde la API a un metodo de una clase de la libreria_
 
 ---
 
@@ -106,10 +113,28 @@ Prerrequisitos:
 
 Pretendo usar una libreria de un repositorio publico de GitHub (Sin compilar) para lo que se necesita compilar con jit-pack.
 
-Necesita el **plugin id 'application'**
+Notas:
+Documentacion: [JitPack](https://docs.jitpack.io/building/)
 
-1. Añado el repositorio y JitPack
-  
+---
+
+<img title="Integracion en CLOUD" src="./ApuntesYEjemplos/Sesion5/Recursos/Jitpack.drawio.png">
+
+![Integracion en CLOUD](./Recursos/Jitpack.drawio.png)
+
+
+---
+
+### Incluir libreria de repo publico (GitHub)
+En La **API** 
+
+1. Necesita el **plugin**
+
+```
+id 'application'
+```
+2. Añado el repositorio **JitPack**
+
 ```
 repositories {
       mavenCentral()
@@ -120,22 +145,24 @@ repositories {
 ---
 
 ### Incluir libreria de repo publico (GitHub) II
-
-1. La libreria necesita el plugin
-
+En la **LIB**reria
+1.  La libreria debe estar publicada en GitHub en un repo publico
+    - puedo usar _**nºcommit, version o snapshot**_
+2.  Necesita el plugin
 ```
 id 'java-library'
 ```
 
-2. En la API: Ir a dependencias y añadir linea 
-
+1. Incluir la libreria en la API --> Ir a dependencias y añadir linea 
 ```
 implementation 'Grupo:artefacto:Versión'
+// implementation 'com.github.usuarioPepe:repoLibreria:Tag'
 ```
-3. Ejecutar `gradle → refresh project` --> Saldrán en project and external dependencies las que haya añadido, pudiendo emplearlas en mi codigo
+1. Ejecutar _`gradle → refresh project`_
+> --> Saldrán en project and external dependencies las que haya añadido, pudiendo emplearlas en mi codigo
+
 
 Notas:
-Documentacion: [JitPack](https://docs.jitpack.io/building/)
 
 - grupo: es la ruta al usuario de GitHub 
 - artefacto: es el proyecto del usuario 
