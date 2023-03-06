@@ -9,6 +9,8 @@ Notas: https://web.institutomilitar.com/librerias.html
 - [Librerías Utiles de Backend](#librerías-utiles-de-backend)
     - [INDICE](#indice)
   - [Jackson](#jackson)
+  - [Metodos clave de Jackson I-II](#metodos-clave-de-jackson-i-ii)
+  - [Metodos clave de Jackson II-II](#metodos-clave-de-jackson-ii-ii)
   - [JDBC](#jdbc)
   - [APACHE HTTP](#apache-http)
 - [Fin de la presentacion](#fin-de-la-presentacion)
@@ -30,6 +32,42 @@ Notas: https://web.institutomilitar.com/librerias.html
 - json node
 - jsonGenerator
 - annotations
+
+--
+
+## Metodos clave de Jackson I-II
+
+```
+// Clase que permite acceder a los metodos
+ObjectMapper objectMapper = new ObjectMapper(); 
+
+// Lee un string en json 
+objectMapper.readTree(json);
+
+// Convierte jsonString en objeto
+objectMapper.readValue(jsonString, claseObjetivo.class);
+
+//Convierte Objeto en jsonString
+objectMapper.writeValueAsString(objeto):
+```
+
+--
+
+## Metodos clave de Jackson II-II
+
+```
+//Creo un nodo json vacio
+JsonNode nodoJson = objectMapper.createObjectNode();
+
+// Agregar clave:valor
+((ObjectNode) nodoJson).put("Clave","valor"); 
+
+//Creo un array json
+ArrayNode arrayJson = objectMapper.createArrayNode();
+
+//Agrego un nodo al array	
+arrayJson.add(nodoJson);
+```
 
 --
 

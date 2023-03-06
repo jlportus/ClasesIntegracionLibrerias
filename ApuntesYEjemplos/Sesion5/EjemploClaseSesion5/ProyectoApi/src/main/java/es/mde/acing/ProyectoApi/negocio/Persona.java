@@ -3,12 +3,15 @@ package es.mde.acing.ProyectoApi.negocio;
 import java.sql.Date;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 
 //@JsonPropertyOrder({ "edad", "nombre" })
 public class Persona {
-
+	
+	
+	//@JsonProperty("nombredepila")
 	String nombre;
 //	@JsonIgnore
 	int edad;
