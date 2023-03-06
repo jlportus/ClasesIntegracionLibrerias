@@ -1,0 +1,30 @@
+plugins {
+	id 'java'
+	id 'java-library'
+	id 'eclipse'
+}
+
+group = 'es.mde'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	
+}
+
+test {
+	useJUnitPlatform()
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives javadocJar
+}
