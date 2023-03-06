@@ -9,8 +9,10 @@ Notas: https://web.institutomilitar.com/librerias.html
 - [Librerías Utiles de Backend](#librerías-utiles-de-backend)
     - [INDICE](#indice)
   - [Jackson](#jackson)
-  - [Metodos clave de Jackson I-II](#metodos-clave-de-jackson-i-ii)
-  - [Metodos clave de Jackson II-II](#metodos-clave-de-jackson-ii-ii)
+    - [Metodos clave de Jackson I-II](#metodos-clave-de-jackson-i-ii)
+    - [Metodos clave de Jackson II-II](#metodos-clave-de-jackson-ii-ii)
+    - [Metodos clave de Jackson Listados](#metodos-clave-de-jackson-listados)
+    - [Fechas](#fechas)
   - [JDBC](#jdbc)
   - [APACHE HTTP](#apache-http)
 - [Fin de la presentacion](#fin-de-la-presentacion)
@@ -33,9 +35,9 @@ Notas: https://web.institutomilitar.com/librerias.html
 - jsonGenerator
 - annotations
 
---
+---
 
-## Metodos clave de Jackson I-II
+### Metodos clave de Jackson I-II
 
 ```
 // Clase que permite acceder a los metodos
@@ -51,9 +53,9 @@ objectMapper.readValue(jsonString, claseObjetivo.class);
 objectMapper.writeValueAsString(objeto):
 ```
 
---
+---
 
-## Metodos clave de Jackson II-II
+### Metodos clave de Jackson II-II
 
 ```
 //Creo un nodo json vacio
@@ -69,7 +71,41 @@ ArrayNode arrayJson = objectMapper.createArrayNode();
 arrayJson.add(nodoJson);
 ```
 
---
+---
+
+### Metodos clave de Jackson Listados
+
+```
+//Leer listado desde un array
+List<Car> listCar = objectMapper.readValue(
+  jsonCarArray, new TypeReference<List<Car>>() {}
+);
+
+// TypeReference<List<T>>(){} 
+//    --> Clase de Jackson que obtiene los tipos de otra clase 
+        (un listado por ejemplo)
+//    tambien vale para un Map<String,Object>
+```
+
+---
+
+### Fechas
+
+Introduccion a fechas
+
+https://www.arteco-consulting.com/post/introduccion-a-java-time
+
+> Recomendado --> Usar Instant + formatter
+
+```
+@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "UTC")
+private Instant createdDate;
+
+objectMapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
+```
+https://stackoverflow.com/a/45674593
+
+---
 
 Ejercicio:
 
@@ -81,6 +117,7 @@ Ejercicio:
 - crear un nodo a partir de un objeto e incluir campos (clave valor y array)
 
 - Trabajar con fechas
+  
 ---
 
 ## JDBC
