@@ -25,6 +25,12 @@ dependencies {
 	implementation 'com.github.jlportus:ProyectoLib:c7bb35c'
 	//implementation project(':ProyectoLib')
 	
+	// https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core
+	implementation 'com.fasterxml.jackson.core:jackson-core:2.14.2'
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.14.2'
+	implementation 'com.fasterxml.jackson.core:jackson-annotations:2.14.2'
+	
+	
 	
 	
 }
