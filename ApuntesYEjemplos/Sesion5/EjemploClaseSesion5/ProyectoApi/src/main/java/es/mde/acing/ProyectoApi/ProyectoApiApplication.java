@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import es.mde.acing.ProyectoApi.negocio.Persona;
 import es.mde.acing.ProyectoApi.utils.jackson.JsonBuilder;
+import es.mde.acing.ProyectoApi.utils.jackson.JsonLists;
 import es.mde.acing.ProyectoApi.utils.jackson.ParseadorJackson;
 import es.mde.acing.ProyectoLib.utils.ClasePruebaLibreria;
 
@@ -22,6 +23,8 @@ public class ProyectoApiApplication {
 		ParseadorJackson.parseadorJsonAObjeto(personaStringJson, new Persona());
 		
 		JsonBuilder.generadorJson();
+		
+		JsonLists.generandoListados();
 	}
 
 }
