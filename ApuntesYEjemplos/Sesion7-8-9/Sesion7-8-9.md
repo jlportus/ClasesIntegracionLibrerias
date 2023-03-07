@@ -14,6 +14,7 @@ Notas: https://web.institutomilitar.com/librerias.html
     - [Metodos clave de Jackson Listados](#metodos-clave-de-jackson-listados)
     - [Fechas](#fechas)
   - [JDBC](#jdbc)
+    - [Ejemplo de conexion](#ejemplo-de-conexion)
   - [APACHE HTTP](#apache-http)
 - [Fin de la presentacion](#fin-de-la-presentacion)
 
@@ -123,7 +124,36 @@ Ejercicio:
 ## JDBC
 
 https://www.baeldung.com/java-jdbc
+
 https://www.marcobehler.com/guides/java-databases
+
+---
+
+### Ejemplo de conexion
+
+1. incluir dependencia de bbdd h2
+2. Arrancar BBDD (H2-Local)
+```
+$HOME\.gradle\caches\modules-2\files-2.1\com.h2database\h2\1.4.200\f7533fe7cb8e99c87a43d325a77b4b678ad9031a\h2-1.4.200.jar"
+```
+1. Crear una bbdd h2
+2. Crear una tabla persona y cargar datos
+
+---
+
+3. Conectar con cliente web
+```
+jdbc:{driver}:urlBD //:user:pass
+
+jdbc:h2:tcp://localhost/~/test
+user:sa
+pass:
+```
+
+> Crear un metodo como el de la guia y probarlo
+
+Notas:
+Es necesario incluir la libreria de h2 a mano en el classpath
 
 ---
 

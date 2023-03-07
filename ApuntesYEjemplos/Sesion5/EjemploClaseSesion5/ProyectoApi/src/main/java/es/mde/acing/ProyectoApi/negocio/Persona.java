@@ -46,7 +46,7 @@ public class Persona {
 
 	}
 
-	public Persona(String nombre, int edad, Date fechaNacimiento) {
+	public Persona(String nombre, int edad) {
 		super();
 		this.nombre = nombre;
 		this.edad = edad;
