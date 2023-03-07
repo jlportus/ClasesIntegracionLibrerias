@@ -22,7 +22,7 @@ import es.mde.acing.ProyectoLib.utils.ClasePruebaLibreria;
 public class ProyectoApiApplication {
 
 	public static void main(String[] args) {
-//		SpringApplication.run(ProyectoApiApplication.class, args);
+		SpringApplication.run(ProyectoApiApplication.class, args);
 		ClasePruebaLibreria.holaLibreria();
 
 //		String personaStringJson ="{ \"nombre\" : \"Manolo\", \"edad\" : 5 }";
