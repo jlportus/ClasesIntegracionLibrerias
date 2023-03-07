@@ -153,7 +153,10 @@ pass:
 > Crear un metodo como el de la guia y probarlo
 
 Notas:
-Es necesario incluir la libreria de h2 a mano en el classpath
+Es necesario incluir la libreria en el build.gradle de h2 con 
+```
+implementation 'com.h2database:h2:1.4.200'
+```
 
 ---
 
