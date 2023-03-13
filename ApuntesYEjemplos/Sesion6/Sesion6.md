@@ -6,12 +6,55 @@
 
 - [Uso de Servidores Web](#uso-de-servidores-web)
     - [INDICE](#indice)
-  - [Instalar un Tomcat](#instalar-un-tomcat)
   - [Construir una WebAPP](#construir-una-webapp)
+  - [Descargar e iniciar Tomcat por consola](#descargar-e-iniciar-tomcat-por-consola)
+  - [Instalar un Tomcat como servicio](#instalar-un-tomcat-como-servicio)
+
 
 ---
 
-## Instalar un Tomcat
+## Construir una WebAPP
+
+Desde el proyecto gradle ejecutar
+```
+gradle clean build
+```
+
+Ejecutar war por consola con jvm
+```
+cd build\libs
+java -jar .\ProyectoApi-0.0.1.war
+```
+Incluir frontEnd en el war
+```
+// En la carpeta src\main\webapp 
+// Incluir el proyecto front construido
+arranca --> index.html
+```
+
+---
+
+## Descargar e iniciar Tomcat por consola
+
+[Descargar tomcat de la pagina oficial](https://tomcat.apache.org/download-90.cgi)
+Copiar el war a la carpeta `/webapps/`
+
+Ejecutar
+```
+/bin/startup.sh
+
+/bin/shutdown.sh
+
+-> http://localhost:8080/{nombreDelWar}/index.html
+```
+
+Notas:
+1. modificar el conf/users.xml para incluir el usuario web 
+2. modificar el conf/server.xml para modificar el puerto de servicio 
+
+---
+
+## Instalar un Tomcat como servicio
 
 Puede instalar el servidor Tomcat en Ubuntu siguiendo estos pasos:
 
@@ -48,23 +91,3 @@ sudo systemctl restart tomcat9
 ```
 Ahora su servidor Tomcat está instalado y en ejecución en su sistema Ubuntu. Puede acceder al servidor a través del navegador web en http://localhost:80/.
 
----
-
-## Construir una WebAPP
-
-Desde el proyecto gradle ejecutar
-```
-gradle clean build
-```
-
-Ejecutar war por consola con jvm
-```
-cd build\libs
-java -jar .\ProyectoApi-0.0.1.war
-```
-Incluir frontEnd en el war
-```
-// En la carpeta src\main\webapp 
-// Incluir el proyecto front construido
-arranca --> index.html
-```
