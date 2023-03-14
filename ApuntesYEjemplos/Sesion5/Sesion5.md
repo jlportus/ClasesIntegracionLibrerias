@@ -152,8 +152,12 @@ En la **LIB**reria
 ```
 id 'java-library'
 ```
+3. Debe haber una release de la libreria
+4. Jitpack [funciona con java 8](https://docs.jitpack.io/building/#java-version)
 
-1. Incluir la libreria en la API --> Ir a dependencias y añadir linea 
+---
+
+5. Incluir la libreria en la API --> Ir a dependencias y añadir linea 
 ```
 implementation 'Grupo:artefacto:Versión'
 // implementation 'com.github.usuarioPepe:repoLibreria:Tag'

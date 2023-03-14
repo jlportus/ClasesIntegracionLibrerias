@@ -15,7 +15,8 @@ Notas: https://web.institutomilitar.com/librerias.html
     - [Fechas](#fechas)
   - [JDBC](#jdbc)
     - [Ejemplo de conexion](#ejemplo-de-conexion)
-  - [APACHE HTTP](#apache-http)
+  - [Junit](#junit)
+  - [Mockito](#mockito)
 - [Fin de la presentacion](#fin-de-la-presentacion)
 
 ---
@@ -160,12 +161,25 @@ implementation 'com.h2database:h2:1.4.200'
 
 ---
 
-## APACHE HTTP
+## Junit
 
-https://en.wikipedia.org/wiki/Jakarta_RESTful_Web_Services
+https://junit.org/junit5/docs/current/user-guide/#overview
 
-https://www.tutorialspoint.com/apache_httpclient/index.htm
-https://mkyong.com/webservices/jax-rs/restful-java-client-with-apache-httpclient/
+- puntos 1 y 2
+
+https://www.baeldung.com/junit-5
+
+https://www.baeldung.com/junit-5-test-annotation
+
+https://www.baeldung.com/junit-assertions
+
+---
+
+## Mockito
+
+https://www.baeldung.com/mockito-mock-methods
+
+https://www.baeldung.com/mockito-behavior
 
 ---
 

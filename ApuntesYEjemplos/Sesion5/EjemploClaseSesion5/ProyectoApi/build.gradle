@@ -22,7 +22,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	implementation 'com.github.jlportus:ProyectoLib:c7bb35c'
+	implementation 'com.github.jlportus:ProyectoLib:97f2d63'
 	//implementation project(':ProyectoLib')
 	
 	// https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core

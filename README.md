@@ -49,14 +49,14 @@ Resultados de aprendizaje:
 
 | Sesion                                        | Contenido                                    | Objetivo                                                                                                                                           |
 | --------------------------------------------- | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <a href="./index.html">Sesion 0</a>         | Presentacion e introduccion de la asignatura |                                                                                                                                                    |
+| <a href="./index.html">Sesion 0</a>           | Presentacion e introduccion de la asignatura |                                                                                                                                                    |
 | <a href="./sesion1.html">Sesion 1</a>         | Conceptos generales de Librerías             | Justificacion del uso de Librerías. <br/> Describir que es una librería<br/>repositorios<br/> gestores de dependencias<br/> Librería VS Framework  |
 | <a href="./sesion2.html">Sesion 2</a>         | JAVA - HolaLibrería                          | implementar una librería con java, generarla y emplearla                                                                                           |
 | <a href="./sesion3.html">Sesion 3</a>         | Gradle/Maven - repositorios                  | Gestion de dependencias con Gradle y Maven. <br/>Tipos de inclusion<br/> repositorios de librerías<br/> Busqueda de librerías<br/> licenciamientos |
 | <a href="./sesion4.html">Sesion 4</a>         | Generacion de una librería con gestor        | Implementacion y generacion de una libreira usando mvn o gradle                                                                                    |
 | <a href="./sesion5.html">Sesion 5</a>         | Trabajando con librerías en local            | Usar una librería con dos proyectos en local (Librería-negocio <> API)<br/> arquitectura de capas                                                  |
 | <a href="./sesion6.html">Sesion 6</a>         | Generacion war - Servidor Web (Tomcat)       |                                                                                                                                                    |
-| <a href="./sesion7-8-9.html">Sesion 7-8-9</a> | Librerías Utiles de Backend                  | Jackson<br/> JDBC<br/> Apache HTTP                                                                                                                 |
+| <a href="./sesion7-8-9.html">Sesion 7-8-9</a> | Librerías Utiles de Backend                  | Jackson<br/> JDBC<br/> Junit&Mockito                                                                                                               |
 
 ---
 
