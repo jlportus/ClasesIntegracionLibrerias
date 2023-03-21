@@ -56,6 +56,11 @@ Prerrequisitos:
 - Están en local (clonados o generados).
 - Ambos Proyectos deberian tener su propio **GIT**
 
+>Nota:
+>Las versiones de Spring  3+ generan por defecto proyectos con java 17+
+
+>**JITPACK** compila por defecto solo con java 1.8 --> usar SpringBoot 2.7+ y java 1.8 (al menos en la libreria)
+
 ---
 
 1. El `proyecto-LIBreria` esta en la misma carpeta donde está mi `proyecto-API` _(en carpetas hermanas)_
@@ -153,7 +158,8 @@ En la **LIB**reria
 id 'java-library'
 ```
 3. Debe haber una release de la libreria
-4. Jitpack [funciona con java 8](https://docs.jitpack.io/building/#java-version)
+
+> Jitpack [funciona por defecto con java 8](https://docs.jitpack.io/building/#java-version)
 
 ---
 
