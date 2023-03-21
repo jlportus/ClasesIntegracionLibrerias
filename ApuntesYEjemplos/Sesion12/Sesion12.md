@@ -7,7 +7,10 @@
     - [INDICE](#indice)
   - [Node](#node)
   - [NPM](#npm)
-  - [Instalar un Tomcat como servicio](#instalar-un-tomcat-como-servicio)
+  - [Estructura de proyectos Node](#estructura-de-proyectos-node)
+  - [Scripts de Node](#scripts-de-node)
+  - [Repositorio NPM](#repositorio-npm)
+  - [Librerias Utiles](#librerias-utiles)
 
 
 ---
@@ -31,47 +34,71 @@ https://nodejs.org/en/download
 
 **Node Package Manager** es el gestor de paquetes (dependencias) por defecto de node
 
-Usa el archivo [package.json](https://github.com/jlportus/ClasesIntegracionLibrerias/tree/main/ApuntesYEjemplos/Sesion12/vue-project/package.json)
+Usa el archivo [package.json](https://github.com/jlportus/ClasesIntegracionLibrerias/tree/main/ApuntesYEjemplos/Sesion12/vue-project/package.json) para declarar las dependencias del proyecto
+
+>Crear un proyecto vue con la cli de vue
+
+```
+cd /mi_proyecto/
+# instalar las dependencias
+npm install
+
+# Instalar dependencia y salvar en package.json
+npm install <package-name>@<version> --save 
+```
 
 Notas:
 Crear un proyecto con vue https://vuejs.org/guide/quick-start.html#creating-a-vue-application
 
 ---
 
-## Instalar un Tomcat como servicio
-
-Puede instalar el servidor Tomcat en Ubuntu siguiendo estos pasos:
-
-Abra una terminal en su sistema Ubuntu.
-
-Actualice la lista de paquetes apt usando el siguiente comando:
+## Estructura de proyectos Node
 
 ```
-sudo apt update
-```
-Instale el servidor Tomcat con el siguiente comando:
-```
-sudo apt install tomcat9
-```
+# declaracion de depencencias
+package.json
 
----
+# resolucion de dependencias (despues de npm install)
+package-lock.json
 
-Una vez que la instalación esté completa, el servicio Tomcat se iniciará automáticamente. Para asegurarse de que Tomcat se esté ejecutando, puede usar el siguiente comando:
+# las dependencias en el proyecto
+./node_modules
 
-```
-sudo systemctl status tomcat9
-```
-Puede ajustar la configuración de Tomcat en el archivo /etc/tomcat9/server.xml. Por ejemplo, puede cambiar el puerto predeterminado de 8080 a 80 para permitir el acceso a través del navegador utilizando el siguiente comando:
-
-```
-sudo sed -i 's/Connector port="8080"/Connector port="80"/g' /etc/tomcat9/server.xml
+index.html
 ```
 
 ---
 
-Reinicie el servicio Tomcat para que se tomen en cuenta los cambios de configuración:
-```
-sudo systemctl restart tomcat9
-```
-Ahora su servidor Tomcat está instalado y en ejecución en su sistema Ubuntu. Puede acceder al servidor a través del navegador web en http://localhost:80/.
+## Scripts de Node
 
+```
+# Ejecutar un script declarado en package.json
+npm run <task-name>
+
+npm run dev
+
+# construir una app --> /dist/[...]
+npm run build
++ index.html
+    -+ assets/scripts.js
+    -+ assets/estilos.css
+```
+
+Notas:
+El contenido de la carpeta /dist seria la aplicacion web completa "compilada" con todos los recursos (html+css+js)
+
+---
+
+## Repositorio NPM
+
+[https://www.npmjs.com/](https://www.npmjs.com/)
+
+---
+
+## Librerias Utiles
+
+[Electron](https://www.npmjs.com/package/electron)
+
+[chart.js](https://www.npmjs.com/package/chart.js)
+
+[gridjs](https://gridjs.io/)
