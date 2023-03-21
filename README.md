@@ -62,16 +62,16 @@ Resultados de aprendizaje:
 
 ### Temario y planificacion (2 de 2)
 
-| Sesion                                        | Contenido                            | Objetivo                                                                                     |
-| --------------------------------------------- | ------------------------------------ | -------------------------------------------------------------------------------------------- |
-| <a href="./sesion10-11.html">Sesion 10-11</a> | JavaScript - HolaLibrería            | implementar una librería con javaScript, generarla y emplearla                               |
-| <a href="./sesion12.html">Sesion 12</a>       | node-npm - repositorios              | Gestion de dependencias con node-npm<br/> Tipos de inclusion<br/> repositorios de librerías> |
-| <a href="./sesion13.html">Sesion 13</a>       | Librerías Utiles de Frontend         | Electron <br/>ChartJs<br/>ReactTables                                                        |
-| <a href="./sesion14.html">Sesion 14</a>       | Generacion web (Tomcat)              |                                                                                              |
-| <a href="./sesion15.html">Sesion 15</a>       | Generacion documentacion             | Generar @javaDocs                                                                            |
-| <a href="./sesion16-17.html">Sesion 16-17</a> | Ejemplo de uso proyecto fin de curso |                                                                                              |
-| <a href="./sesion18.html">Sesion 18</a>       | Resolucion de dudas                  |                                                                                              |
-| <a href="./sesion19-20.html">Sesion 19-20</a> | Ejercicio Practico                   | Ejercicio tutorizado para la puesta en practica de los conocimientos                         |
+| Sesion                                  | Contenido                            | Objetivo                                                                                     |
+| --------------------------------------- | ------------------------------------ | -------------------------------------------------------------------------------------------- |
+| Sesion 10-11                            | JavaScript - HolaLibrería            | implementar una librería con javaScript, generarla y emplearla                               |
+| <a href="./sesion12.html">Sesion 12</a> | node-npm - repositorios              | Gestion de dependencias con node-npm<br/> Tipos de inclusion<br/> repositorios de librerías> |
+| Sesion 13                               | Librerías Utiles de Frontend         | Electron <br/>ChartJs<br/>ReactTables<br/>Gridjs                                             |
+| Sesion 14                               | Generacion web (Tomcat)              |                                                                                              |
+| <a href="./sesion15.html">Sesion 15</a> | Generacion documentacion             | Generar @javaDocs                                                                            |
+| Sesion 16-17                            | Ejemplo de uso proyecto fin de curso |                                                                                              |
+| Sesion 18                               | Resolucion de dudas                  |                                                                                              |
+| Sesion 19-20                            | Ejercicio Practico                   | Ejercicio tutorizado para la puesta en practica de los conocimientos                         |
 
 ---
 

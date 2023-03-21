@@ -1,17 +1,19 @@
-# node-npm - repositorios
+# node-npm </br>Repositorios js
+
 ---
 
 ### INDICE
 
-- [node-npm - repositorios](#node-npm---repositorios)
+- [node-npm Repositorios js](#node-npm-repositorios-js)
     - [INDICE](#indice)
   - [Node](#node)
   - [NPM](#npm)
+  - [Ejemplo de proyecto node](#ejemplo-de-proyecto-node)
   - [Estructura de proyectos Node](#estructura-de-proyectos-node)
   - [Scripts de Node](#scripts-de-node)
   - [Repositorio NPM](#repositorio-npm)
   - [Librerias Utiles](#librerias-utiles)
-
+- [Fin de la presentacion](#fin-de-la-presentacion)
 
 ---
 
@@ -22,6 +24,7 @@
 Permite desarrollar la parte de servidor y de cliente de apps para navegadores
 
 Notas:
+
 https://nodejs.dev/en/learn/introduction-to-nodejs/
 
 Instalacion:
@@ -31,10 +34,13 @@ https://nodejs.org/en/download
 
 ## NPM
 
-
-**Node Package Manager** es el gestor de paquetes (dependencias) por defecto de node
+**Node Package Manager** es el gestor de paquetes (dependencias) por defecto de **_NODE_**
 
 Usa el archivo [package.json](https://github.com/jlportus/ClasesIntegracionLibrerias/tree/main/ApuntesYEjemplos/Sesion12/vue-project/package.json) para declarar las dependencias del proyecto
+
+---
+
+## Ejemplo de proyecto node
 
 >Crear un proyecto vue con la cli de vue
 
@@ -48,6 +54,7 @@ npm install <package-name>@<version> --save
 ```
 
 Notas:
+
 Crear un proyecto con vue https://vuejs.org/guide/quick-start.html#creating-a-vue-application
 
 ---
@@ -85,7 +92,7 @@ npm run build
 ```
 
 Notas:
-El contenido de la carpeta /dist seria la aplicacion web completa "compilada" con todos los recursos (html+css+js)
+El contenido de la carpeta /dist contiene la aplicacion web completa _"compilada"_ con todos los recursos (html+css+js)
 
 ---
 
@@ -102,3 +109,10 @@ El contenido de la carpeta /dist seria la aplicacion web completa "compilada" co
 [chart.js](https://www.npmjs.com/package/chart.js)
 
 [gridjs](https://gridjs.io/)
+
+---
+
+# Fin de la presentacion 
+<a href="./index.html#/6">Ir al indice de Presentaciones</a>
+
+<a href="./sesion15.html">Ir a la Sesion 15</a>
