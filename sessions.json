@@ -1,0 +1,1519 @@
+{
+  "generatedAt": "2026-02-01T07:33:41.208Z",
+  "sessions": [
+    {
+      "id": "readme",
+      "title": "Integracion de Librerías",
+      "path": "README.md",
+      "index": 0,
+      "slides": [
+        {
+          "h": 0,
+          "v": 0,
+          "anchors": [
+            "integracion-de-librer-as"
+          ]
+        },
+        {
+          "h": 1,
+          "v": 0,
+          "anchors": [
+            "presentacion"
+          ]
+        },
+        {
+          "h": 2,
+          "v": 0,
+          "anchors": [
+            "marco-general-de-la-asignatura-curr-culo"
+          ]
+        },
+        {
+          "h": 3,
+          "v": 0,
+          "anchors": [
+            "competencias-generales"
+          ]
+        },
+        {
+          "h": 4,
+          "v": 0,
+          "anchors": [
+            "competencias-especificas"
+          ]
+        },
+        {
+          "h": 5,
+          "v": 0,
+          "anchors": [
+            "objetivo-de-la-asignatura"
+          ]
+        },
+        {
+          "h": 6,
+          "v": 0,
+          "anchors": [
+            "temario-y-planificacion-1-de-2"
+          ]
+        },
+        {
+          "h": 7,
+          "v": 0,
+          "anchors": [
+            "temario-y-planificacion-2-de-2"
+          ]
+        },
+        {
+          "h": 8,
+          "v": 0,
+          "anchors": [
+            "evaluacion"
+          ]
+        }
+      ],
+      "anchorMap": {
+        "integracion-de-librer-as": {
+          "h": 0,
+          "v": 0
+        },
+        "presentacion": {
+          "h": 1,
+          "v": 0
+        },
+        "marco-general-de-la-asignatura-curr-culo": {
+          "h": 2,
+          "v": 0
+        },
+        "competencias-generales": {
+          "h": 3,
+          "v": 0
+        },
+        "competencias-especificas": {
+          "h": 4,
+          "v": 0
+        },
+        "objetivo-de-la-asignatura": {
+          "h": 5,
+          "v": 0
+        },
+        "temario-y-planificacion-1-de-2": {
+          "h": 6,
+          "v": 0
+        },
+        "temario-y-planificacion-2-de-2": {
+          "h": 7,
+          "v": 0
+        },
+        "evaluacion": {
+          "h": 8,
+          "v": 0
+        }
+      }
+    },
+    {
+      "id": "sesion1",
+      "title": "Conceptos Generales de LibrerÍas",
+      "path": "ApuntesYEjemplos/Sesion1/Sesion1.md",
+      "index": 1,
+      "slides": [
+        {
+          "h": 0,
+          "v": 0,
+          "anchors": [
+            "conceptos-generales-de-librer-as"
+          ]
+        },
+        {
+          "h": 1,
+          "v": 0,
+          "anchors": [
+            "indice"
+          ]
+        },
+        {
+          "h": 2,
+          "v": 0,
+          "anchors": [
+            "librer-a"
+          ]
+        },
+        {
+          "h": 3,
+          "v": 0,
+          "anchors": [
+            "librer-a-vs-biblioteca"
+          ]
+        },
+        {
+          "h": 4,
+          "v": 0,
+          "anchors": [
+            "caracter-sticas-de-librer-as",
+            "caracter-sticas-de-librer-as-ii"
+          ]
+        },
+        {
+          "h": 5,
+          "v": 0,
+          "anchors": [
+            "uso-de-librer-a-vs-copy-paste"
+          ]
+        },
+        {
+          "h": 6,
+          "v": 0,
+          "anchors": [
+            "librer-a-vs-framework"
+          ]
+        },
+        {
+          "h": 7,
+          "v": 0,
+          "anchors": [
+            "repositorio"
+          ]
+        },
+        {
+          "h": 8,
+          "v": 0,
+          "anchors": [
+            "gestores-de-dependencias"
+          ]
+        },
+        {
+          "h": 9,
+          "v": 0,
+          "anchors": [
+            "fin-de-la-presentacion"
+          ]
+        }
+      ],
+      "anchorMap": {
+        "conceptos-generales-de-librer-as": {
+          "h": 0,
+          "v": 0
+        },
+        "indice": {
+          "h": 1,
+          "v": 0
+        },
+        "librer-a": {
+          "h": 2,
+          "v": 0
+        },
+        "librer-a-vs-biblioteca": {
+          "h": 3,
+          "v": 0
+        },
+        "caracter-sticas-de-librer-as": {
+          "h": 4,
+          "v": 0
+        },
+        "caracter-sticas-de-librer-as-ii": {
+          "h": 4,
+          "v": 0
+        },
+        "uso-de-librer-a-vs-copy-paste": {
+          "h": 5,
+          "v": 0
+        },
+        "librer-a-vs-framework": {
+          "h": 6,
+          "v": 0
+        },
+        "repositorio": {
+          "h": 7,
+          "v": 0
+        },
+        "gestores-de-dependencias": {
+          "h": 8,
+          "v": 0
+        },
+        "fin-de-la-presentacion": {
+          "h": 9,
+          "v": 0
+        }
+      }
+    },
+    {
+      "id": "sesion12",
+      "title": "node-npm </br>Repositorios js",
+      "path": "ApuntesYEjemplos/Sesion12/Sesion12.md",
+      "index": 2,
+      "slides": [
+        {
+          "h": 0,
+          "v": 0,
+          "anchors": [
+            "node-npm-br-repositorios-js"
+          ]
+        },
+        {
+          "h": 1,
+          "v": 0,
+          "anchors": [
+            "indice"
+          ]
+        },
+        {
+          "h": 2,
+          "v": 0,
+          "anchors": [
+            "node"
+          ]
+        },
+        {
+          "h": 3,
+          "v": 0,
+          "anchors": [
+            "npm"
+          ]
+        },
+        {
+          "h": 4,
+          "v": 0,
+          "anchors": [
+            "ejemplo-de-proyecto-node",
+            "instalar-las-dependencias",
+            "instalar-dependencia-y-salvar-en-package-json"
+          ]
+        },
+        {
+          "h": 5,
+          "v": 0,
+          "anchors": [
+            "estructura-de-proyectos-node",
+            "declaracion-de-depencencias",
+            "resolucion-de-dependencias-despues-de-npm-install",
+            "las-dependencias-en-el-proyecto"
+          ]
+        },
+        {
+          "h": 6,
+          "v": 0,
+          "anchors": [
+            "scripts-de-node",
+            "ejecutar-un-script-declarado-en-package-json",
+            "construir-una-app-dist"
+          ]
+        },
+        {
+          "h": 7,
+          "v": 0,
+          "anchors": [
+            "repositorio-npm"
+          ]
+        },
+        {
+          "h": 8,
+          "v": 0,
+          "anchors": [
+            "librerias-utiles"
+          ]
+        },
+        {
+          "h": 9,
+          "v": 0,
+          "anchors": [
+            "fin-de-la-presentacion"
+          ]
+        }
+      ],
+      "anchorMap": {
+        "node-npm-br-repositorios-js": {
+          "h": 0,
+          "v": 0
+        },
+        "indice": {
+          "h": 1,
+          "v": 0
+        },
+        "node": {
+          "h": 2,
+          "v": 0
+        },
+        "npm": {
+          "h": 3,
+          "v": 0
+        },
+        "ejemplo-de-proyecto-node": {
+          "h": 4,
+          "v": 0
+        },
+        "instalar-las-dependencias": {
+          "h": 4,
+          "v": 0
+        },
+        "instalar-dependencia-y-salvar-en-package-json": {
+          "h": 4,
+          "v": 0
+        },
+        "estructura-de-proyectos-node": {
+          "h": 5,
+          "v": 0
+        },
+        "declaracion-de-depencencias": {
+          "h": 5,
+          "v": 0
+        },
+        "resolucion-de-dependencias-despues-de-npm-install": {
+          "h": 5,
+          "v": 0
+        },
+        "las-dependencias-en-el-proyecto": {
+          "h": 5,
+          "v": 0
+        },
+        "scripts-de-node": {
+          "h": 6,
+          "v": 0
+        },
+        "ejecutar-un-script-declarado-en-package-json": {
+          "h": 6,
+          "v": 0
+        },
+        "construir-una-app-dist": {
+          "h": 6,
+          "v": 0
+        },
+        "repositorio-npm": {
+          "h": 7,
+          "v": 0
+        },
+        "librerias-utiles": {
+          "h": 8,
+          "v": 0
+        },
+        "fin-de-la-presentacion": {
+          "h": 9,
+          "v": 0
+        }
+      }
+    },
+    {
+      "id": "readme",
+      "title": "vue-project",
+      "path": "ApuntesYEjemplos/Sesion12/vue-project/README.md",
+      "index": 3,
+      "slides": [
+        {
+          "h": 0,
+          "v": 0,
+          "anchors": [
+            "vue-project",
+            "recommended-ide-setup",
+            "type-support-for-vue-imports-in-ts",
+            "customize-configuration",
+            "project-setup",
+            "compile-and-hot-reload-for-development",
+            "type-check-compile-and-minify-for-production",
+            "run-unit-tests-with-vitest-https-vitest-dev",
+            "run-end-to-end-tests-with-cypress-https-www-cypress-io",
+            "lint-with-eslint-https-eslint-org"
+          ]
+        }
+      ],
+      "anchorMap": {
+        "vue-project": {
+          "h": 0,
+          "v": 0
+        },
+        "recommended-ide-setup": {
+          "h": 0,
+          "v": 0
+        },
+        "type-support-for-vue-imports-in-ts": {
+          "h": 0,
+          "v": 0
+        },
+        "customize-configuration": {
+          "h": 0,
+          "v": 0
+        },
+        "project-setup": {
+          "h": 0,
+          "v": 0
+        },
+        "compile-and-hot-reload-for-development": {
+          "h": 0,
+          "v": 0
+        },
+        "type-check-compile-and-minify-for-production": {
+          "h": 0,
+          "v": 0
+        },
+        "run-unit-tests-with-vitest-https-vitest-dev": {
+          "h": 0,
+          "v": 0
+        },
+        "run-end-to-end-tests-with-cypress-https-www-cypress-io": {
+          "h": 0,
+          "v": 0
+        },
+        "lint-with-eslint-https-eslint-org": {
+          "h": 0,
+          "v": 0
+        }
+      }
+    },
+    {
+      "id": "sesion16-17",
+      "title": "Ejercicios de librerias de Backend",
+      "path": "ApuntesYEjemplos/Sesion16-17/Sesion16-17.md",
+      "index": 4,
+      "slides": [
+        {
+          "h": 0,
+          "v": 0,
+          "anchors": [
+            "ejercicios-de-librerias-de-backend"
+          ]
+        },
+        {
+          "h": 1,
+          "v": 0,
+          "anchors": [
+            "indice"
+          ]
+        },
+        {
+          "h": 2,
+          "v": 0,
+          "anchors": [
+            "instrucciones-generales"
+          ]
+        },
+        {
+          "h": 3,
+          "v": 0,
+          "anchors": [
+            "ejercicios"
+          ]
+        },
+        {
+          "h": 4,
+          "v": 0,
+          "anchors": [
+            "proyecto-libreria-api"
+          ]
+        },
+        {
+          "h": 5,
+          "v": 0,
+          "anchors": [
+            "generacion-de-un-war"
+          ]
+        },
+        {
+          "h": 6,
+          "v": 0,
+          "anchors": [
+            "usando-librerias"
+          ]
+        },
+        {
+          "h": 7,
+          "v": 0,
+          "anchors": []
+        },
+        {
+          "h": 8,
+          "v": 0,
+          "anchors": []
+        },
+        {
+          "h": 9,
+          "v": 0,
+          "anchors": []
+        },
+        {
+          "h": 10,
+          "v": 0,
+          "anchors": []
+        },
+        {
+          "h": 11,
+          "v": 0,
+          "anchors": [
+            "haga-el-ultimo-commit-suba-sus-cambios-y-haga-el-pull-request"
+          ]
+        }
+      ],
+      "anchorMap": {
+        "ejercicios-de-librerias-de-backend": {
+          "h": 0,
+          "v": 0
+        },
+        "indice": {
+          "h": 1,
+          "v": 0
+        },
+        "instrucciones-generales": {
+          "h": 2,
+          "v": 0
+        },
+        "ejercicios": {
+          "h": 3,
+          "v": 0
+        },
+        "proyecto-libreria-api": {
+          "h": 4,
+          "v": 0
+        },
+        "generacion-de-un-war": {
+          "h": 5,
+          "v": 0
+        },
+        "usando-librerias": {
+          "h": 6,
+          "v": 0
+        },
+        "haga-el-ultimo-commit-suba-sus-cambios-y-haga-el-pull-request": {
+          "h": 11,
+          "v": 0
+        }
+      }
+    },
+    {
+      "id": "enunciado-ejerciciosesion2",
+      "title": "Ejercicio Sesion 2",
+      "path": "ApuntesYEjemplos/Sesion2/EjercicioSesion2/Enunciado ejercicioSesion2.md",
+      "index": 5,
+      "slides": [
+        {
+          "h": 0,
+          "v": 0,
+          "anchors": [
+            "ejercicio-sesion-2"
+          ]
+        }
+      ],
+      "anchorMap": {
+        "ejercicio-sesion-2": {
+          "h": 0,
+          "v": 0
+        }
+      }
+    },
+    {
+      "id": "sesion2",
+      "title": "JAVA - HolaLibrería",
+      "path": "ApuntesYEjemplos/Sesion2/Sesion2.md",
+      "index": 6,
+      "slides": [
+        {
+          "h": 0,
+          "v": 0,
+          "anchors": [
+            "java-holalibrer-a"
+          ]
+        },
+        {
+          "h": 1,
+          "v": 0,
+          "anchors": [
+            "indice"
+          ]
+        },
+        {
+          "h": 2,
+          "v": 0,
+          "anchors": [
+            "java-holalibrer-a"
+          ]
+        },
+        {
+          "h": 3,
+          "v": 0,
+          "anchors": [
+            "conceptos-jar"
+          ]
+        },
+        {
+          "h": 4,
+          "v": 0,
+          "anchors": [
+            "conceptos-war"
+          ]
+        },
+        {
+          "h": 5,
+          "v": 0,
+          "anchors": [
+            "procedimiento-para-generar-un-jar"
+          ]
+        },
+        {
+          "h": 6,
+          "v": 0,
+          "anchors": [
+            "fin-de-la-presentacion"
+          ]
+        }
+      ],
+      "anchorMap": {
+        "java-holalibrer-a": {
+          "h": 0,
+          "v": 0
+        },
+        "indice": {
+          "h": 1,
+          "v": 0
+        },
+        "conceptos-jar": {
+          "h": 3,
+          "v": 0
+        },
+        "conceptos-war": {
+          "h": 4,
+          "v": 0
+        },
+        "procedimiento-para-generar-un-jar": {
+          "h": 5,
+          "v": 0
+        },
+        "fin-de-la-presentacion": {
+          "h": 6,
+          "v": 0
+        }
+      }
+    },
+    {
+      "id": "sesion3",
+      "title": "Repositorios",
+      "path": "ApuntesYEjemplos/Sesion3/Sesion3.md",
+      "index": 7,
+      "slides": [
+        {
+          "h": 0,
+          "v": 0,
+          "anchors": [
+            "repositorios",
+            "gradle-maven"
+          ]
+        },
+        {
+          "h": 1,
+          "v": 0,
+          "anchors": [
+            "indice"
+          ]
+        },
+        {
+          "h": 2,
+          "v": 0,
+          "anchors": [
+            "gradle-maven-repositorios"
+          ]
+        },
+        {
+          "h": 3,
+          "v": 0,
+          "anchors": [
+            "conceptos-repositorios",
+            "repositorios-privados"
+          ]
+        },
+        {
+          "h": 4,
+          "v": 0,
+          "anchors": [
+            "conceptos-licenciamiento"
+          ]
+        },
+        {
+          "h": 5,
+          "v": 0,
+          "anchors": [
+            "maven"
+          ]
+        },
+        {
+          "h": 6,
+          "v": 0,
+          "anchors": [
+            "ejemplo-pom-xml"
+          ]
+        },
+        {
+          "h": 7,
+          "v": 0,
+          "anchors": [
+            "comandos-maven"
+          ]
+        },
+        {
+          "h": 8,
+          "v": 0,
+          "anchors": [
+            "fases-maven"
+          ]
+        },
+        {
+          "h": 9,
+          "v": 0,
+          "anchors": [
+            "conceptos-gradle"
+          ]
+        },
+        {
+          "h": 10,
+          "v": 0,
+          "anchors": [
+            "conceptos-gradle-ii"
+          ]
+        },
+        {
+          "h": 11,
+          "v": 0,
+          "anchors": [
+            "ejemplo-build-gradle"
+          ]
+        },
+        {
+          "h": 12,
+          "v": 0,
+          "anchors": [
+            "instalacion-gradle"
+          ]
+        },
+        {
+          "h": 13,
+          "v": 0,
+          "anchors": [
+            "comandos-gradle"
+          ]
+        },
+        {
+          "h": 14,
+          "v": 0,
+          "anchors": [
+            "crear-un-proyecto-gradle"
+          ]
+        },
+        {
+          "h": 15,
+          "v": 0,
+          "anchors": [
+            "crear-proyecto-gradle-por-consola",
+            "comporbar-version-de-gradle",
+            "ejecutar",
+            "seguir-las-instrucciones-de-la-interfaz-de-consola"
+          ]
+        },
+        {
+          "h": 16,
+          "v": 0,
+          "anchors": [
+            "declaracion-de-dependencias-en-gradle"
+          ]
+        },
+        {
+          "h": 17,
+          "v": 0,
+          "anchors": [
+            "declarar-una-libreria-de-un-repositorio-proyecto-de-github"
+          ]
+        },
+        {
+          "h": 18,
+          "v": 0,
+          "anchors": [
+            "tipos-de-inclusion-de-librerias-con-gradle"
+          ]
+        },
+        {
+          "h": 19,
+          "v": 0,
+          "anchors": [
+            "api-vs-dependencia"
+          ]
+        },
+        {
+          "h": 20,
+          "v": 0,
+          "anchors": [
+            "precedencia-y-exportacion-de-dependencias"
+          ]
+        },
+        {
+          "h": 21,
+          "v": 0,
+          "anchors": [
+            "inclusi-n-de-una-libreria-a-trav-s-de-repositorios"
+          ]
+        },
+        {
+          "h": 22,
+          "v": 0,
+          "anchors": [
+            "inclusi-n-e-una-libreria-local"
+          ]
+        },
+        {
+          "h": 23,
+          "v": 0,
+          "anchors": [
+            "fin-de-la-presentacion"
+          ]
+        },
+        {
+          "h": 24,
+          "v": 0,
+          "anchors": []
+        }
+      ],
+      "anchorMap": {
+        "repositorios": {
+          "h": 0,
+          "v": 0
+        },
+        "gradle-maven": {
+          "h": 0,
+          "v": 0
+        },
+        "indice": {
+          "h": 1,
+          "v": 0
+        },
+        "gradle-maven-repositorios": {
+          "h": 2,
+          "v": 0
+        },
+        "conceptos-repositorios": {
+          "h": 3,
+          "v": 0
+        },
+        "repositorios-privados": {
+          "h": 3,
+          "v": 0
+        },
+        "conceptos-licenciamiento": {
+          "h": 4,
+          "v": 0
+        },
+        "maven": {
+          "h": 5,
+          "v": 0
+        },
+        "ejemplo-pom-xml": {
+          "h": 6,
+          "v": 0
+        },
+        "comandos-maven": {
+          "h": 7,
+          "v": 0
+        },
+        "fases-maven": {
+          "h": 8,
+          "v": 0
+        },
+        "conceptos-gradle": {
+          "h": 9,
+          "v": 0
+        },
+        "conceptos-gradle-ii": {
+          "h": 10,
+          "v": 0
+        },
+        "ejemplo-build-gradle": {
+          "h": 11,
+          "v": 0
+        },
+        "instalacion-gradle": {
+          "h": 12,
+          "v": 0
+        },
+        "comandos-gradle": {
+          "h": 13,
+          "v": 0
+        },
+        "crear-un-proyecto-gradle": {
+          "h": 14,
+          "v": 0
+        },
+        "crear-proyecto-gradle-por-consola": {
+          "h": 15,
+          "v": 0
+        },
+        "comporbar-version-de-gradle": {
+          "h": 15,
+          "v": 0
+        },
+        "ejecutar": {
+          "h": 15,
+          "v": 0
+        },
+        "seguir-las-instrucciones-de-la-interfaz-de-consola": {
+          "h": 15,
+          "v": 0
+        },
+        "declaracion-de-dependencias-en-gradle": {
+          "h": 16,
+          "v": 0
+        },
+        "declarar-una-libreria-de-un-repositorio-proyecto-de-github": {
+          "h": 17,
+          "v": 0
+        },
+        "tipos-de-inclusion-de-librerias-con-gradle": {
+          "h": 18,
+          "v": 0
+        },
+        "api-vs-dependencia": {
+          "h": 19,
+          "v": 0
+        },
+        "precedencia-y-exportacion-de-dependencias": {
+          "h": 20,
+          "v": 0
+        },
+        "inclusi-n-de-una-libreria-a-trav-s-de-repositorios": {
+          "h": 21,
+          "v": 0
+        },
+        "inclusi-n-e-una-libreria-local": {
+          "h": 22,
+          "v": 0
+        },
+        "fin-de-la-presentacion": {
+          "h": 23,
+          "v": 0
+        }
+      }
+    },
+    {
+      "id": "enunciado-ejerciciosesion4",
+      "title": "Ejercicio Sesion 4",
+      "path": "ApuntesYEjemplos/Sesion4/EjercicioSesion4/Enunciado ejercicioSesion4.md",
+      "index": 8,
+      "slides": [
+        {
+          "h": 0,
+          "v": 0,
+          "anchors": [
+            "ejercicio-sesion-4"
+          ]
+        },
+        {
+          "h": 0,
+          "v": 1,
+          "anchors": []
+        },
+        {
+          "h": 0,
+          "v": 2,
+          "anchors": []
+        },
+        {
+          "h": 0,
+          "v": 3,
+          "anchors": []
+        },
+        {
+          "h": 0,
+          "v": 4,
+          "anchors": []
+        },
+        {
+          "h": 1,
+          "v": 0,
+          "anchors": [
+            "fin-de-la-presentacion"
+          ]
+        }
+      ],
+      "anchorMap": {
+        "ejercicio-sesion-4": {
+          "h": 0,
+          "v": 0
+        },
+        "fin-de-la-presentacion": {
+          "h": 1,
+          "v": 0
+        }
+      }
+    },
+    {
+      "id": "sesion4",
+      "title": "Repositorios",
+      "path": "ApuntesYEjemplos/Sesion4/Sesion4.md",
+      "index": 9,
+      "slides": [
+        {
+          "h": 0,
+          "v": 0,
+          "anchors": [
+            "repositorios",
+            "generacion-de-una-librer-a-con-gestor"
+          ]
+        },
+        {
+          "h": 1,
+          "v": 0,
+          "anchors": [
+            "indice"
+          ]
+        },
+        {
+          "h": 2,
+          "v": 0,
+          "anchors": [
+            "gradle-maven-repositorios"
+          ]
+        }
+      ],
+      "anchorMap": {
+        "repositorios": {
+          "h": 0,
+          "v": 0
+        },
+        "generacion-de-una-librer-a-con-gestor": {
+          "h": 0,
+          "v": 0
+        },
+        "indice": {
+          "h": 1,
+          "v": 0
+        },
+        "gradle-maven-repositorios": {
+          "h": 2,
+          "v": 0
+        }
+      }
+    },
+    {
+      "id": "leame",
+      "title": "Leame",
+      "path": "ApuntesYEjemplos/Sesion5/EjemploClaseSesion5/Leame.md",
+      "index": 10,
+      "slides": [
+        {
+          "h": 0,
+          "v": 0,
+          "anchors": []
+        }
+      ],
+      "anchorMap": {}
+    },
+    {
+      "id": "enunciado-ejerciciosesion5",
+      "title": "Ejercicio Sesion 5",
+      "path": "ApuntesYEjemplos/Sesion5/EjercicioSesion5/Enunciado ejercicioSesion5.md",
+      "index": 11,
+      "slides": [
+        {
+          "h": 0,
+          "v": 0,
+          "anchors": [
+            "ejercicio-sesion-5"
+          ]
+        },
+        {
+          "h": 0,
+          "v": 1,
+          "anchors": [
+            "trabajando-en-local"
+          ]
+        },
+        {
+          "h": 0,
+          "v": 2,
+          "anchors": [
+            "trabajando-en-cloud"
+          ]
+        },
+        {
+          "h": 1,
+          "v": 0,
+          "anchors": [
+            "fin-de-la-presentacion"
+          ]
+        }
+      ],
+      "anchorMap": {
+        "ejercicio-sesion-5": {
+          "h": 0,
+          "v": 0
+        },
+        "trabajando-en-local": {
+          "h": 0,
+          "v": 1
+        },
+        "trabajando-en-cloud": {
+          "h": 0,
+          "v": 2
+        },
+        "fin-de-la-presentacion": {
+          "h": 1,
+          "v": 0
+        }
+      }
+    },
+    {
+      "id": "sesion5",
+      "title": "Trabajando con librerías en local",
+      "path": "ApuntesYEjemplos/Sesion5/Sesion5.md",
+      "index": 12,
+      "slides": [
+        {
+          "h": 0,
+          "v": 0,
+          "anchors": [
+            "trabajando-con-librer-as-en-local"
+          ]
+        },
+        {
+          "h": 1,
+          "v": 0,
+          "anchors": [
+            "indice"
+          ]
+        },
+        {
+          "h": 2,
+          "v": 0,
+          "anchors": [
+            "proyecto-api-libreria"
+          ]
+        },
+        {
+          "h": 3,
+          "v": 0,
+          "anchors": [
+            "integrando-librerias"
+          ]
+        },
+        {
+          "h": 4,
+          "v": 0,
+          "anchors": []
+        },
+        {
+          "h": 5,
+          "v": 0,
+          "anchors": [
+            "integrar-proyecto-local"
+          ]
+        },
+        {
+          "h": 6,
+          "v": 0,
+          "anchors": []
+        },
+        {
+          "h": 7,
+          "v": 0,
+          "anchors": []
+        },
+        {
+          "h": 8,
+          "v": 0,
+          "anchors": []
+        },
+        {
+          "h": 9,
+          "v": 0,
+          "anchors": [
+            "incluir-libreria-de-repo-publico-github"
+          ]
+        },
+        {
+          "h": 10,
+          "v": 0,
+          "anchors": []
+        },
+        {
+          "h": 11,
+          "v": 0,
+          "anchors": [
+            "incluir-libreria-de-repo-publico-github"
+          ]
+        },
+        {
+          "h": 12,
+          "v": 0,
+          "anchors": [
+            "incluir-libreria-de-repo-publico-github-ii"
+          ]
+        },
+        {
+          "h": 13,
+          "v": 0,
+          "anchors": []
+        }
+      ],
+      "anchorMap": {
+        "trabajando-con-librer-as-en-local": {
+          "h": 0,
+          "v": 0
+        },
+        "indice": {
+          "h": 1,
+          "v": 0
+        },
+        "proyecto-api-libreria": {
+          "h": 2,
+          "v": 0
+        },
+        "integrando-librerias": {
+          "h": 3,
+          "v": 0
+        },
+        "integrar-proyecto-local": {
+          "h": 5,
+          "v": 0
+        },
+        "incluir-libreria-de-repo-publico-github": {
+          "h": 9,
+          "v": 0
+        },
+        "incluir-libreria-de-repo-publico-github-ii": {
+          "h": 12,
+          "v": 0
+        }
+      }
+    },
+    {
+      "id": "sesion6",
+      "title": "Uso de Servidores Web",
+      "path": "ApuntesYEjemplos/Sesion6/Sesion6.md",
+      "index": 13,
+      "slides": [
+        {
+          "h": 0,
+          "v": 0,
+          "anchors": [
+            "uso-de-servidores-web"
+          ]
+        },
+        {
+          "h": 1,
+          "v": 0,
+          "anchors": [
+            "indice"
+          ]
+        },
+        {
+          "h": 2,
+          "v": 0,
+          "anchors": [
+            "construir-una-webapp"
+          ]
+        },
+        {
+          "h": 3,
+          "v": 0,
+          "anchors": [
+            "descargar-e-iniciar-tomcat-por-consola",
+            "instalar-un-tomcat-como-servicio"
+          ]
+        },
+        {
+          "h": 4,
+          "v": 0,
+          "anchors": [
+            "fin-de-la-presentacion"
+          ]
+        }
+      ],
+      "anchorMap": {
+        "uso-de-servidores-web": {
+          "h": 0,
+          "v": 0
+        },
+        "indice": {
+          "h": 1,
+          "v": 0
+        },
+        "construir-una-webapp": {
+          "h": 2,
+          "v": 0
+        },
+        "descargar-e-iniciar-tomcat-por-consola": {
+          "h": 3,
+          "v": 0
+        },
+        "instalar-un-tomcat-como-servicio": {
+          "h": 3,
+          "v": 0
+        },
+        "fin-de-la-presentacion": {
+          "h": 4,
+          "v": 0
+        }
+      }
+    },
+    {
+      "id": "leame",
+      "title": "Leame",
+      "path": "ApuntesYEjemplos/Sesion7-8-9/Leame.md",
+      "index": 14,
+      "slides": [
+        {
+          "h": 0,
+          "v": 0,
+          "anchors": []
+        }
+      ],
+      "anchorMap": {}
+    },
+    {
+      "id": "sesion7-8-9",
+      "title": "Librerías Utiles de Backend",
+      "path": "ApuntesYEjemplos/Sesion7-8-9/Sesion7-8-9.md",
+      "index": 15,
+      "slides": [
+        {
+          "h": 0,
+          "v": 0,
+          "anchors": [
+            "librer-as-utiles-de-backend"
+          ]
+        },
+        {
+          "h": 1,
+          "v": 0,
+          "anchors": [
+            "indice"
+          ]
+        },
+        {
+          "h": 2,
+          "v": 0,
+          "anchors": [
+            "jackson"
+          ]
+        },
+        {
+          "h": 3,
+          "v": 0,
+          "anchors": [
+            "metodos-clave-de-jackson-i-ii"
+          ]
+        },
+        {
+          "h": 4,
+          "v": 0,
+          "anchors": [
+            "metodos-clave-de-jackson-ii-ii"
+          ]
+        },
+        {
+          "h": 5,
+          "v": 0,
+          "anchors": [
+            "metodos-clave-de-jackson-listados"
+          ]
+        },
+        {
+          "h": 6,
+          "v": 0,
+          "anchors": [
+            "fechas"
+          ]
+        },
+        {
+          "h": 7,
+          "v": 0,
+          "anchors": []
+        },
+        {
+          "h": 8,
+          "v": 0,
+          "anchors": [
+            "jdbc"
+          ]
+        },
+        {
+          "h": 9,
+          "v": 0,
+          "anchors": [
+            "ejemplo-de-conexion"
+          ]
+        },
+        {
+          "h": 10,
+          "v": 0,
+          "anchors": []
+        },
+        {
+          "h": 11,
+          "v": 0,
+          "anchors": [
+            "junit"
+          ]
+        },
+        {
+          "h": 12,
+          "v": 0,
+          "anchors": [
+            "mockito"
+          ]
+        },
+        {
+          "h": 13,
+          "v": 0,
+          "anchors": [
+            "fin-de-la-presentacion"
+          ]
+        },
+        {
+          "h": 14,
+          "v": 0,
+          "anchors": []
+        }
+      ],
+      "anchorMap": {
+        "librer-as-utiles-de-backend": {
+          "h": 0,
+          "v": 0
+        },
+        "indice": {
+          "h": 1,
+          "v": 0
+        },
+        "jackson": {
+          "h": 2,
+          "v": 0
+        },
+        "metodos-clave-de-jackson-i-ii": {
+          "h": 3,
+          "v": 0
+        },
+        "metodos-clave-de-jackson-ii-ii": {
+          "h": 4,
+          "v": 0
+        },
+        "metodos-clave-de-jackson-listados": {
+          "h": 5,
+          "v": 0
+        },
+        "fechas": {
+          "h": 6,
+          "v": 0
+        },
+        "jdbc": {
+          "h": 8,
+          "v": 0
+        },
+        "ejemplo-de-conexion": {
+          "h": 9,
+          "v": 0
+        },
+        "junit": {
+          "h": 11,
+          "v": 0
+        },
+        "mockito": {
+          "h": 12,
+          "v": 0
+        },
+        "fin-de-la-presentacion": {
+          "h": 13,
+          "v": 0
+        }
+      }
+    }
+  ]
+}

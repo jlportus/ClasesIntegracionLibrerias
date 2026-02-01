@@ -16,18 +16,7 @@
   <body>
     <div class="reveal">
       <div class="slides">
-        <section
-          data-markdown="./README.md"
-          data-separator="^\r?\n\---\r?\n"
-          data-separator-vertical="^\r?\n\--\r?\n"
-          data-separator-notes="^Notas:"
-          data-charset="utf-8"
-        >
-          <!--
-        Note that Windows uses `\r\n` instead of `\n` as its linefeed character.
-        For a regex that supports all operating systems, use `\r?\n` instead of `\n`.
-    -->
-        </section>
+        <!-- sessions will be injected here by scripts/load-sessions.js -->
       </div>
     </div>
 
@@ -35,15 +24,20 @@
     <script src="plugin/notes/notes.js"></script>
     <script src="plugin/markdown/markdown.js"></script>
     <script src="plugin/highlight/highlight.js"></script>
+    <script src="scripts/load-sessions.js"></script>
     <script>
-      // More info about initialization & config:
-      // - https://revealjs.com/initialization/
-      // - https://revealjs.com/config/
-      Reveal.initialize({
-        hash: true,
-
-        // Learn about plugins: https://revealjs.com/plugins/
-        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      // Initialize Reveal after sessions are injected
+      loadSessions().then(() => {
+        Reveal.initialize({
+          hash: true,
+          plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+        });
+      }).catch((err) => {
+        console.error('Error loading sessions:', err);
+        Reveal.initialize({
+          hash: true,
+          plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+        });
       });
     </script>
   </body>
