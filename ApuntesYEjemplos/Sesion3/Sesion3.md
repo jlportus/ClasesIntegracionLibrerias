@@ -472,8 +472,10 @@ Al hacer esto, Gradle agregará la librería al classpath del proyecto y podrá 
 ---
 
 # Fin de la presentacion 
-<a href="./index.html#/6">Ir al indice de Presentaciones</a>
+<a href="..\..\README.md">Ir al indice de Presentaciones</a>
 
-<a href="./sesion4.html">Ir a la Sesion 4</a>
+<a href="../Sesion4/Sesion4.md">Ir a la Sesion 4</a>
 
 ---
+
+

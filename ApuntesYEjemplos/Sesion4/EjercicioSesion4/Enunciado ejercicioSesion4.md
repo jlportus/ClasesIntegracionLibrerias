@@ -22,8 +22,9 @@
 ---
 
 # Fin de la presentacion 
-<a href="./index.html#/6">Ir al indice de Presentaciones</a>
+<a href="..\..\..\README.md">Ir al indice de Presentaciones</a>
 
-<a href="./sesion5.html">Ir a la Sesion 5</a>
+<a href="../../Sesion5/Sesion5.md">Ir a la Sesion 5</a>
 
 ---
+

@@ -117,8 +117,9 @@ Notas:
 ---
 
 # Fin de la presentacion 
-<a href="./index.html#/6">Ir al indice de Presentaciones</a>
+<a href="..\..\README.md">Ir al indice de Presentaciones</a>
 
-<a href="./sesion3.html">Ir a la Sesion 3</a>
+<a href="../Sesion3/Sesion3.md">Ir a la Sesion 3</a>
 
 ---
+

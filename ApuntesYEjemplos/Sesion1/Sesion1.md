@@ -111,8 +111,9 @@ abrir  un compilado
 ---
 
 # Fin de la presentacion 
-<a href="./index.html#/6">Ir al indice de Presentaciones</a>
+<a href="..\..\README.md">Ir al indice de Presentaciones</a>
 
-<a href="./sesion2.html">Ir a la Sesion 2</a>
+<a href="../Sesion2/Sesion2.md">Ir a la Sesion 2</a>
 
 ---
+

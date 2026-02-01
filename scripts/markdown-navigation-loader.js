@@ -120,11 +120,20 @@
     const anchor = hashIndex === -1 ? "" : href.slice(hashIndex + 1);
 
     const basePath = getBasePath(currentMdPath);
-    let resolved = window.MdUtils.resolveRelativePath(basePath, pathPart);
-    if (resolved.toLowerCase().endsWith(".html")) {
-      resolved = resolved.slice(0, -5) + ".md";
+    const resolved = window.MdUtils.resolveRelativePath(basePath, pathPart);
+    const mdPath = resolved.toLowerCase().endsWith(".html")
+      ? resolved.slice(0, -5) + ".md"
+      : resolved;
+    return { mdPath, anchor };
+  }
+
+  async function loadMarkdownOrNavigate(href) {
+    const { mdPath, anchor } = resolveTargetFromHref(href);
+    try {
+      await loadMarkdown(mdPath, { anchor });
+    } catch (error) {
+      window.location.href = href;
     }
-    return { mdPath: resolved, anchor };
   }
 
   function onLinkClick(event) {
@@ -144,10 +153,16 @@
     }
 
     const lower = href.toLowerCase();
-    if (lower.endsWith(".md") || lower.endsWith(".html") || lower.includes(".md#") || lower.includes(".html#")) {
+    if (lower.endsWith(".md") || lower.includes(".md#")) {
       event.preventDefault();
       const { mdPath, anchor } = resolveTargetFromHref(href);
       loadMarkdown(mdPath, { anchor }).catch(console.error);
+      return;
+    }
+
+    if (lower.endsWith(".html") || lower.includes(".html#")) {
+      event.preventDefault();
+      loadMarkdownOrNavigate(href).catch(console.error);
     }
   }
 

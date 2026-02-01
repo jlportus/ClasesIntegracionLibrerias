@@ -64,12 +64,14 @@ function rewriteMarkdownLink(rawUrl, basePath) {
   const anchor = hashIndex === -1 ? "" : url.slice(hashIndex + 1);
 
   const lower = pathPart.toLowerCase();
-  if (lower.endsWith(".md") || lower.endsWith(".html")) {
-    let resolved = resolveRelativePath(basePath, pathPart);
-    if (resolved.toLowerCase().endsWith(".html")) {
-      resolved = resolved.slice(0, -5) + ".md";
-    }
+  if (lower.endsWith(".md")) {
+    const resolved = resolveRelativePath(basePath, pathPart);
     const rewritten = toMdHashLink(resolved, anchor);
+    return rewritten + (title ? " " + title : "");
+  }
+  if (lower.endsWith(".html")) {
+    const resolved = resolveRelativePath(basePath, pathPart);
+    const rewritten = resolved + (anchor ? "#" + anchor : "");
     return rewritten + (title ? " " + title : "");
   }
 
@@ -98,15 +100,20 @@ function rewriteLinksInMemory(mdText, basePath) {
   mdText = mdText.replace(/\b(href|src)\s*=\s*"([^"]*)"/gi, (match, attr, url) => {
     if (!url || isExternalUrl(url) || url.startsWith("#")) return match;
     const lower = url.toLowerCase();
-    if (lower.endsWith(".md") || lower.endsWith(".html")) {
+    if (lower.endsWith(".md")) {
       const hashIndex = url.indexOf("#");
       const pathPart = hashIndex === -1 ? url : url.slice(0, hashIndex);
       const anchor = hashIndex === -1 ? "" : url.slice(hashIndex + 1);
-      let resolved = resolveRelativePath(basePath, pathPart);
-      if (resolved.toLowerCase().endsWith(".html")) {
-        resolved = resolved.slice(0, -5) + ".md";
-      }
+      const resolved = resolveRelativePath(basePath, pathPart);
       const rewritten = toMdHashLink(resolved, anchor);
+      return `${attr}="${rewritten}"`;
+    }
+    if (lower.endsWith(".html")) {
+      const hashIndex = url.indexOf("#");
+      const pathPart = hashIndex === -1 ? url : url.slice(0, hashIndex);
+      const anchor = hashIndex === -1 ? "" : url.slice(hashIndex + 1);
+      const resolved = resolveRelativePath(basePath, pathPart);
+      const rewritten = resolved + (anchor ? "#" + anchor : "");
       return `${attr}="${rewritten}"`;
     }
     const resolvedResource = resolveRelativeResource(basePath, url);

@@ -184,8 +184,10 @@ https://www.baeldung.com/mockito-behavior
 ---
 
 # Fin de la presentacion 
-<a href="./index.html#/6">Ir al indice de Presentaciones</a>
+<a href="..\..\README.md">Ir al indice de Presentaciones</a>
 
-<a href="./sesion12.html">Ir a la Sesion 12</a>
+<a href="../Sesion12/Sesion12.md">Ir a la Sesion 12</a>
 
 ---
+
+
