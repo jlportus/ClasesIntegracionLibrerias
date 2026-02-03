@@ -8,6 +8,7 @@
 
 - [Conceptos Generales de Librerías](#conceptos-generales-de-librerías)
     - [INDICE](#indice)
+- [Objetivos de la sesión](#objetivos-de-la-sesión)
     - [¿Qué es una librería?](#qué-es-una-librería)
   - [Librería vs Biblioteca](#librería-vs-biblioteca)
     - [Características de una librería](#características-de-una-librería)
@@ -18,7 +19,19 @@
     - [¿Qué aporta un repositorio?](#qué-aporta-un-repositorio)
     - [Gestores de dependencias](#gestores-de-dependencias)
     - [Ejemplo mínimo (solo para idea, sin entrar aún en detalle)](#ejemplo-mínimo-solo-para-idea-sin-entrar-aún-en-detalle)
+- [Comprobación de conocimientos](#comprobación-de-conocimientos)
 - [Fin de la presentación](#fin-de-la-presentación)
+
+---
+
+# Objetivos de la sesión
+
+- Comprender qué es una librería y cuándo usarla
+- Conocer repositorios y gestores de dependencias
+- Ser capaz de diferenciar librería vs framework
+
+Notas:
+- Entregable: Explicar (breve) una decisión de integración para un caso simple.
 
 ---
 
@@ -172,6 +185,18 @@ console.log(_.chunk([1, 2, 3, 4], 2));
 ```
 
 Notas: Estos fragmentos muestran el patrón común: declarar una dependencia y consumirla desde código. En sesiones posteriores se verá cómo elegir versiones concretas, cómo identificar transitivas, cómo resolver conflictos y cómo publicar tu propia librería para que otros la consuman. También se verá que en frontend entra un factor adicional: el bundler, que empaqueta módulos y afecta a cómo se distribuyen librerías (ESM/CJS, tree-shaking, etc.). Aquí solo interesa el concepto: declaras → resuelves → usas.
+
+---
+
+# Comprobación de conocimientos
+
+- Checklist:
+  - ¿Qué es una librería? (resumen en 1 frase)
+  - Nombra 2 gestores de dependencias
+  - Explica por qué evitar Copy&Paste
+
+Notas:
+- Preguntas para repasar: escribe en 1 frase la diferencia entre librería y framework; explica qué aporta un repositorio.
 
 ---
 

@@ -26,6 +26,17 @@
 
 ---
 
+# Objetivos de la sesión
+
+- Entender qué es un artefacto (JAR/WAR)
+- Diseñar y empaquetar una librería y su consumidor
+- Escribir tests mínimos y README
+
+Notas:
+- Entregable: repositorio con librería y consumidor funcional
+
+---
+
 ### Artefacto
 
 Un **artefacto** es el resultado empaquetado de un proceso de build que se puede **distribuir** e **integrar** en otros proyectos.
@@ -332,6 +343,18 @@ Esta organización facilita evaluar y ejecutar. En Maven/Gradle puede ser multi-
 
 Notas:
 Los criterios reflejan la realidad profesional: si no es reproducible, no es integrable. La separación librería/consumidor demuestra que has entendido el modelo de dependencia. Los tests no son “extra”: son la base para poder evolucionar la librería en futuras sesiones sin romper a los consumidores sin darte cuenta.
+
+---
+
+# Comprobación de conocimientos
+
+- Checklist:
+  - ¿Qué es un artefacto? (1 frase)
+  - Describe estructura mínima de un proyecto Java
+  - ¿Por qué es importante separar librería y consumidor?
+
+Notas:
+- Preguntas rápidas: identifica dónde van los tests y qué debe contener el README.
 
 ---
 
