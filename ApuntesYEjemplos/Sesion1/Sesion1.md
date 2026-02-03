@@ -1,24 +1,24 @@
-# Conceptos Generales de LibrerÍas
+# Conceptos Generales de Librerías
 
 ---
 
 ### INDICE
 
-- [Conceptos Generales de LibrerÍas](#conceptos-generales-de-librerías)
-    - [INDICE](#indice)
-    - [Librería](#librería)
-    - [Librería vs Biblioteca](#librería-vs-biblioteca)
-    - [Características de Librerías](#características-de-librerías)
-    - [Características de Librerías II](#características-de-librerías-ii)
-    - [Uso de Librería vs Copy\&Paste](#uso-de-librería-vs-copypaste)
-    - [Librería vs FRAMEWORK](#librería-vs-framework)
-    - [Repositorio](#repositorio)
-    - [Gestores de dependencias](#gestores-de-dependencias)
-- [Fin de la presentacion](#fin-de-la-presentacion)
+- [Conceptos Generales de Librerías](#conceptos-generales-de-librerías)
+  - [INDICE](#indice)
+  - [¿Qué es una librería?](#qué-es-una-librería)
+  - [Librería vs Biblioteca](#librería-vs-biblioteca)
+  - [Características de una librería](#características-de-una-librería)
+  - [Características de una librería II](#características-de-una-librería-ii)
+  - [Uso de librería vs Copy\&Paste](#uso-de-librería-vs-copypaste)
+  - [Librería vs Framework](#librería-vs-framework)
+  - [Repositorio](#repositorio)
+  - [Gestores de dependencias](#gestores-de-dependencias)
+- [Fin de la presentación](#fin-de-la-presentación)
 
 ---
 
-### Librería
+### ¿Qué es una librería?
 
 **Las bibliotecas de código:**
 
@@ -27,92 +27,143 @@
 [Biblioteca de código Wikipedia](<https://es.wikipedia.org/wiki/Biblioteca_(inform%C3%A1tica)>)
 
 Notas:
-[Guion de la asignatura DIM XLIII](https://web.institutomilitar.com/librerias.html)
+Una librería (o biblioteca de código) es un componente reutilizable que encapsula funcionalidad ya resuelta (por ejemplo, serialización JSON, logging, validación, acceso a BBDD, utilidades de fechas…). Su valor no es solo “tener código hecho”, sino poder incorporarlo de forma controlada en un proyecto: con una versión, una licencia, documentación y una forma estándar de distribución. En la asignatura, “integrar” significa precisamente eso: incorporar piezas externas de forma reproducible, mantenible y verificable, evitando soluciones frágiles como copiar código sin trazabilidad.
 
 ---
 
-### Librería vs Biblioteca
+## Librería vs Biblioteca
 
-> **Library** : En realidad la traducción literal del ingles de _library_ es **BIBLIOTECA** y lo que en castellano es una librería en ingles es una _bookstore_
-
----
-
-### Características de Librerías
-
-- No están desarrolladas para ejecutarse por si solas, si no en otros programas
-- Se pueden utilizar en diferentes proyectos sin tener que escribir el código desde cero.
-  - Permiten reutilización
-- Permiten ahorrar tiempo y esfuerzo al no tener que escribir funciones comunes desde cero.
-- Simplifican mantenimiento
-- Están optimizadas (mas eficientes)
-- Desarrolladas por otros programadores (_"expertos_")
-- **DOCUMENTACIÓN**
-- Aumenta la confiabilidad del código ya que las bibliotecas suelen ser ampliamente probadas y utilizadas.
+- En la práctica, **“librería”** y **“biblioteca”** se usan como sinónimos
+- “Biblioteca” es una traducción muy extendida (library)
+- “Librería” es el término más habitual en el contexto de dependencias y publicación
 
 Notas:
-
-### Características de Librerías II
-
-- **Ahorro de tiempo**: Las bibliotecas de código pueden ahorrar mucho tiempo en el desarrollo de software, ya que los desarrolladores no tienen que escribir todo el código desde cero. En lugar de eso, pueden utilizar una biblioteca existente y reutilizar el código que ya ha sido probado y optimizado.
-
-- **Mayor eficiencia**: Las bibliotecas de código suelen estar escritas por expertos y contienen algoritmos y estructuras de datos optimizadas, lo que puede mejorar significativamente el rendimiento y la eficiencia de un programa.
-
-- **Mejora de la calidad del software**: Las bibliotecas de código son ampliamente utilizadas y probadas por una gran comunidad de desarrolladores, lo que aumenta la confiabilidad y la calidad del software que utiliza esas bibliotecas.
-
-- **Facilidad de uso**: Las bibliotecas de código suelen tener una documentación detallada y una API clara y consistente, lo que hace que sea más fácil para los desarrolladores entender y utilizar las bibliotecas.
-
-- **Actualizaciones y mantenimiento**: Las bibliotecas de código suelen ser mantenidas y actualizadas por la comunidad de desarrolladores, lo que significa que los desarrolladores pueden confiar en que las bibliotecas se mantendrán al día y estarán disponibles en el futuro.
-
-- **Soluciones especializadas:** Las bibliotecas de código pueden ofrecer soluciones especializadas a problemas específicos, lo que permite a los desarrolladores enfocarse en la lógica de negocio de su aplicación y no en solucionar problemas comunes y ya resueltos
+No hay una diferencia técnica relevante entre ambos términos en el uso cotidiano: ambos describen un paquete de código reutilizable. Sin embargo, en entornos de desarrollo y documentación técnica se ha popularizado “librería” para hablar del artefacto que consumes como dependencia (por ejemplo, un JAR en Java o un paquete en npm). Es útil saberlo porque en documentación, foros y herramientas encontrarás ambos términos.
 
 ---
 
-### Uso de Librería vs Copy&Paste
+### Características de una librería
+
+- Está pensada para **reutilizarse** en múltiples proyectos
+- Define una **API** (clases, funciones, contratos)
+- Puede incluir **documentación**, ejemplos y tests
+- Se distribuye como **artefacto** (p. ej. JAR / paquete npm / DLL)
+
+Notas:
+Una librería bien construida no es solo un conjunto de ficheros: es un producto técnico. La API es el “contrato” con los consumidores: si cambia, puede romper integraciones. Por eso, además del código, importan la documentación y los ejemplos mínimos ejecutables. Un artefacto es el resultado empaquetado y distribuible. En esta asignatura, se trabajará con artefactos en Java (JAR/WAR) y en JS (paquetes npm), pero los principios son comunes: empaquetar, versionar, publicar, consumir y verificar.
+
+--
+
+### Características de una librería II
+
+- Tiene **versiones** (evoluciona en el tiempo)
+- Tiene **dependencias** (directas y transitivas)
+- Tiene **licencia** (condiciones de uso)
+- Puede tener **riesgos** (compatibilidad, seguridad, mantenimiento)
+
+Notas:
+La parte crítica de “integración” aparece aquí: una librería no vive aislada. Sus dependencias transitivas pueden entrar en conflicto con las de tu proyecto. Las versiones pueden introducir cambios incompatibles. La licencia puede imponer restricciones (por ejemplo, en redistribución o copyleft). Además, incluso una librería popular puede tener vulnerabilidades o quedar abandonada. Por eso, integrar librerías no es un acto puntual, sino un proceso que requiere criterio y verificación.
 
 ---
 
-### Librería vs FRAMEWORK
+### Uso de librería vs Copy&Paste
 
-**Coincidencias**
+**Usar librería**
+- Versionable y actualizable
+- Trazable (sabes de dónde viene)
+- Reutilizable y mantenible
+- Permite correcciones centralizadas
 
-1. Ambas son código reusable escrito por terceros generalmente.
+**Copy&Paste**
+- Duplicas código y errores
+- Difícil de actualizar y auditar
+- Sin control de licencia/origen
+- Genera “deuda” invisible
 
-**Diferencias**
+Notas:
+El copy&paste suele parecer rápido al inicio, pero crea un problema serio: el código copiado queda desconectado de su fuente original. Cuando aparece un bug o una vulnerabilidad, no tienes una forma limpia de aplicar el parche. En cambio, una dependencia con versión te permite actualizar y documentar el cambio. Además, desde el punto de vista legal, copiar código sin revisar su licencia es especialmente peligroso: puedes introducir obligaciones que afecten al proyecto completo sin darte cuenta.
 
-2. Una librería ofrece generalmente una funcionalidad única y concreta
-3. Un framework ofrece un conjunto global de soluciones para hacer una aplicación completa
+---
 
-[**Inversion de Control**](https://en.wikipedia.org/wiki/Inversion_of_control)
+### Librería vs Framework
+
+- **Librería**: tu código llama a la librería
+- **Framework**: el framework llama a tu código (inversión de control)
+
+Ejemplo mental:
+- Librería: “yo decido cuándo serializar a JSON”
+- Framework: “el framework decide el ciclo de vida y yo encajo mis piezas”
+
+Notas:
+La distinción es útil porque afecta a la integración y al impacto en arquitectura. Una librería suele ser más sustituible (puedes cambiar la librería de logging, por ejemplo). Un framework suele “envolver” tu aplicación y obligarte a seguir convenciones. Integrar un framework es una decisión más estructural, mientras que integrar una librería suele ser más localizada. Aun así, ambos se gestionan como dependencias y ambos pueden tener conflictos, licencias y riesgos.
 
 ---
 
 ### Repositorio
 
-> Lugar en el que se almacena, organiza y distribuye código de aplicaciones o programas
-
-|                                                                                           |                                                                       |
-| ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| **Repositorios de proyectos**<br/>- GitHub<br/>- GitLab<br/>- SourceForge<br/>- Bitbucket | **Repositorios de Librerías** <br/>- mavenCentral<br/>- npmRepository |
+- Lugar donde se **almacenan y distribuyen** artefactos/paquetes
+- Puede ser:
+  - **Local** (en tu máquina)
+  - **Corporativo** (Nexus/Artifactory, etc.)
+  - **Público** (Maven Central, npm registry, etc.)
 
 Notas:
-¿cual es la diferencia entre ambos tipos?
-abrir  un compilado
+Un repositorio no es solo “un sitio para descargar cosas”: es el mecanismo que hace que la integración sea reproducible. Si tu proyecto declara dependencias, el build tool debe poder resolverlas desde un repositorio. En entornos profesionales, lo habitual es usar un repositorio corporativo que actúa como proxy/cache y control de lo que se permite introducir. Esto mejora disponibilidad, rendimiento y seguridad (por ejemplo, bloqueando paquetes vulnerables o no aprobados).
+
+--
+
+### ¿Qué aporta un repositorio?
+
+- Repetibilidad: mismas dependencias en cualquier entorno
+- Colaboración: todo el equipo usa el mismo origen de artefactos
+- Control: políticas de publicación, permisos, auditoría
+- Trazabilidad: saber qué versión se usó y cuándo
+
+Notas:
+Sin repositorio, cada desarrollador podría integrar “lo que encuentre” de forma distinta. Con repositorio y versiones, puedes reconstruir el estado exacto de un proyecto meses después. Esto es esencial para CI/CD, para depuración de incidencias y para auditorías (técnicas o legales). La integración moderna se apoya en esta base: versiones declaradas + repositorio confiable + build reproducible.
 
 ---
 
 ### Gestores de dependencias
 
-> Herramienta que se encarga de descargar y organizar las dependencias de terceros (librerías) empleadas en un proyecto de manera automática.
+- Herramientas para **declarar** y **resolver** dependencias
+- Automatizan:
+  - descarga de artefactos
+  - resolución de transitivas
+  - compilación/build
+  - empaquetado y publicación
 
-|                                                                                                                |                                                          |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
-| **Gestores de Backend**<br/>- Maven --> Java<br/>- Gradle --> Java<br/>- Composer --> PHP<br/>- NuGet --> .NET | **Gestores de Frontend**<br/>- Node + npm --> JavaScript |
+Ejemplos:
+- Java: **Maven**, **Gradle**
+- JS: **npm** (y otros gestores compatibles)
+
+Notas:
+Un gestor de dependencias convierte la integración en un proceso declarativo: en vez de “bajar a mano” ficheros y copiarlos, declaras qué necesitas y el sistema lo resuelve. Esto reduce errores, pero introduce conceptos importantes: scopes (qué depende de qué fase), transitivas (dependencias de tus dependencias), conflictos de versiones y mecanismos de control (exclusiones, overrides, lockfiles). En la asignatura, se verá cómo usar estas herramientas y, sobre todo, cómo diagnosticar cuando el proceso falla.
+
+--
+
+### Ejemplo mínimo (solo para idea, sin entrar aún en detalle)
+
+Maven (pom.xml):
+```xml
+<dependency>
+  <groupId>com.fasterxml.jackson.core</groupId>
+  <artifactId>jackson-databind</artifactId>
+  <version>2.x.x</version>
+</dependency>
+
+npm:
+
+npm i lodash
+
+import _ from "lodash";
+console.log(_.chunk([1, 2, 3, 4], 2));
+
+Notas: Estos fragmentos muestran el patrón común: declarar una dependencia y consumirla desde código. En sesiones posteriores se verá cómo elegir versiones concretas, cómo identificar transitivas, cómo resolver conflictos y cómo publicar tu propia librería para que otros la consuman. También se verá que en frontend entra un factor adicional: el bundler, que empaqueta módulos y afecta a cómo se distribuyen librerías (ESM/CJS, tree-shaking, etc.). Aquí solo interesa el concepto: declaras → resuelves → usas.
+
 
 ---
 
-# Fin de la presentacion 
-<a href="./index.html#/6">Ir al indice de Presentaciones</a>
+Fin de la presentación
 
-<a href="./sesion2.html">Ir a la Sesion 2</a>
-
----
+Notas: Cierre conceptual: integrar librerías es un conjunto de decisiones y procesos (versionado, repositorios, licencias, verificación y mantenimiento). La siguiente sesión aterriza el tema en Java: artefactos (JAR/WAR) y un “HolaLibrería” con una librería propia y un consumidor. El objetivo es que el alumnado empiece a ver la integración como algo reproducible y entregable (con evidencias: build que compila, ejemplo mínimo y documentación básica).
