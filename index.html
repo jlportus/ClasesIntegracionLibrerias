@@ -8,10 +8,10 @@
 
     <link rel="stylesheet" href="dist/reset.css" />
     <link rel="stylesheet" href="dist/reveal.css" />
-    <link rel="stylesheet" href="dist/theme/white.css" />
+    <link rel="stylesheet" href="dist/theme/dracula.css" />
 
     <!-- Theme used for syntax highlighted code -->
-    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+    <link rel="stylesheet" href="plugin/highlight/dracula.css" />
   </head>
   <body>
     <div class="reveal">
@@ -29,13 +29,19 @@
       // - https://revealjs.com/initialization/
       // - https://revealjs.com/config/
       Reveal.initialize({
-        hash: false,
+        hash: false, // Disabled because we use custom hash navigation for markdown files
+        width: 1280,
+        height: 720,
+        margin: 0.03,
 
         // Learn about plugins: https://revealjs.com/plugins/
         plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
       }).then(() => {
+        console.log('[Main] Reveal initialized, starting MarkdownNavigationLoader...');
         if (window.MarkdownNavigationLoader) {
           window.MarkdownNavigationLoader.init({ initialMd: "README.md" });
+        } else {
+          console.error('[Main] MarkdownNavigationLoader not found!');
         }
       });
     </script>

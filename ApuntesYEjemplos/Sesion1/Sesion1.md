@@ -1,19 +1,23 @@
 # Conceptos Generales de Librerías
 
+<a href="..\..\README.md">indice de Presentaciones</a>
+
 ---
 
 ### INDICE
 
 - [Conceptos Generales de Librerías](#conceptos-generales-de-librerías)
-  - [INDICE](#indice)
-  - [¿Qué es una librería?](#qué-es-una-librería)
+    - [INDICE](#indice)
+    - [¿Qué es una librería?](#qué-es-una-librería)
   - [Librería vs Biblioteca](#librería-vs-biblioteca)
-  - [Características de una librería](#características-de-una-librería)
-  - [Características de una librería II](#características-de-una-librería-ii)
-  - [Uso de librería vs Copy\&Paste](#uso-de-librería-vs-copypaste)
-  - [Librería vs Framework](#librería-vs-framework)
-  - [Repositorio](#repositorio)
-  - [Gestores de dependencias](#gestores-de-dependencias)
+    - [Características de una librería](#características-de-una-librería)
+    - [Características de una librería II](#características-de-una-librería-ii)
+    - [Uso de librería vs Copy\&Paste](#uso-de-librería-vs-copypaste)
+    - [Librería vs Framework](#librería-vs-framework)
+    - [Repositorio](#repositorio)
+    - [¿Qué aporta un repositorio?](#qué-aporta-un-repositorio)
+    - [Gestores de dependencias](#gestores-de-dependencias)
+    - [Ejemplo mínimo (solo para idea, sin entrar aún en detalle)](#ejemplo-mínimo-solo-para-idea-sin-entrar-aún-en-detalle)
 - [Fin de la presentación](#fin-de-la-presentación)
 
 ---
@@ -24,7 +28,7 @@
 
 > Son conjuntos de funciones y procedimientos preescritos que pueden ser utilizados para realizar tareas específicas en un programa.
 
-[Biblioteca de código Wikipedia](<https://es.wikipedia.org/wiki/Biblioteca_(inform%C3%A1tica)>)
+[Biblioteca de código Wikipedia](https://es.wikipedia.org/wiki/Biblioteca_(inform%C3%A1tica))
 
 Notas:
 Una librería (o biblioteca de código) es un componente reutilizable que encapsula funcionalidad ya resuelta (por ejemplo, serialización JSON, logging, validación, acceso a BBDD, utilidades de fechas…). Su valor no es solo “tener código hecho”, sino poder incorporarlo de forma controlada en un proyecto: con una versión, una licencia, documentación y una forma estándar de distribución. En la asignatura, “integrar” significa precisamente eso: incorporar piezas externas de forma reproducible, mantenible y verificable, evitando soluciones frágiles como copiar código sin trazabilidad.
@@ -69,12 +73,14 @@ La parte crítica de “integración” aparece aquí: una librería no vive ais
 ### Uso de librería vs Copy&Paste
 
 **Usar librería**
+
 - Versionable y actualizable
 - Trazable (sabes de dónde viene)
 - Reutilizable y mantenible
 - Permite correcciones centralizadas
 
 **Copy&Paste**
+
 - Duplicas código y errores
 - Difícil de actualizar y auditar
 - Sin control de licencia/origen
@@ -91,6 +97,7 @@ El copy&paste suele parecer rápido al inicio, pero crea un problema serio: el c
 - **Framework**: el framework llama a tu código (inversión de control)
 
 Ejemplo mental:
+
 - Librería: “yo decido cuándo serializar a JSON”
 - Framework: “el framework decide el ciclo de vida y yo encajo mis piezas”
 
@@ -134,8 +141,10 @@ Sin repositorio, cada desarrollador podría integrar “lo que encuentre” de f
   - empaquetado y publicación
 
 Ejemplos:
+
 - Java: **Maven**, **Gradle**
-- JS: **npm** (y otros gestores compatibles)
+- JS: **npm**, **yarn** (y otros gestores compatibles)
+- .NET: **NuGet**
 
 Notas:
 Un gestor de dependencias convierte la integración en un proceso declarativo: en vez de “bajar a mano” ficheros y copiarlos, declaras qué necesitas y el sistema lo resuelve. Esto reduce errores, pero introduce conceptos importantes: scopes (qué depende de qué fase), transitivas (dependencias de tus dependencias), conflictos de versiones y mecanismos de control (exclusiones, overrides, lockfiles). En la asignatura, se verá cómo usar estas herramientas y, sobre todo, cómo diagnosticar cuando el proceso falla.
@@ -145,25 +154,33 @@ Un gestor de dependencias convierte la integración en un proceso declarativo: e
 ### Ejemplo mínimo (solo para idea, sin entrar aún en detalle)
 
 Maven (pom.xml):
+
 ```xml
 <dependency>
   <groupId>com.fasterxml.jackson.core</groupId>
   <artifactId>jackson-databind</artifactId>
   <version>2.x.x</version>
 </dependency>
+```
 
 npm:
 
+```
 npm i lodash
-
 import _ from "lodash";
 console.log(_.chunk([1, 2, 3, 4], 2));
+```
 
 Notas: Estos fragmentos muestran el patrón común: declarar una dependencia y consumirla desde código. En sesiones posteriores se verá cómo elegir versiones concretas, cómo identificar transitivas, cómo resolver conflictos y cómo publicar tu propia librería para que otros la consuman. También se verá que en frontend entra un factor adicional: el bundler, que empaqueta módulos y afecta a cómo se distribuyen librerías (ESM/CJS, tree-shaking, etc.). Aquí solo interesa el concepto: declaras → resuelves → usas.
 
-
 ---
 
-Fin de la presentación
+# Fin de la presentación
+
+<a href="..\..\README.md">Ir al indice de Presentaciones</a>
+
+<a href="../Sesion2/Sesion2.md">Ir a la Sesion 2</a>
 
 Notas: Cierre conceptual: integrar librerías es un conjunto de decisiones y procesos (versionado, repositorios, licencias, verificación y mantenimiento). La siguiente sesión aterriza el tema en Java: artefactos (JAR/WAR) y un “HolaLibrería” con una librería propia y un consumidor. El objetivo es que el alumnado empiece a ver la integración como algo reproducible y entregable (con evidencias: build que compila, ejemplo mínimo y documentación básica).
+
+---

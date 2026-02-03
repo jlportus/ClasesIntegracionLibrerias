@@ -63,13 +63,31 @@
   }
 
   function navigateToAnchor(anchor) {
-    if (!anchor) return;
+    if (!anchor) {
+      console.log('[MarkdownNavigationLoader] No anchor, going to first slide');
+      Reveal.slide(0, 0);
+      return;
+    }
+    console.log('[MarkdownNavigationLoader] Looking for anchor:', anchor);
     const el = document.getElementById(anchor);
-    if (!el) return;
+    if (!el) {
+      console.warn('[MarkdownNavigationLoader] Anchor element not found:', anchor);
+      Reveal.slide(0, 0);
+      return;
+    }
     const slide = el.closest("section");
-    if (!slide) return;
+    if (!slide) {
+      console.warn('[MarkdownNavigationLoader] Slide not found for anchor:', anchor);
+      Reveal.slide(0, 0);
+      return;
+    }
     const indices = Reveal.getIndices(slide);
-    if (!indices) return;
+    if (!indices) {
+      console.warn('[MarkdownNavigationLoader] Indices not found for slide');
+      Reveal.slide(0, 0);
+      return;
+    }
+    console.log('[MarkdownNavigationLoader] Navigating to indices:', indices);
     Reveal.slide(indices.h, indices.v, indices.f);
   }
 
@@ -78,6 +96,7 @@
     const basePath = getBasePath(normalized);
     const anchor = options.anchor || "";
 
+    console.log('[MarkdownNavigationLoader] loadMarkdown called:', normalized, 'anchor:', anchor);
     currentMdPath = normalized;
 
     let processed = cache.get(normalized);
@@ -95,14 +114,41 @@
 
     const markdown = Reveal.getPlugin && Reveal.getPlugin("markdown");
     if (markdown && markdown.processSlides && markdown.convertSlides) {
+      console.log('[MarkdownNavigationLoader] Processing and converting markdown slides...');
       await markdown.processSlides(Reveal.getRevealElement());
       await markdown.convertSlides();
+      console.log('[MarkdownNavigationLoader] Markdown conversion complete');
+    } else {
+      console.error('[MarkdownNavigationLoader] Markdown plugin not available!');
     }
 
+    // Trigger syntax highlighting on all code blocks after markdown conversion
+    const highlight = Reveal.getPlugin && Reveal.getPlugin("highlight");
+    if (highlight && highlight.highlightBlock) {
+      console.log('[MarkdownNavigationLoader] Applying syntax highlighting...');
+      const codeBlocks = Reveal.getRevealElement().querySelectorAll("pre code");
+      console.log('[MarkdownNavigationLoader] Found', codeBlocks.length, 'code blocks');
+      codeBlocks.forEach((block) => {
+        highlight.highlightBlock(block);
+      });
+    } else {
+      console.error('[MarkdownNavigationLoader] Highlight plugin not available!');
+    }
+
+    console.log('[MarkdownNavigationLoader] Syncing Reveal...');
     Reveal.sync();
 
+    console.log('[MarkdownNavigationLoader] Reveal synced, setting hash...');
     setHash(normalized, anchor);
-    requestAnimationFrame(() => navigateToAnchor(anchor));
+    
+    // Wait a bit to ensure DOM is fully ready, then navigate
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        console.log('[MarkdownNavigationLoader] Navigating to anchor:', anchor || '(first slide)');
+        navigateToAnchor(anchor);
+        console.log('[MarkdownNavigationLoader] Load complete!');
+      });
+    });
   }
 
   function shouldIgnoreLink(href) {
@@ -174,16 +220,21 @@
   }
 
   function init(options = {}) {
+    console.log('[MarkdownNavigationLoader] Initializing...');
+    console.log('[MarkdownNavigationLoader] Current hash:', window.location.hash);
+    
     document.addEventListener("click", onLinkClick);
     window.addEventListener("hashchange", onHashChange);
 
     const fromHash = parseMdHash(window.location.hash);
     if (fromHash) {
+      console.log('[MarkdownNavigationLoader] Loading from hash:', fromHash);
       loadMarkdown(fromHash.mdPath, { anchor: fromHash.anchor }).catch(console.error);
       return;
     }
 
     const initialMd = options.initialMd || "README.md";
+    console.log('[MarkdownNavigationLoader] Loading initial:', initialMd);
     loadMarkdown(initialMd).catch(console.error);
   }
 

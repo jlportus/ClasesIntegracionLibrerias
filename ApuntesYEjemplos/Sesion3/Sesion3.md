@@ -2,6 +2,8 @@
 
 # Gradle/Maven
 
+<a href="..\..\README.md">indice de Presentaciones</a>
+
 ---
 
 ### INDICE
@@ -168,13 +170,13 @@ comandos más comunes de Maven:
 
 default lifecycle phases executed.
 
-    validate: _validate the project is correct and all necessary information is available_
+    validate:_validate the project is correct and all necessary information is available_
     compile: _compile the source code of the project_
     test: _test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed_
 
-        [...]
+    [...]
 
-    package: _take the compiled code and package it in its distributable format, such as a JAR._
+    package:_take the compiled code and package it in its distributable format, such as a JAR._
     integration-test: _process and deploy the package if necessary into an environment where integration tests can be run_
     verify: _run any checks to verify the package is valid and meets quality criteria_
     install: _install the package into the local repository, for use as a dependency in other projects locally_
@@ -286,6 +288,7 @@ Notas:
 Si no aparece la opción "Application" en el Project Template del wizard de creación de proyecto Gradle en Eclipse, puede deberse a que la extensión "Buildship Gradle Integration" no esté instalada en su Eclipse.
 
 Para solucionarlo, siga estos pasos:
+
 ```
 Abra Eclipse y seleccione "Help" > "Eclipse Marketplace".
 
@@ -360,7 +363,7 @@ dependencies {
 }
 ```
 
-Notas: 
+Notas:
 
 Utilizando el complemento maven-publish:
 
@@ -430,7 +433,6 @@ Existen otros tipos de dependencias en Gradle, como annotationProcessor, compile
 - Una api alguien puede utilizar los métodos de la api desde mi librería
 - Una dependencia No se puede → solo los puede usar mi librería en local
 
-
 ---
 
 ### Precedencia y exportacion de dependencias
@@ -444,14 +446,16 @@ Existe precedencia cuando hay conflicto entre clases iguales
 
 ### Inclusión de una libreria a través de repositorios
 
-En este modo, se especifica la dependencia en el archivo build.gradle y Gradle se encarga de buscar la librería en los repositorios especificados. 
+En este modo, se especifica la dependencia en el archivo build.gradle y Gradle se encarga de buscar la librería en los repositorios especificados.
 
 Ejemplo: se desea agregar la librería Log4j --> incluir la siguiente línea en el archivo build.gradle:
+
 ```
 dependencies {
     implementation 'org.apache.logging.log4j:log4j-core:2.17.1'
 }
 ```
+
 Gradle buscará la librería Log4j en los repositorios remotos especificados en el archivo settings.gradle, la descargará y la agregará al classpath del proyecto.
 
 ---
@@ -459,7 +463,6 @@ Gradle buscará la librería Log4j en los repositorios remotos especificados en 
 ### Inclusión e una libreria local
 
 En este modo, se especifica la ruta de la librería en el sistema de archivos local. Por ejemplo, si se tiene la librería Log4j en la carpeta /lib del proyecto, se puede incluir la siguiente línea en el archivo build.gradle:
-
 
 ```
 dependencies {
@@ -471,11 +474,10 @@ Al hacer esto, Gradle agregará la librería al classpath del proyecto y podrá 
 
 ---
 
-# Fin de la presentacion 
+# Fin de la presentacion
+
 <a href="..\..\README.md">Ir al indice de Presentaciones</a>
 
 <a href="../Sesion4/Sesion4.md">Ir a la Sesion 4</a>
 
 ---
-
-
