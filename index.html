@@ -8,36 +8,41 @@
 
     <link rel="stylesheet" href="dist/reset.css" />
     <link rel="stylesheet" href="dist/reveal.css" />
-    <link rel="stylesheet" href="dist/theme/white.css" />
+    <link rel="stylesheet" href="dist/theme/dracula.css" />
 
     <!-- Theme used for syntax highlighted code -->
-    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+    <link rel="stylesheet" href="plugin/highlight/dracula.css" />
   </head>
   <body>
     <div class="reveal">
-      <div class="slides">
-        <!-- sessions will be injected here by scripts/load-sessions.js -->
-      </div>
+      <div class="slides"></div>
     </div>
 
     <script src="dist/reveal.js"></script>
     <script src="plugin/notes/notes.js"></script>
     <script src="plugin/markdown/markdown.js"></script>
     <script src="plugin/highlight/highlight.js"></script>
-    <script src="scripts/load-sessions.js"></script>
+    <script src="scripts/md-utils.js"></script>
+    <script src="scripts/markdown-navigation-loader.js"></script>
     <script>
-      // Initialize Reveal after sessions are injected
-      loadSessions().then(() => {
-        Reveal.initialize({
-          hash: true,
-          plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
-        });
-      }).catch((err) => {
-        console.error('Error loading sessions:', err);
-        Reveal.initialize({
-          hash: true,
-          plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
-        });
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: false, // Disabled because we use custom hash navigation for markdown files
+        width: 1280,
+        height: 720,
+        margin: 0.03,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      }).then(() => {
+        console.log('[Main] Reveal initialized, starting MarkdownNavigationLoader...');
+        if (window.MarkdownNavigationLoader) {
+          window.MarkdownNavigationLoader.init({ initialMd: "README.md" });
+        } else {
+          console.error('[Main] MarkdownNavigationLoader not found!');
+        }
       });
     </script>
   </body>

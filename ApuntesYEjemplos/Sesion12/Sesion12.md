@@ -113,6 +113,7 @@ El contenido de la carpeta /dist contiene la aplicacion web completa _"compilada
 ---
 
 # Fin de la presentacion 
-<a href="./index.html#/6">Ir al indice de Presentaciones</a>
+<a href="..\..\README.md">Ir al indice de Presentaciones</a>
 
-<a href="./sesion15.html">Ir a la Sesion 15</a>
+<a href="../Sesion15/Sesion15.md">Ir a la Sesion 15</a>
+

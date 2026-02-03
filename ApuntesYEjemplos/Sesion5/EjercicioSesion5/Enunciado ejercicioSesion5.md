@@ -18,6 +18,7 @@
 ---
 
 # Fin de la presentacion 
-<a href="./index.html#/6">Ir al indice de presentaciones</a>
+<a href="..\..\..\README.md">Ir al indice de Presentaciones</a>
 
-<a href="./sesion6.html">Ir a la Sesion 6</a>
+<a href="../../Sesion6/Sesion6.md">Ir a la Sesion 6</a>
+

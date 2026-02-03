@@ -46,12 +46,33 @@ const Plugin = () => {
 		var leadingWs = text.match( /^\n?(\s*)/ )[1].length,
 			leadingTabs = text.match( /^\n?(\t*)/ )[1].length;
 
-		if( leadingTabs > 0 ) {
-			text = text.replace( new RegExp('\\n?\\t{' + leadingTabs + '}','g'), '\n' );
-		}
-		else if( leadingWs > 1 ) {
-			text = text.replace( new RegExp('\\n? {' + leadingWs + '}', 'g'), '\n' );
-		}
+		// Normalize leading indentation but avoid altering lines inside fenced code blocks (``` or ~~~)
+		if( leadingTabs > 0 || leadingWs > 1 ) {
+			var lines = text.split('\n');
+			var inFence = false;
+			var fenceRe = /^\s*(```|~~~)/;
+		console.log('[getMarkdownFromSlide] Leading whitespace to remove:', leadingWs, 'leading tabs:', leadingTabs);
+		for( var i = 0; i < lines.length; i++ ) {
+			var line = lines[i];
+			if( fenceRe.test( line ) ) {
+				inFence = !inFence;
+				console.log('[getMarkdownFromSlide] Line', i, 'is fence, inFence now:', inFence);
+				continue;
+			}
+			if( !inFence ) {
+				var before = line;
+				if( leadingTabs > 0 ) {
+					lines[i] = line.replace( new RegExp('^\\t{' + leadingTabs + '}'), '' );
+				}
+				else if( leadingWs > 1 ) {
+					lines[i] = line.replace( new RegExp('^ {' + leadingWs + '}'), '' );
+				}
+				if(i < 5 || (line.includes('class') || line.includes('public'))) {
+					console.log('[getMarkdownFromSlide] Line', i, 'NOT in fence, before:', JSON.stringify(before.substring(0,50)), 'after:', JSON.stringify(lines[i].substring(0,50)));
+				}
+			} else {
+				if(i < 15 && (line.includes('class') || line.includes('public') || line.includes('private'))) {
+					console.log('[getMarkdownFromSlide] Line', i, 'IN fence, preserving:', JSON.stringify(line.substring(0,60)));
 
 		return text;
 
@@ -398,6 +419,17 @@ const Plugin = () => {
 				section.appendChild( notes );
 			}
 
+			// Trigger syntax highlighting on any code blocks we just created
+			var highlightPlugin = deck.getPlugin && deck.getPlugin('highlight');
+		console.log('[Markdown Plugin] Highlight plugin:', highlightPlugin ? 'found' : 'NOT FOUND');
+		if (highlightPlugin && typeof highlightPlugin.highlightBlock === 'function') {
+			var blocks = [].slice.call( section.querySelectorAll('pre code') );
+			console.log('[Markdown Plugin] Found', blocks.length, 'code blocks to highlight');
+			blocks.forEach( function( block, index ) {
+				console.log('[Markdown Plugin] Block', index, '- classes:', block.className, '- first 50 chars:', block.textContent.substring(0, 50));
+				highlightPlugin.highlightBlock( block );
+				console.log('[Markdown Plugin] Block', index, 'highlighted - new classes:', block.className);
+
 		} );
 
 		return Promise.resolve();
@@ -446,7 +478,9 @@ const Plugin = () => {
 					// highlight.js is able to read it
 					code = escapeForHTML( code );
 
-					return `<pre><code ${lineNumbers} class="${language}">${code}</code></pre>`;
+				// Add both 'language-X' and 'hljs' classes for proper highlighting
+				const languageClass = language ? `language-${language} hljs` : 'hljs';
+				return `<pre><code ${lineNumbers} class="${languageClass}">${code}</code></pre>`;
 				};
 			}
 
@@ -456,6 +490,9 @@ const Plugin = () => {
 
 			marked.setOptions( {
 				renderer,
+				breaks: false,
+				gfm: true,
+				pedantic: false,
 				...markedOptions
 			} );
 
