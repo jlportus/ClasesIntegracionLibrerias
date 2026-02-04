@@ -1,22 +1,39 @@
 # Librerías JavaScript puro (sin npm). ESM y CJS
+<a href="..\..\README.md">Ir al indice de Presentaciones</a>
 
 ---
 
 ### INDICE
 
 - [Librerías JavaScript puro (sin npm). ESM y CJS](#librerías-javascript-puro-sin-npm-esm-y-cjs)
-  - [INDICE](#indice)
+    - [INDICE](#indice)
   - [¿Qué es una librería en JavaScript “puro”?](#qué-es-una-librería-en-javascript-puro)
   - [Formas de integrar sin npm](#formas-de-integrar-sin-npm)
-  - [Modelo 1: Script global (window)](#modelo-1-script-global-window)
-  - [Modelo 2: ESM (ECMAScript Modules)](#modelo-2-esm-ecmascript-modules)
-  - [CJS (CommonJS) y por qué existe](#cjs-commonjs-y-por-qué-existe)
+- [Modelo 1: Script global (window)](#modelo-1-script-global-window)
+    - [Idea](#idea)
+    - [index-global.html](#index-globalhtml)
+    - [lib/finanzas-global.js](#libfinanzas-globaljs)
+    - [app-global.js (consumidor)](#app-globaljs-consumidor)
+- [Modelo 2: ESM (ECMAScript Modules)](#modelo-2-esm-ecmascript-modules)
+    - [Idea](#idea-1)
+    - [index-esm.html](#index-esmhtml)
+    - [lib/finanzas-esm.js](#libfinanzas-esmjs)
+    - [app-esm.js](#app-esmjs)
+- [CJS (CommonJS) y por qué existe](#cjs-commonjs-y-por-qué-existe)
   - [Comparativa ESM vs CJS](#comparativa-esm-vs-cjs)
-  - [Inyectar HTML: template e innerHTML](#inyectar-html-template-e-innerhtml)
-  - [“Componentes” sin frameworks: Web Components](#componentes-sin-frameworks-web-components)
+- [Inyectar HTML: template e innerHTML](#inyectar-html-template-e-innerhtml)
+    - [innerHTML (rápido)](#innerhtml-rápido)
+    - [template (más mantenible)](#template-más-mantenible)
+- [“Componentes” sin frameworks: Web Components](#componentes-sin-frameworks-web-components)
+    - [Idea](#idea-2)
   - [Ejemplo completo: Calculadora IVA como componente](#ejemplo-completo-calculadora-iva-como-componente)
+    - [index-component.html](#index-componenthtml)
+    - [iva-calculator.js (componente ESM que integra librería)](#iva-calculatorjs-componente-esm-que-integra-librería)
   - [Cómo ejecutar sin npm (servidor mínimo)](#cómo-ejecutar-sin-npm-servidor-mínimo)
-  - [Ejercicio para el alumno](#ejercicio-para-el-alumno)
+- [Ejercicio para el alumno](#ejercicio-para-el-alumno)
+  - [Parte A: Librería “Conversor” (ESM)](#parte-a-librería-conversor-esm)
+  - [Parte B: Integrar la librería en un Web Component](#parte-b-integrar-la-librería-en-un-web-component)
+  - [Parte C (opcional): versión global](#parte-c-opcional-versión-global)
 - [Fin de la presentación](#fin-de-la-presentación)
 
 ---

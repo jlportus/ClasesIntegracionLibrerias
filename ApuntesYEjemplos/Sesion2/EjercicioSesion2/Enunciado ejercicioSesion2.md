@@ -2,7 +2,7 @@
 
 # Guía práctica en Eclipse: de “una clase” a librería JAR + app ejecutable
 
-`<a href="..\..\README.md">`Ir al indice de Presentaciones `</a>`
+<a href="..\..\README.md">Ir al indice de Presentaciones</a>
 
 ---
 
@@ -10,26 +10,26 @@
 
 - [Ejercicio Sesion 2](#ejercicio-sesion-2)
 - [Guía práctica en Eclipse: de “una clase” a librería JAR + app ejecutable](#guía-práctica-en-eclipse-de-una-clase-a-librería-jar--app-ejecutable)
-  - [INDICE](#indice)
+    - [INDICE](#indice)
   - [Objetivo](#objetivo)
 - [Fase 1: Un solo proyecto con clase de utilidades](#fase-1-un-solo-proyecto-con-clase-de-utilidades)
-  - [1. Crear el proyecto en Eclipse](#1-crear-el-proyecto-en-eclipse)
-  - [2. Crear paquetes y clases](#2-crear-paquetes-y-clases)
-  - [3. Código de la utilidad (en el mismo proyecto)](#3-código-de-la-utilidad-en-el-mismo-proyecto)
-  - [4. Código del consumidor inicial](#4-código-del-consumidor-inicial)
+    - [1. Crear el proyecto en Eclipse](#1-crear-el-proyecto-en-eclipse)
+    - [2. Crear paquetes y clases](#2-crear-paquetes-y-clases)
+    - [3. Código de la utilidad (en el mismo proyecto)](#3-código-de-la-utilidad-en-el-mismo-proyecto)
+    - [4. Código del consumidor inicial](#4-código-del-consumidor-inicial)
 - [Fase 2: Refactor a dos proyectos (librería + consumidor)](#fase-2-refactor-a-dos-proyectos-librería--consumidor)
-  - [5. Crear el proyecto de librería](#5-crear-el-proyecto-de-librería)
-  - [6. Mover la clase de utilidades al proyecto de librería](#6-mover-la-clase-de-utilidades-al-proyecto-de-librería)
-  - [7. Ajustar el consumidor](#7-ajustar-el-consumidor)
-  - [8. Añadir el proyecto librería al Build Path del consumidor](#8-añadir-el-proyecto-librería-al-build-path-del-consumidor)
+    - [5. Crear el proyecto de librería](#5-crear-el-proyecto-de-librería)
+    - [6. Mover la clase de utilidades al proyecto de librería](#6-mover-la-clase-de-utilidades-al-proyecto-de-librería)
+    - [7. Ajustar el consumidor](#7-ajustar-el-consumidor)
+    - [8. Añadir el proyecto librería al Build Path del consumidor](#8-añadir-el-proyecto-librería-al-build-path-del-consumidor)
 - [Fase 3: Generar el JAR de la librería](#fase-3-generar-el-jar-de-la-librería)
-  - [9. Exportar el JAR de la librería](#9-exportar-el-jar-de-la-librería)
+    - [9. Exportar el JAR de la librería](#9-exportar-el-jar-de-la-librería)
 - [Fase 4: Eliminar el código de la librería del consumidor y consumir el JAR](#fase-4-eliminar-el-código-de-la-librería-del-consumidor-y-consumir-el-jar)
-  - [10. Romper la dependencia entre proyectos (para simular integración real)](#10-romper-la-dependencia-entre-proyectos-para-simular-integración-real)
-  - [11. Añadir el JAR externo al consumidor](#11-añadir-el-jar-externo-al-consumidor)
+    - [10. Romper la dependencia entre proyectos (para simular integración real)](#10-romper-la-dependencia-entre-proyectos-para-simular-integración-real)
+    - [11. Añadir el JAR externo al consumidor](#11-añadir-el-jar-externo-al-consumidor)
 - [Fase 5: Crear un JAR ejecutable (java -jar) con interacción por consola](#fase-5-crear-un-jar-ejecutable-java--jar-con-interacción-por-consola)
-  - [12. Mejorar la App para interacción por consola](#12-mejorar-la-app-para-interacción-por-consola)
-  - [13. Exportar un “Runnable JAR” en Eclipse](#13-exportar-un-runnable-jar-en-eclipse)
+    - [12. Mejorar la App para interacción por consola](#12-mejorar-la-app-para-interacción-por-consola)
+    - [13. Exportar un “Runnable JAR” en Eclipse](#13-exportar-un-runnable-jar-en-eclipse)
   - [Comprobación final](#comprobación-final)
     - [14. Ejecutar fuera de Eclipse](#14-ejecutar-fuera-de-eclipse)
 - [Ejercicio adicional](#ejercicio-adicional)
