@@ -1,4 +1,3 @@
-````md
 # Librerías JavaScript puro (sin npm). ESM y CJS
 
 ---
