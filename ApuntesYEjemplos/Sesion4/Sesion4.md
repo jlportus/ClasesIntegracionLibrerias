@@ -2,6 +2,8 @@
 
 # Generacion de una librería con gestor
 
+<a href="..\..\README.md">Ir al indice de Presentaciones </a>
+
 ---
 
 ### INDICE
@@ -25,7 +27,7 @@ Practicar la inclusion de librerias en un proyecto Spring
 
 # Fin de la presentacion
 
-- <a href=".\EjercicioSesion4\Enunciado ejercicioSesion4.md">Libreira JAVA</a>
+- <a href=".\EjercicioSesion4\Enunciado ejercicioSesion4.md">Ejercicio Sesion 4</a>
 
 
 <a href="..\..\README.md">Ir al indice de Presentaciones </a>

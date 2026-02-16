@@ -1,5 +1,9 @@
 # Ejercicio Sesion 4 (Maven — Ubuntu)
 
+<a href="..\..\README.md">Ir al indice de Presentaciones </a>
+
+---
+
 Objetivo: realizar los mismos ejercicios de la sesión pero usando **Maven** y comandos para **Ubuntu** (basado en la Sesión 3).
 
 1) Cree un proyecto **Maven** usando el wizard de Eclipse
@@ -54,8 +58,6 @@ Objetivo: realizar los mismos ejercicios de la sesión pero usando **Maven** y c
 
 # Fin de la presentación
 
-`<a href="..\..\..\README.md">`Ir al índice de Presentaciones`</a>`
+<a href="..\..\README.md">Ir al indice de Presentaciones </a>
 
-`<a href="../../Sesion5/Sesion5.md">`Ir a la Sesión 5`</a>`
-
----
+<a href="../Sesion5/Sesion5.md">Ir a la Sesion 5</a>

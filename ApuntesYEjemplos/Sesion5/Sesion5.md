@@ -65,7 +65,7 @@ Prerrequisitos:
 
 >**JITPACK** compila por defecto solo con java 1.8 --> usar SpringBoot 2.7+ y java 1.8 (al menos en la libreria)
 
----
+--
 
 1. El `proyecto-LIBreria` esta en la misma carpeta donde está mi `proyecto-API` _(en carpetas hermanas)_
 2. Al proyecto **LIB**reria le quito todas las anotaciones e importaciones de Spring
@@ -79,6 +79,9 @@ Prerrequisitos:
    - File → Import... → **Maven** → **Existing Maven Projects** → seleccionar la carpeta del proyecto → Finish (asegúrese de tener instalado M2E).
 4. En el `pom.xml` del proyecto **LIB**
    - Asegúrese de que `packaging` sea `jar` y configure el `maven-compiler-plugin` (source/target). Ejemplo:
+
+--
+
 ```
 <packaging>jar</packaging>
 
@@ -96,9 +99,9 @@ Prerrequisitos:
 </build>
 ```
 
----
+--
 
-5. (Multi-módulo recomendado) Crear un *parent* `pom.xml` que agrupe ambos proyectos (ubicado en la carpeta padre):
+1. (Multi-módulo recomendado) Crear un *parent* `pom.xml` que agrupe ambos proyectos (ubicado en la carpeta padre):
 
 Ejemplo de `pom.xml` (parent):
 ```
@@ -115,11 +118,12 @@ Ejemplo de `pom.xml` (parent):
   </modules>
 </project>
 ```
+Notas:
 > Asegúrese de que los nombres de carpeta coincidan con los nombres de módulo.
 
 Alternativa: si los proyectos son independientes, ejecute `mvn install` en la librería para instalarla en el repositorio local y luego añada la dependencia en la API.
 
----
+--
 
 6. En el `pom.xml` del proyecto **API** añada la dependencia a la librería:
 ```
@@ -153,7 +157,7 @@ Documentacion: [JitPack](https://docs.jitpack.io/building/)
 ![Integracion en CLOUD](./Recursos/Jitpack.drawio.png)
 
 
----
+--
 
 ### Incluir libreria de repo publico (GitHub)
 En la **API** (Maven)
@@ -167,6 +171,7 @@ En la **API** (Maven)
   </repository>
 </repositories>
 ```
+--
 
 2. Añadir la dependencia en `pom.xml` con las coordenadas `com.github.usuario:repo:version`.
 
@@ -180,6 +185,7 @@ Ejemplos Maven (JitPack):
   <version>v1.2.3</version>
 </dependency>
 ```
+--
 
 - Dependencia por **commit** (usar short/long hash):
 ```
@@ -189,7 +195,7 @@ Ejemplos Maven (JitPack):
   <version>1a2b3c4</version> <!-- short hash -->
 </dependency>
 ```
-
+--
 - Dependencia **branch-SNAPSHOT** (último commit de la rama):
 ```
 <dependency>
@@ -198,7 +204,7 @@ Ejemplos Maven (JitPack):
   <version>master-SNAPSHOT</version>
 </dependency>
 ```
-
+--
 - Repositorio multi-módulo (usar `Repo:Module`):
 ```
 <dependency>
@@ -223,7 +229,7 @@ En la **LIB**reria (Maven)
 
 > JitPack [funciona por defecto con Java 8](https://docs.jitpack.io/building/#java-version) — consulte la documentación si necesita otra versión de Java.
 
----
+--
 
 5. Incluir la librería en la API — añadir la dependencia en el `pom.xml`:
 ```
@@ -261,6 +267,8 @@ Notas:
 Notas:
 Pasos detallados y comandos (NOTAS para el docente / estudiante):
 
+--
+
 1) Preparar el `pom.xml` (añadir `distributionManagement`):
 
 ```xml
@@ -274,12 +282,14 @@ Pasos detallados y comandos (NOTAS para el docente / estudiante):
 ```
 - Reemplace `OWNER` por su usuario u organización y `REPOSITORY` por el repositorio donde publicará.
 
+--
+
 2) Crear un PAT (GitHub Settings → Developer settings → Personal access tokens):
 - Scopes recomendados:
   - `write:packages`, `read:packages` (obligatorio para publicar/leer paquetes)
   - `repo` (si el repositorio es privado)
 - Copie el token (no podrá verlo de nuevo).
-
+--
 3) Configurar credenciales locales en `~/.m2/settings.xml` (para publicar desde su máquina):
 
 ```xml
@@ -293,8 +303,9 @@ Pasos detallados y comandos (NOTAS para el docente / estudiante):
   </servers>
 </settings>
 ```
+Notas:
 - Alternativa para CI: en GitHub Actions use `GITHUB_TOKEN` (no requiere PAT) y `actions/setup-java` para configurar `server-id`.
-
+--
 4) Publicar manualmente (local):
 - Construir y desplegar: `mvn -B -DskipTests deploy`
 - Verifique en la pestaña **Packages** del repositorio GitHub.
@@ -322,9 +333,10 @@ jobs:
       - name: Build and deploy
         run: mvn -B -DskipTests deploy
 ```
+Notas:
 - `server-id` debe ser igual a `<id>` en `distributionManagement`.
 - `GITHUB_TOKEN` funciona para publicar en el mismo repositorio; para publicar desde otro repo use un PAT con `write:packages` almacenado en `secrets`.
-
+--
 6) Consumir el paquete (proyecto cliente):
 - Añadir repositorio en el `pom.xml` del cliente:
 
@@ -336,8 +348,11 @@ jobs:
   </repository>
 </repositories>
 ```
+Notas:
 - Añadir la dependencia con las coordenadas publicadas (groupId/artifactId/version).
 - Para uso local o CI, proporcione credenciales (PAT) en `~/.m2/settings.xml` o use `GITHUB_TOKEN` en Actions.
+
+--
 
 7) Verificación y problemas comunes:
 - 401 / 403 → revisar `server id` y credenciales / scopes del PAT.
