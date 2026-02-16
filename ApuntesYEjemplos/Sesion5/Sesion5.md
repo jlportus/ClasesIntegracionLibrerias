@@ -1,5 +1,7 @@
 # Trabajando con librerías en local
 
+<a href="..\..\README.md">indice de Presentaciones</a>
+
 ---
 
 ### INDICE
@@ -12,6 +14,8 @@
     - [Incluir libreria de repo publico (GitHub)](#incluir-libreria-de-repo-publico-github)
     - [Incluir libreria de repo publico (GitHub)](#incluir-libreria-de-repo-publico-github-1)
     - [Incluir libreria de repo publico (GitHub) II](#incluir-libreria-de-repo-publico-github-ii)
+    - [Publicar en GitHub Packages (Maven)](#publicar-en-github-packages-maven)
+- [Fin de la presentacion](#fin-de-la-presentacion)
 
 ---
 
@@ -30,10 +34,10 @@ Utilizar ambos
 
 Voy a utilizar código de otro proyecto en el mio. Podré desarrollar por un lado el proyecto-**API** para realizar la persistencia y la capa REST y en otro proyecto-**LIB** (mi libreria) desarrollaré la lógica de mi negocio (java "puro")
 
-Ambos proyectos deberían ser Proyectos Gradle:
+Ambos proyectos deberían ser proyectos **Maven**:
 
-- El de la API con Spring con todas las dependencias para REST y persistencia
-- El de la LIB sera un proyecto Gradle Spring, sin dependencias (aunque se le quitarán las anotaciones Spring).
+- El de la **API**: proyecto Spring Boot (Maven) con dependencias para REST y persistencia.
+- El de la **LIB**: proyecto Maven tipo librería (`packaging` = `jar`) sin dependencias Spring (se le quitarán las anotaciones Spring del código).
 
 ---
 
@@ -68,47 +72,68 @@ Prerrequisitos:
    - Del main
      - @SpringApplication
      - SpringContext = `SpringApplication.run`
-   - Del build.gradle
-     - dependencias y plugins Spring  _`...Springframework...`_
-   - La carpeta de Tests _(Los test se ejecutaran desde la API)_
-3. Importar ambos proyectos Gradle en eclipse.
-   - Usar valores por defecto
-4. En el `build.gradle` del proyecto **LIB**
-   - Eclipse Necesita ademas los plugin
+   - Del `pom.xml`
+     - eliminar dependencias `spring-boot-starter-*` y el plugin `spring-boot-maven-plugin` (si existen) para dejarlo como biblioteca Java pura
+   - La carpeta de Tests _(Los test se ejecutarán desde la API o desde un módulo dedicado)_
+3. Importar ambos proyectos **Maven** en Eclipse.
+   - File → Import... → **Maven** → **Existing Maven Projects** → seleccionar la carpeta del proyecto → Finish (asegúrese de tener instalado M2E).
+4. En el `pom.xml` del proyecto **LIB**
+   - Asegúrese de que `packaging` sea `jar` y configure el `maven-compiler-plugin` (source/target). Ejemplo:
 ```
-     `id 'java'`
-     `id 'java-library'`
-     `id 'eclipse'`
+<packaging>jar</packaging>
+
+<build>
+  <plugins>
+    <plugin>
+      <artifactId>maven-compiler-plugin</artifactId>
+      <version>3.10.1</version>
+      <configuration>
+        <source>17</source>
+        <target>17</target>
+      </configuration>
+    </plugin>
+  </plugins>
+</build>
 ```
 
 ---
 
-5. En el **`settings.gradle`** del proyecto **API**
-   - Debe coincidir el nombre del directorio con el del proyecto
+5. (Multi-módulo recomendado) Crear un *parent* `pom.xml` que agrupe ambos proyectos (ubicado en la carpeta padre):
+
+Ejemplo de `pom.xml` (parent):
 ```
-`rootProject.name = 'nombreProyectoAPI'` 
-//(si esta hecho con Spring lo genera automáticamente)
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.miempresa</groupId>
+  <artifactId>workspace-parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+    <module>proyecto-LIBreria</module>
+    <module>proyecto-API</module>
+  </modules>
+</project>
 ```
-   - Introduzco una linea nueva con:
-```
-includeFlat 'proyecto-LIBreria'
-```
-> Debe ser el mismo nombre que tiene el proyectoLIB en su settings.gradle
+> Asegúrese de que los nombres de carpeta coincidan con los nombres de módulo.
+
+Alternativa: si los proyectos son independientes, ejecute `mvn install` en la librería para instalarla en el repositorio local y luego añada la dependencia en la API.
 
 ---
 
-6. En el **`build.gradle`** del proyecto **API**
-   - Introduzco en el apartado **`dependencias`**
+6. En el `pom.xml` del proyecto **API** añada la dependencia a la librería:
 ```
-dependencies {
-  //
-  implementation project(':proyecto-LIBreria')
-}
+<dependency>
+  <groupId>com.miempresa</groupId>
+  <artifactId>proyecto-LIBreria</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+</dependency>
 ```
-7. Ejecutar **Refresh gradle project**
-> En propiedades de mi proyecto en java build path (o en la carpeta Project and External Dependencies) 
-> 
-> **→ saldrá la librería como una dependencia**
+- Si usa un `parent` multi-módulo, el reactor de Maven compilará y resolverá el módulo LIB automáticamente; si no, ejecute `cd proyecto-LIBreria && mvn install` antes de compilar la API.
+7. Actualizar dependencias y compilar
+- En Eclipse: botón derecho sobre el proyecto → **Maven** → **Update Project...**
+- Desde la consola (multi-módulo): `mvn -am -pl proyecto-API package` o `mvn -am -pl proyecto-API spring-boot:run`
+> En Eclipse aparecerá la librería en `Maven Dependencies` y podrá usarse desde la API.
 
 8. _Comprobar llamando desde la API a un metodo de una clase de la libreria_
 
@@ -131,45 +156,85 @@ Documentacion: [JitPack](https://docs.jitpack.io/building/)
 ---
 
 ### Incluir libreria de repo publico (GitHub)
-En La **API** 
+En la **API** (Maven)
 
-1. Necesita el **plugin**
+1. Añadir el repositorio **JitPack** en el `pom.xml`:
+```
+<repositories>
+  <repository>
+    <id>jitpack.io</id>
+    <url>https://jitpack.io</url>
+  </repository>
+</repositories>
+```
 
-```
-id 'application'
-```
-2. Añado el repositorio **JitPack**
+2. Añadir la dependencia en `pom.xml` con las coordenadas `com.github.usuario:repo:version`.
 
+Ejemplos Maven (JitPack):
+
+- Dependencia por **release tag** (recomendado para producción):
 ```
-repositories {
-      mavenCentral()
-      maven { url 'https://jitpack.io' }
-}
+<dependency>
+  <groupId>com.github.User</groupId>
+  <artifactId>Repo</artifactId>
+  <version>v1.2.3</version>
+</dependency>
 ```
+
+- Dependencia por **commit** (usar short/long hash):
+```
+<dependency>
+  <groupId>com.github.User</groupId>
+  <artifactId>Repo</artifactId>
+  <version>1a2b3c4</version> <!-- short hash -->
+</dependency>
+```
+
+- Dependencia **branch-SNAPSHOT** (último commit de la rama):
+```
+<dependency>
+  <groupId>com.github.User</groupId>
+  <artifactId>Repo</artifactId>
+  <version>master-SNAPSHOT</version>
+</dependency>
+```
+
+- Repositorio multi-módulo (usar `Repo:Module`):
+```
+<dependency>
+  <groupId>com.github.User.Repo</groupId>
+  <artifactId>Module</artifactId>
+  <version>v1.0.0</version>
+</dependency>
+```
+
+Notas prácticas:
+- Forzar actualización de dependencias en Maven: `mvn -U`.
+- Ver log de construcción en JitPack si falla: `https://jitpack.io/com/github/USER/REPO/VERSION/build.log`.
+- Si JitPack necesita otra versión de JDK, especifíquela en `jitpack.yml` o en el `pom.xml` (maven-compiler-plugin).
 
 ---
 
 ### Incluir libreria de repo publico (GitHub) II
-En la **LIB**reria
-1.  La libreria debe estar publicada en GitHub en un repo publico
-    - puedo usar _**nºcommit, version o snapshot**_
-2.  Necesita el plugin
-```
-id 'java-library'
-```
-3. Debe haber una release de la libreria
+En la **LIB**reria (Maven)
+1.  La librería debe estar publicada en GitHub en un repo público (puede usar nº de commit, tag o snapshot).
+2.  Asegúrese de que el repo tenga un `pom.xml` válido y `packaging` configurado como `jar` (equivalente a `java-library`).
+3.  Debe existir un tag/release para usar versiones concretas con JitPack.
 
-> Jitpack [funciona por defecto con java 8](https://docs.jitpack.io/building/#java-version)
+> JitPack [funciona por defecto con Java 8](https://docs.jitpack.io/building/#java-version) — consulte la documentación si necesita otra versión de Java.
 
 ---
 
-5. Incluir la libreria en la API --> Ir a dependencias y añadir linea 
+5. Incluir la librería en la API — añadir la dependencia en el `pom.xml`:
 ```
-implementation 'Grupo:artefacto:Versión'
-// implementation 'com.github.usuarioPepe:repoLibreria:Tag'
+<dependency>
+  <groupId>com.github.usuarioPepe</groupId>
+  <artifactId>repoLibreria</artifactId>
+  <version>Tag</version>
+</dependency>
 ```
-1. Ejecutar _`gradle → refresh project`_
-> --> Saldrán en project and external dependencies las que haya añadido, pudiendo emplearlas en mi codigo
+6. Ejecutar **Maven → Update Project** (Eclipse) o `mvn compile` desde la línea de comandos.
+> Aparecerán en `Maven Dependencies` y podrán emplearse en el código.
 
 
 Notas:
@@ -183,3 +248,118 @@ Notas:
 > - sanapshot (ultima versión) 
 > - 1 commit concreto > puedo poner varias versiones que se crearan en sus carpetas correspondientes
 
+---
+
+### Publicar en GitHub Packages (Maven)
+
+- Pasos rápidos (slide):
+  - Configurar `distributionManagement` en `pom.xml` → apuntar a `https://maven.pkg.github.com/OWNER/REPOSITORY`.
+  - Crear un Personal Access Token (PAT) con `write:packages` (+ `repo` si es privado).
+  - Añadir credenciales en `~/.m2/settings.xml` (server id debe coincidir con `distributionManagement`).
+  - Ejecutar `mvn deploy` local o configurar GitHub Actions para publicar automáticamente en cada release.
+
+Notas:
+Pasos detallados y comandos (NOTAS para el docente / estudiante):
+
+1) Preparar el `pom.xml` (añadir `distributionManagement`):
+
+```xml
+<distributionManagement>
+  <repository>
+    <id>github</id> <!-- debe coincidir con el <server> en settings.xml -->
+    <name>GitHub OWNER Apache Maven Packages</name>
+    <url>https://maven.pkg.github.com/OWNER/REPOSITORY</url>
+  </repository>
+</distributionManagement>
+```
+- Reemplace `OWNER` por su usuario u organización y `REPOSITORY` por el repositorio donde publicará.
+
+2) Crear un PAT (GitHub Settings → Developer settings → Personal access tokens):
+- Scopes recomendados:
+  - `write:packages`, `read:packages` (obligatorio para publicar/leer paquetes)
+  - `repo` (si el repositorio es privado)
+- Copie el token (no podrá verlo de nuevo).
+
+3) Configurar credenciales locales en `~/.m2/settings.xml` (para publicar desde su máquina):
+
+```xml
+<settings>
+  <servers>
+    <server>
+      <id>github</id>               <!-- coincide con <id> en distributionManagement -->
+      <username>GITHUB_USERNAME</username>
+      <password>PERSONAL_ACCESS_TOKEN</password>
+    </server>
+  </servers>
+</settings>
+```
+- Alternativa para CI: en GitHub Actions use `GITHUB_TOKEN` (no requiere PAT) y `actions/setup-java` para configurar `server-id`.
+
+4) Publicar manualmente (local):
+- Construir y desplegar: `mvn -B -DskipTests deploy`
+- Verifique en la pestaña **Packages** del repositorio GitHub.
+
+5) Publicar automáticamente con GitHub Actions (ejemplo mínimo):
+
+```yaml
+name: Publish Maven package
+on:
+  release:
+    types: [published]
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          server-id: github
+          server-username: ${{ github.actor }}
+          server-password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build and deploy
+        run: mvn -B -DskipTests deploy
+```
+- `server-id` debe ser igual a `<id>` en `distributionManagement`.
+- `GITHUB_TOKEN` funciona para publicar en el mismo repositorio; para publicar desde otro repo use un PAT con `write:packages` almacenado en `secrets`.
+
+6) Consumir el paquete (proyecto cliente):
+- Añadir repositorio en el `pom.xml` del cliente:
+
+```xml
+<repositories>
+  <repository>
+    <id>github</id>
+    <url>https://maven.pkg.github.com/OWNER/REPOSITORY</url>
+  </repository>
+</repositories>
+```
+- Añadir la dependencia con las coordenadas publicadas (groupId/artifactId/version).
+- Para uso local o CI, proporcione credenciales (PAT) en `~/.m2/settings.xml` o use `GITHUB_TOKEN` en Actions.
+
+7) Verificación y problemas comunes:
+- 401 / 403 → revisar `server id` y credenciales / scopes del PAT.
+- 404 → URL del repositorio en `distributionManagement` incorrecta.
+- Error de firma → deshabilite `gpg:sign` o configure firma en CI.
+- Consultar build log de GitHub Actions y la entrada en GitHub → Packages → nombre del paquete.
+
+8) Visibilidad y permisos:
+- Los paquetes heredan visibilidad del repositorio; ajuste permisos desde GitHub UI si es necesario.
+
+9) Buenas prácticas:
+- Publicar releases (tag) para artefactos de producción.
+- Usar GitHub Actions + `GITHUB_TOKEN` para despliegues reproducibles.
+- Mantener `groupId` y `version` estables y semánticos.
+
+---
+
+# Fin de la presentacion
+
+- <a href=".\EjercicioSesion5\Enunciado ejercicioSesion5.md">Libreira JS</a>
+
+
+<a href="..\..\README.md">Ir al indice de Presentaciones</a>
+
+<a href="../Sesion6/Sesion6.md">Ir a la Sesion 6</a>

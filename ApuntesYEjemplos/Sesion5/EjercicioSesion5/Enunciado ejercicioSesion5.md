@@ -3,8 +3,10 @@
 --
 ## Trabajando en local
 
-1. Cree un proyecto gradle Springboot --> Libreria
-2. Cree un proyecto gradle Springboot --> Api
+1. Cree un proyecto **Maven (Spring Boot)** → Librería
+2. Cree un proyecto **Maven (Spring Boot)** → API
+
+(Enlazar ambos proyectos mediante un parent `pom.xml` multi-módulo o instalando la librería en el repositorio local con `mvn install`.)
 3. Vincule ambos proyectos para trabajar en local
 4. Pruebe que estan enlazados creando una clase con un metodo en la libreria e invoquelo desde la API
 --

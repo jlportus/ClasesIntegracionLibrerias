@@ -11,6 +11,7 @@
 - [Repositorios](#repositorios)
 - [Gradle/Maven](#gradlemaven)
     - [INDICE](#indice)
+- [Objetivos de la sesión](#objetivos-de-la-sesión)
   - [Gradle/Maven - repositorios](#gradlemaven---repositorios)
   - [Conceptos - Repositorios](#conceptos---repositorios)
     - [Repositorios Privados](#repositorios-privados)
@@ -56,6 +57,7 @@
     - [Precedencia y exportacion de dependencias](#precedencia-y-exportacion-de-dependencias)
     - [Inclusión de una libreria a través de repositorios](#inclusión-de-una-libreria-a-través-de-repositorios)
     - [Inclusión e una libreria local](#inclusión-e-una-libreria-local)
+- [Comprobación de conocimientos](#comprobación-de-conocimientos)
 - [Fin de la presentacion](#fin-de-la-presentacion)
 
 ---
@@ -710,7 +712,7 @@ Siga las instrucciones para instalar la extensión y reinicie Eclipse.
 ```
 
 
----
+--
 
 ## Declaracion de dependencias en gradle
 
@@ -757,7 +759,7 @@ dependencies {
 
 En este caso, el paréntesis indica que la versión inicial es cualquier versión anterior a la versión especificada, mientras que el corchete indica que la versión final es la versión especificada y todas las versiones posteriores.
 
----
+--
 
 ## Declarar una libreria de un repositorio proyecto de gitHub
 
@@ -809,7 +811,7 @@ publishing {
 }
 ```
 
----
+--
 
 ### Tipos de inclusion de librerias con gradle
 
@@ -837,14 +839,14 @@ se pueden declarar diferentes tipos de dependencias en el archivo build.gradle. 
 
 Existen otros tipos de dependencias en Gradle, como annotationProcessor, compileClasspath, runtimeClasspath, entre otros, que se utilizan en situaciones específicas.
 
----
+--
 
 ### Api vs Dependencia
 
 - Una api alguien puede utilizar los métodos de la api desde mi librería
 - Una dependencia No se puede → solo los puede usar mi librería en local
 
----
+--
 
 ### Precedencia y exportacion de dependencias
 
@@ -853,7 +855,7 @@ Existe precedencia cuando hay conflicto entre clases iguales
 - 1° la mas arriba del build path → order export
 - **export** ⇒ cualquiera que use mi liberia tendrá acceso a las librerias externas que esa integre.
 
----
+--
 
 ### Inclusión de una libreria a través de repositorios
 
@@ -869,7 +871,7 @@ dependencies {
 
 Gradle buscará la librería Log4j en los repositorios remotos especificados en el archivo settings.gradle, la descargará y la agregará al classpath del proyecto.
 
----
+--
 
 ### Inclusión e una libreria local
 
@@ -902,5 +904,3 @@ Notas:
 <a href="..\..\README.md">Ir al indice de Presentaciones</a>
 
 <a href="../Sesion4/Sesion4.md">Ir a la Sesion 4</a>
-
----
