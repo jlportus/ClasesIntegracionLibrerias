@@ -3,8 +3,8 @@
 
 | Sesion                                                     | Descripcion                                  | Sesion                                                     | Descripcion                          |
 | ---------------------------------------------------------- | -------------------------------------------- | ---------------------------------------------------------- | ------------------------------------ |
-| [Sesion 0](./ApuntesYEjemplos/Sesion0/Sesion0.md)             | Presentacion e introduccion de la asignatura | [Sesion 10-11](./ApuntesYEjemplos/Sesion10-11/Sesion10-11.md) | JavaScript - HolaLibrería           |
-| [Sesion 1](./ApuntesYEjemplos/Sesion1/Sesion1.md)             | Conceptos generales de Librerías            | [Sesion 12](./ApuntesYEjemplos/Sesion12/Sesion12.md)          | node-npm - repositorios              |
+| [Sesion 0](./ApuntesYEjemplos/Sesion0/Sesion0.md)             | Presentacion e introduccion de la asignatura | [Sesion 10-11-12](./ApuntesYEjemplos/Sesion10-11-12/Sesion10-11-12.md) | JS/npm - HolaLibrería y dependencias |
+| [Sesion 1](./ApuntesYEjemplos/Sesion1/Sesion1.md)             | Conceptos generales de Librerías            |                                           |                                      |
 | [Sesion 2](./ApuntesYEjemplos/Sesion2/Sesion2.md)             | HolaLibrería                                | [Sesion 13](./ApuntesYEjemplos/Sesion13/Sesion13.md)          | Librerías Utiles de Frontend        |
 | [Sesion 3](./ApuntesYEjemplos/Sesion3/Sesion3.md)             | Gradle/Maven - repositorios                  | [Sesion 14](./ApuntesYEjemplos/Sesion14/Sesion14.md)          | Generacion web (Tomcat)              |
 | [Sesion 4](./ApuntesYEjemplos/Sesion4/Sesion4.md)             | Generacion de una librería con gestor       | [Sesion 15](./ApuntesYEjemplos/Sesion15/Sesion15.md)          | Generacion documentacion             |
