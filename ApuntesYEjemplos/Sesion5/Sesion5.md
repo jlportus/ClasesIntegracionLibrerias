@@ -140,7 +140,7 @@ Pasos completos en la guía: [GuiaIntegracionProyectoAPI-LIB.md](./GuiaIntegraci
 
 # Fin de la presentacion
 
-- <a href=".\EjercicioSesion5\Enunciado ejercicioSesion5.md">Ejercicio Sesion 5</a>
+- <a href="./EjercicioSesion5/Enunciado ejercicioSesion5.md">Ejercicio Sesion 5</a>
 - <a href="./GuiaIntegracionProyectoAPI-LIB.md">Guía detallada API-LIB</a>
 
 <a href="..\..\README.md">Ir al indice de Presentaciones</a>
