@@ -1,8 +1,26 @@
 # Ejercicio Sesión 10‑11‑12: Librería calculadora TypeScript
 
-### Objetivo general
-Construir una librería de cálculo en TypeScript, gestionarla con npm, realizar pruebas, versionarla y consumirla desde un proyecto de demostración. El foco está en la estructura del paquete y el uso del gestor de dependencias; la lógica de cálculo es sencilla (sumas, restas, etc.) y servirá de ejemplo para futuras integraciones con un backend.
+### Misión
+El alumno debe crear desde cero una pequeña librería llamada `calc-lib` que proporcione funciones para realizar operaciones básicas (sumar, restar, multiplicar, dividir). Esta librería simula un componente reutilizable que podría ser usado por diferentes aplicaciones, por ejemplo, un frontend que muestra resultados o un backend que delega cálculos. Durante el proceso aprenderá a gestionar las dependencias con npm, a escribir tests que validen el código, a asignar una versión a la librería y a consumirla desde otro proyecto. Al terminar, la librería estará lista para ser publicada en un registro (incluso local) y usada por otros.
 
+### Propósito de la práctica
+Esta práctica sirve para que entiendas el ciclo completo de una librería: escribir código, empaquetarlo y compartirlo. La idea general es que trabajes con herramientas reales (TypeScript, npm, Jest) y veas cómo se organiza un proyecto profesional. Los objetivos finales que podrás demostrar son:
+
+- Tener un proyecto `calc-lib` que compila y genera un paquete en `dist/`.
+- Generar y ejecutar pruebas automáticas que cubran las operaciones de la calculadora.
+- Modificar el `package.json` para indicar la entrada (`main`), tipos (`types`), y scripts de build/test.
+- Instalar el paquete en un proyecto de ejemplo y usarlo correctamente.
+
+Los riesgos asumibles son simples: el código de la calculadora puede ser incorrecto o no compilar, pero eso se solucionará con los tests; los comandos de npm pueden fallar si no se usa la versión correcta de Node, así que se proporcionarán instrucciones paso a paso. No se espera que el alumno domine cada herramienta desde el principio, el objetivo es practicar y entender los pasos.
+
+### Objetivo general
+Al finalizar esta práctica, el alumno deberá disponer de un paquete npm (`calc-lib`) que:
+
+- compila sin errores y genera artefactos en `dist/`;
+- contiene funciones de cálculo testadas automáticamente;
+- se puede instalar desde otro proyecto y utilizar correctamente.
+
+La finalidad no es crear la calculadora más completa, sino dominar el ciclo de vida de una librería: diseño, empaquetado, prueba y consumo.
 ---
 
 ## Paso 1 – Inicializar el proyecto

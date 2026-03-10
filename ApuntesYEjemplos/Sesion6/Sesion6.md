@@ -4,6 +4,24 @@
 
 ---
 
+### Misión
+En esta sesión vas a aprender a empaquetar una aplicación Spring Boot como un artefacto desplegable (`war` o `jar`) y a ponerla en marcha tanto con el servidor embebido como en un Tomcat externo. Un **Tomcat** es un servidor web/servlet que recibe peticiones HTTP y ejecuta aplicaciones Java, por lo que es un software que «habla» con el navegador y ejecuta tu código. Veremos por qué a veces ejecutamos la app con un Tomcat integrado (fácil para desarrollo) y otras veces la desplegamos en un Tomcat independiente, que es lo que encontrarías en un entorno real.
+
+El objetivo es que entiendas qué contiene el paquete, cómo incluir recursos frontend y cómo ajustar la configuración para distintos entornos. Hacer esta práctica te permite experimentar el flujo completo de crear un artefacto que luego puede ejecutarse en cualquier servidor compatible; es un paso clave para entender cómo se publican aplicaciones Java en el mundo real.
+
+### Propósito de la sesión
+La práctica muestra el flujo completo desde compilar una aplicación hasta verla ejecutándose en un contenedor web. Al finalizar deberías poder:
+
+- Generar y distinguir entre `jar` y `war`.
+- Configurar `pom.xml` para producción y despliegue externo.
+- Incorporar recursos estáticos (HTML/JS/CSS) construidos con npm.
+- Conocer la estructura interna del artefacto y el propósito de cada carpeta.
+- Desplegar en Tomcat y resolver problemas comunes.
+
+Este conocimiento es esencial para cualquier proyecto Java web: si algo no se empaqueta bien o el WAR no arranca, la aplicación no sirve. Los riesgos son sencillos (selectores de ruta, versiones de Tomcat) y se explicarán con ejemplos para que los puedas manejar.
+
+---
+
 ## ¿Qué genera Maven al construir?
 
 ```

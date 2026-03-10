@@ -1,5 +1,25 @@
 # Guía: Generación e integración de proyecto API + LIB con Maven
 
+### Misión
+El estudiante debe aprender a enlazar un proyecto de lógica independiente (LIB) con una aplicación API (Spring Boot) en distintos escenarios: desarrollo local, mediante JitPack y publicando en GitHub Packages. Esta separación entre API y librería refleja una arquitectura común en la que la parte responsable de la lógica de negocio (la "lib" ) se mantiene aislada de la aplicación que ofrece los servicios web. De este modo:
+
+- la misma lógica puede ser reutilizada por varias APIs o aplicaciones (por ejemplo, móvil y web) sin duplicación;
+- los desarrolladores de la librería pueden trabajar de forma independiente y publicar nuevas versiones sin tocar la API;
+- se pueden escribir tests específicos para la librería sin cargar la infraestructura de Spring;
+- en entornos empresariales la librería puede desplegarse en un repositorio corporativo y ser consumida por servicios diversos.
+
+El objetivo es practicar cómo se declara la dependencia, cómo se resuelven versiones y cómo se actualiza el código cuando la librería cambia.
+
+### Propósito de la práctica
+Esta guía ofrece un recorrido paso a paso para que comprendas los mecanismos que permiten que una API consuma código de una librería externa. La práctica tiene sentido porque en proyectos reales la lógica de negocio suele evolucionar con mayor frecuencia que la capa de acceso web; si la lógica está en una librería, se puede mejorar o corregir sin desplegar de nuevo toda la aplicación, y se facilita que varios equipos la utilicen. Al separar la librería, la API solo se encarga de recibir peticiones y delegar, lo que hace que sea más fácil de entender y mantener. Al finalizar deberías ser capaz de:
+
+- Organizar proyectos en módulos o carpetas hermanas.
+- Instalar artefactos en el repositorio local `.m2` y consumirlos.
+- Usar servicios de terceros (JitPack, GitHub Packages) para resolver dependencias.
+- Configurar `pom.xml`, `settings.xml` y, si procede, GitHub Actions.
+
+Riesgos asumibles: la compilación puede fallar por versiones incompatibles (manejable con mensajes de Maven), el acceso a repositorios remotos puede requerir tokens y ajustes de URL. La intención es que te familiarices con los comandos y archivos clave sin necesidad de dominar Maven al detalle.
+
 ## Índice
 
 1. [Estructura de proyecto recomendada](#1-estructura-de-proyecto-recomendada)
